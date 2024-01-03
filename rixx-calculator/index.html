@@ -1,8 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Bat Boys</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello BalmUI</title>
+    <link rel="stylesheet" href="https://unpkg.com/balm-ui/dist/balm-ui.css" />
   </head>
   <body>
-    Foo bar.
+    <div id="app">
+      <ui-button icon="add" @click="$alert(message)">SayHi</ui-button>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/balm-ui"></script>
+    <script src="https://unpkg.com/balm-ui/dist/balm-ui-plus.js"></script>
+    <script>
+      const app = Vue.createApp({
+        setup() {
+          var message = "Hello BalmUI";
+
+          return {
+            message,
+          };
+        },
+      });
+
+      app.use(BalmUI);
+      app.use(BalmUIPlus);
+
+      app.mount("#app");
+    </script>
   </body>
 </html>
