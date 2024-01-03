@@ -1,0 +1,1199 @@
+[
+  {
+    "index": 1,
+    "zinium": 1,
+    "longname": "You may create one Rixx-Tec gear of your choice",
+    "shortname": "one Rixx-Tec gear",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["equipment"]
+  },
+  {
+    "index": 2,
+    "zinium": 5,
+    "longname": "Rune to add +8 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+8 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 3,
+    "zinium": 10,
+    "longname": "Rune to add +2 stat to your Rixx-Tec gear",
+    "shortname": "+2 stat",
+    "blueprint": null,
+    "slots": 2,
+    "tags": ["stat"]
+  },
+  {
+    "index": 4,
+    "zinium": 20,
+    "longname": "Rune to add +2 bonus to your Rixx-Tec gear",
+    "shortname": "+2 bonus",
+    "blueprint": null,
+    "slots": 4,
+    "tags": []
+  },
+  {
+    "index": 5,
+    "zinium": 25,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 6,
+    "zinium": 28,
+    "longname": "Rune to add +4 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+4 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 1,
+    "tags": []
+  },
+  {
+    "index": 7,
+    "zinium": 30,
+    "longname": "Rune to add +2 spell/skill to your Rixx-Tec gear",
+    "shortname": "+2 spell/skill",
+    "blueprint": null,
+    "slots": 2,
+    "tags": []
+  },
+  {
+    "index": 8,
+    "zinium": 40,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 9,
+    "zinium": 50,
+    "longname": "Rune to add +1% exp rate to your Rixx-Tec gear",
+    "shortname": "+1% exp rate",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 10,
+    "zinium": 60,
+    "longname": "Rune to add +1 bonus to your Rixx-Tec gear",
+    "shortname": "+1 bonus",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 11,
+    "zinium": 75,
+    "longname": "Rune to add +2 stat to your Rixx-Tec gear",
+    "shortname": "+2 stat",
+    "blueprint": null,
+    "slots": 2,
+    "tags": ["stat"]
+  },
+  {
+    "index": 12,
+    "zinium": 90,
+    "longname": "Rune to add +2 spell/skill to your Rixx-Tec gear",
+    "shortname": "+2 spell/skill",
+    "blueprint": null,
+    "slots": 2,
+    "tags": []
+  },
+  {
+    "index": 13,
+    "zinium": 125,
+    "longname": "Rune to add +1% exp rate to your Rixx-Tec gear",
+    "shortname": "+1% exp rate",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 14,
+    "zinium": 175,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 15,
+    "zinium": 190,
+    "longname": "Rune to add +1 spell/skill to your Rixx-Tec gear",
+    "shortname": "+1 spell/skill",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 16,
+    "zinium": 220,
+    "longname": "Rune to add +4 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+4 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 1,
+    "tags": []
+  },
+  {
+    "index": 17,
+    "zinium": 230,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 18,
+    "zinium": 249,
+    "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
+    "shortname": "+1% spell/skill haste",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 19,
+    "zinium": 250,
+    "longname": "Rune to add +2 spell/skill to your Rixx-Tec gear",
+    "shortname": "+2 spell/skill",
+    "blueprint": null,
+    "slots": 2,
+    "tags": []
+  },
+  {
+    "index": 20,
+    "zinium": 300,
+    "longname": "Make your Rixx-Tec gear indestructible",
+    "shortname": "Make your Rixx-Tec gear indestructible",
+    "blueprint": "everlasting",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 21,
+    "zinium": 400,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 22,
+    "zinium": 450,
+    "longname": "Rune to add +8 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+8 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 23,
+    "zinium": 500,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 24,
+    "zinium": 505,
+    "longname": "Rune to add +30 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+30 hp/sp/ep max",
+    "blueprint": "vitals",
+    "slots": 5,
+    "tags": []
+  },
+  {
+    "index": 25,
+    "zinium": 525,
+    "longname": "Rune to add +1 spell/skill to your Rixx-Tec gear",
+    "shortname": "+1 spell/skill",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 26,
+    "zinium": 600,
+    "longname": "Rune to add +2 spell/skill to your Rixx-Tec gear",
+    "shortname": "+2 spell/skill",
+    "blueprint": null,
+    "slots": 2,
+    "tags": []
+  },
+  {
+    "index": 27,
+    "zinium": 750,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 28,
+    "zinium": 755,
+    "longname": "Enchant your Rixx-Tec gear to become magically heavy (True HW)",
+    "shortname": "Enchant your Rixx-Tec gear to become magically heavy (True HW)",
+    "blueprint": "solid lead",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 29,
+    "zinium": 765,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 30,
+    "zinium": 790,
+    "longname": "Rune to add +8 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+8 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 31,
+    "zinium": 800,
+    "longname": "Rune to add +2 stat to your Rixx-Tec gear",
+    "shortname": "+2 stat",
+    "blueprint": null,
+    "slots": 2,
+    "tags": ["stat"]
+  },
+  {
+    "index": 32,
+    "zinium": 840,
+    "longname": "Make your Rixx-Tec gear grant additional heart beats",
+    "shortname": "fast metabolism",
+    "blueprint": "metabolism",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 33,
+    "zinium": 850,
+    "longname": "Rune to add +4 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+4 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 1,
+    "tags": []
+  },
+  {
+    "index": 34,
+    "zinium": 888,
+    "longname": "Rune to add +1% exp rate to your Rixx-Tec gear",
+    "shortname": "+1% exp rate",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 35,
+    "zinium": 1000,
+    "longname": "Rune to increase the capacity of your rig type Rixx-Tec gear",
+    "shortname": "Rune to increase the capacity of your rig type Rixx-Tec gear",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 36,
+    "zinium": 1100,
+    "longname": "Make your Rixx-Tec gear indestructible",
+    "shortname": "Make your Rixx-Tec gear indestructible",
+    "blueprint": "everlasting",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 37,
+    "zinium": 1200,
+    "longname": "Rune to increase maximum condition of any gear",
+    "shortname": "Rune to increase maximum condition of any gear",
+    "blueprint": "reconstruction",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 38,
+    "zinium": 1250,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 39,
+    "zinium": 1260,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 40,
+    "zinium": 1370,
+    "longname": "Rune to add +1 spell/skill to your Rixx-Tec gear",
+    "shortname": "+1 spell/skill",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 41,
+    "zinium": 1451,
+    "longname": "You may create one Rixx-Tec gear of your choice",
+    "shortname": "one Rixx-Tec gear",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["equipment"]
+  },
+  {
+    "index": 42,
+    "zinium": 1500,
+    "longname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
+    "shortname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
+    "blueprint": "epic item",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 43,
+    "zinium": 1615,
+    "longname": "Rune to add +2 stat to your Rixx-Tec gear",
+    "shortname": "+2 stat",
+    "blueprint": null,
+    "slots": 2,
+    "tags": ["stat"]
+  },
+  {
+    "index": 44,
+    "zinium": 1800,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 45,
+    "zinium": 1850,
+    "longname": "Rune to add +2 spell/skill to your Rixx-Tec gear",
+    "shortname": "+2 spell/skill",
+    "blueprint": null,
+    "slots": 2,
+    "tags": []
+  },
+  {
+    "index": 46,
+    "zinium": 1875,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 47,
+    "zinium": 1900,
+    "longname": "Rune to add +2 spell/skill to your Rixx-Tec gear",
+    "shortname": "+2 spell/skill",
+    "blueprint": null,
+    "slots": 2,
+    "tags": []
+  },
+  {
+    "index": 48,
+    "zinium": 1910,
+    "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
+    "shortname": "+1% spell/skill haste",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 49,
+    "zinium": 1930,
+    "longname": "Rune to add +8 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+8 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 50,
+    "zinium": 1960,
+    "longname": "Rune to add +4 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+4 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 1,
+    "tags": []
+  },
+  {
+    "index": 51,
+    "zinium": 1990,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 52,
+    "zinium": 2000,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 53,
+    "zinium": 2010,
+    "longname": "Rune to increase the capacity of your rig type Rixx-Tec gear",
+    "shortname": "Rune to increase the capacity of your rig type Rixx-Tec gear",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 54,
+    "zinium": 2121,
+    "longname": "Rune to add +1% exp rate to your Rixx-Tec gear",
+    "shortname": "+1% exp rate",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 55,
+    "zinium": 2150,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 56,
+    "zinium": 2180,
+    "longname": "Rune to add +8 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+8 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 57,
+    "zinium": 2190,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 58,
+    "zinium": 2400,
+    "longname": "Rune to add +1 bonus to your Rixx-Tec gear",
+    "shortname": "+1 bonus",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 59,
+    "zinium": 2425,
+    "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
+    "shortname": "+1% spell/skill haste",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 60,
+    "zinium": 2445,
+    "longname": "Rune to add +30 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+30 hp/sp/ep max",
+    "blueprint": "vitals",
+    "slots": 5,
+    "tags": []
+  },
+  {
+    "index": 61,
+    "zinium": 2450,
+    "longname": "Rune to add +1 spell/skill to your Rixx-Tec gear",
+    "shortname": "+1 spell/skill",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 62,
+    "zinium": 2600,
+    "longname": "Rune to add +2 stat to your Rixx-Tec gear",
+    "shortname": "+2 stat",
+    "blueprint": null,
+    "slots": 2,
+    "tags": ["stat"]
+  },
+  {
+    "index": 63,
+    "zinium": 2670,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 64,
+    "zinium": 2700,
+    "longname": "Rune to add +2 spell/skill to your Rixx-Tec gear",
+    "shortname": "+2 spell/skill",
+    "blueprint": null,
+    "slots": 2,
+    "tags": []
+  },
+  {
+    "index": 65,
+    "zinium": 2855,
+    "longname": "Enchant your Rixx-Tec gear to become magically heavy (True HW)",
+    "shortname": "Enchant your Rixx-Tec gear to become magically heavy (True HW)",
+    "blueprint": "solid lead",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 66,
+    "zinium": 2890,
+    "longname": "Rune to add +4 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+4 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 1,
+    "tags": []
+  },
+  {
+    "index": 67,
+    "zinium": 2900,
+    "longname": "Rune to add +2 stat to your Rixx-Tec gear",
+    "shortname": "+2 stat",
+    "blueprint": null,
+    "slots": 2,
+    "tags": ["stat"]
+  },
+  {
+    "index": 68,
+    "zinium": 2950,
+    "longname": "Rune to add +2 spell/skill to your Rixx-Tec gear",
+    "shortname": "+2 spell/skill",
+    "blueprint": null,
+    "slots": 2,
+    "tags": []
+  },
+  {
+    "index": 69,
+    "zinium": 2990,
+    "longname": "Rune to add +2 bonus to your Rixx-Tec gear",
+    "shortname": "+2 bonus",
+    "blueprint": null,
+    "slots": 4,
+    "tags": []
+  },
+  {
+    "index": 70,
+    "zinium": 2995,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 71,
+    "zinium": 3000,
+    "longname": "You may create one Rixx-Tec gear of your choice",
+    "shortname": "one Rixx-Tec gear",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["equipment"]
+  },
+  {
+    "index": 72,
+    "zinium": 3050,
+    "longname": "Rune to increase maximum condition of any gear",
+    "shortname": "Rune to increase maximum condition of any gear",
+    "blueprint": "reconstruction",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 73,
+    "zinium": 3100,
+    "longname": "Rune to add +1% exp rate to your Rixx-Tec gear",
+    "shortname": "+1% exp rate",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 74,
+    "zinium": 3150,
+    "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
+    "shortname": "+1% spell/skill haste",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 75,
+    "zinium": 3165,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 76,
+    "zinium": 3190,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 77,
+    "zinium": 3200,
+    "longname": "Rune to add +8 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+8 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 78,
+    "zinium": 3230,
+    "longname": "Make your Rixx-Tec gear grant additional heart beats",
+    "shortname": "fast metabolism",
+    "blueprint": "metabolism",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 79,
+    "zinium": 3290,
+    "longname": "Rune to add +1 spell/skill to your Rixx-Tec gear",
+    "shortname": "+1 spell/skill",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 80,
+    "zinium": 3295,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 81,
+    "zinium": 3300,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 82,
+    "zinium": 3633,
+    "longname": "Make your Rixx-Tec gear indestructible",
+    "shortname": "Make your Rixx-Tec gear indestructible",
+    "blueprint": "everlasting",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 83,
+    "zinium": 3699,
+    "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
+    "shortname": "+1% spell/skill haste",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 84,
+    "zinium": 3700,
+    "longname": "Rune to add +2 spell/skill to your Rixx-Tec gear",
+    "shortname": "+2 spell/skill",
+    "blueprint": null,
+    "slots": 2,
+    "tags": []
+  },
+  {
+    "index": 85,
+    "zinium": 3725,
+    "longname": "Rune to add +3% spell/skill efficiency to your Rixx-Tec gear",
+    "shortname": "+3% spell/skill efficiency",
+    "blueprint": "efficiency",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 86,
+    "zinium": 3750,
+    "longname": "Rune to add +4 hp/sp/ep max to your Rixx-Tec gear",
+    "shortname": "+4 hp/sp/ep max",
+    "blueprint": null,
+    "slots": 1,
+    "tags": []
+  },
+  {
+    "index": 87,
+    "zinium": 3770,
+    "longname": "Rune to increase maximum condition of any gear",
+    "shortname": "Rune to increase maximum condition of any gear",
+    "blueprint": "reconstruction",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 88,
+    "zinium": 3777,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 89,
+    "zinium": 3800,
+    "longname": "Rune to add +1 bonus to your Rixx-Tec gear",
+    "shortname": "+1 bonus",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 90,
+    "zinium": 4000,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 91,
+    "zinium": 4600,
+    "longname": "Rune to add +2 spell/skill to your Rixx-Tec gear",
+    "shortname": "+2 spell/skill",
+    "blueprint": null,
+    "slots": 2,
+    "tags": []
+  },
+  {
+    "index": 92,
+    "zinium": 4620,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 93,
+    "zinium": 4650,
+    "longname": "Rune to add +1 spell/skill to your Rixx-Tec gear",
+    "shortname": "+1 spell/skill",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 94,
+    "zinium": 4800,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 95,
+    "zinium": 5000,
+    "longname": "Enchant your Rixx-Tec gear to become magically heavy (True HW)",
+    "shortname": "Enchant your Rixx-Tec gear to become magically heavy (True HW)",
+    "blueprint": "solid lead",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 96,
+    "zinium": 5055,
+    "longname": "Rune to increase the capacity of your rig type Rixx-Tec gear",
+    "shortname": "Rune to increase the capacity of your rig type Rixx-Tec gear",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 97,
+    "zinium": 5555,
+    "longname": "Rune to increase maximum condition of any gear",
+    "shortname": "Rune to increase maximum condition of any gear",
+    "blueprint": "reconstruction",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 98,
+    "zinium": 5600,
+    "longname": "Rune to add +1 stat to your Rixx-Tec gear",
+    "shortname": "+1 stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["stat"]
+  },
+  {
+    "index": 99,
+    "zinium": 5660,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 100,
+    "zinium": 5700,
+    "longname": "Rune to add +2 bonus to your Rixx-Tec gear",
+    "shortname": "+2 bonus",
+    "blueprint": null,
+    "slots": 4,
+    "tags": []
+  },
+  {
+    "index": 101,
+    "zinium": 6000,
+    "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
+    "shortname": "+1% spell/skill haste",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 102,
+    "zinium": 6500,
+    "longname": "Rune to add +1 spell/skill to your Rixx-Tec gear",
+    "shortname": "+1 spell/skill",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 103,
+    "zinium": 7000,
+    "longname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
+    "shortname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 104,
+    "zinium": 7050,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 105,
+    "zinium": 8000,
+    "longname": "Rune to add +1% exp rate to your Rixx-Tec gear",
+    "shortname": "+1% exp rate",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 106,
+    "zinium": 8100,
+    "longname": "Rune to reduce weight on any item",
+    "shortname": "reduce weight",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["other_item"]
+  },
+  {
+    "index": 107,
+    "zinium": 8888,
+    "longname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
+    "shortname": "increase zinium capacity",
+    "blueprint": "epic item",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 108,
+    "zinium": 9000,
+    "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
+    "shortname": "+1% spell/skill haste",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 109,
+    "zinium": 9300,
+    "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
+    "shortname": "resistance against mana flux",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 110,
+    "zinium": 9500,
+    "longname": "Rune to increase maximum condition of any gear",
+    "shortname": "Rune to increase maximum condition of any gear",
+    "blueprint": "reconstruction",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 111,
+    "zinium": 9990,
+    "longname": "Make your Rixx-Tec gear grant additional heart beats",
+    "shortname": "fast metabolism",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 112,
+    "zinium": 10000,
+    "longname": "Make any of your gear to grant additional heart beats",
+    "shortname": "fast metabolism",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["other_item"]
+  },
+  {
+    "index": 113,
+    "zinium": 11000,
+    "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
+    "shortname": "+1% spell/skill haste",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 114,
+    "zinium": 11111,
+    "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
+    "shortname": "decrease weight",
+    "blueprint": "density control",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 115,
+    "zinium": 11555,
+    "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
+    "shortname": "+1% spell/skill haste",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 116,
+    "zinium": 12000,
+    "longname": "Rune to add +3% spell/skill efficiency to your Rixx-Tec gear",
+    "shortname": "+3% spell/skill efficiency",
+    "blueprint": "efficiency",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 117,
+    "zinium": 12222,
+    "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
+    "shortname": "resistance against mana flux",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 118,
+    "zinium": 14000,
+    "longname": "Rune to increase maximum condition of any gear",
+    "shortname": "Rune to increase maximum condition of any gear",
+    "blueprint": "reconstruction",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 119,
+    "zinium": 17000,
+    "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
+    "shortname": "resistance against mana flux",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 120,
+    "zinium": 20000,
+    "longname": "Gain 'Packrat' rank",
+    "shortname": "Gain 'Packrat' rank",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 121,
+    "zinium": 24000,
+    "longname": "Rune to increase maximum condition of any gear",
+    "shortname": "Rune to increase maximum condition of any gear",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 122,
+    "zinium": 25000,
+    "longname": "Flawed quantum Batverse-Matrix",
+    "shortname": "Flawed quantum Batverse-Matrix",
+    "blueprint": "INELIGIBLE) (shattered",
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 123,
+    "zinium": 27000,
+    "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
+    "shortname": "resistance against mana flux",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 124,
+    "zinium": 30000,
+    "longname": "Gain 'Hoarder' rank",
+    "shortname": "Gain 'Hoarder' rank",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 125,
+    "zinium": 32000,
+    "longname": "Rune to increase maximum condition of any gear",
+    "shortname": "Rune to increase maximum condition of any gear",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 126,
+    "zinium": 33333,
+    "longname": "Rune to permanently change damage type of any weapon",
+    "shortname": "Rune to permanently change damage type of any weapon",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 127,
+    "zinium": 35000,
+    "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
+    "shortname": "resistance against mana flux",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 128,
+    "zinium": 38000,
+    "longname": "Rune to add spell/skill to your Rixx-Tec gear",
+    "shortname": "spell/skill",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 129,
+    "zinium": 40000,
+    "longname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
+    "shortname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 130,
+    "zinium": 42000,
+    "longname": "Rune to add increased healing effect to your Rixx-Tec gear",
+    "shortname": "increased healing effect",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 131,
+    "zinium": 45000,
+    "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
+    "shortname": "resistance against mana flux",
+    "blueprint": null,
+    "slots": 0,
+    "tags": []
+  },
+  {
+    "index": 132,
+    "zinium": 47000,
+    "longname": "Rune to replace a stat with another stat on any item",
+    "shortname": "replace a stat with another stat",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["other_item"]
+  },
+  {
+    "index": 133,
+    "zinium": 50000,
+    "longname": "Rixx supercharged Stellar Core Fragment",
+    "shortname": "Rixx supercharged Stellar Core Fragment",
+    "blueprint": "",
+    "slots": 8,
+    "tags": []
+  }
+]

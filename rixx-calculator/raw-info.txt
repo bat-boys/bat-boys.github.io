@@ -1,0 +1,229 @@
+.---------------------------------------------------------------------------------.
+| Recycling Items                                                                 |
+|   value <item>/noeq                  - Calculate amount of zinium you can get   |
+|   offer <item>/noeq                  - Turn items into zinium                   |
+|                                                                                 |
+| Rixx-Tec Gear                                                                   |
+|   list <armour/material>             - List available armour and material types |
+|   create <armour> from <material>    - Create rixx-tec gear                     |
+|   recycle <item>                     - Recycle previously gained rixx-tec gear  |
+|   upgrade <item> with <type> <level> - Add a bonus effect to your rixx-tec gear |
+|   list upgrades                      - List available effects and bonus levels  |
+|   list blueprints                    - List available blueprints                |
+|   list rixx-tec                      - List all your registered rixx-tec gear   |
+|   lost <rixx-tec>                    - Recycle your lost rixx-tec gear          |
+|   runeinfo                           - Shows amount and zinium value of runes   |
+|                                                                                 |
+| Recycle Event                                                                   |
+|   event info                         - Info on current and upcoming recycle     |
+|   event score                        - Current recycle zinium score             |
+|   event help                         - General help of recycle event and gear   |
+|   event changelog                    - Changes applied to recycle event         |
+|   buy case                           - Receive blueprint storage case for 100g  |
+|   event help oneliner                - Short helps from various topics          |
+|   list rewards                       - List rewards and required zinium         |
+|   redeem <index>                     - Receive a spesific zinium reward         |
+`---------------------------------------------------------------------------------'
+
+list upgrades
+Name                      | Description
+--------------------------------------------------------------------------------
+luck                      | Your luck is increased.
+lifeline                  | You occasionally receive emergency heal when at low health.
+longevity                 | You are protected against aging effects.
+speedy spells             | You occasionally hasten your spells.
+mana infusion             | You regenerate mana sporadically.
+lunar madness             | The lunar cycle affects your size and nimbleness.
+sorcerer's moon           | The lunar cycle affects your maximum mana.
+adrenaline rush           | You regenerate endurance sporadically.
+augmented skills          | Your skills gain distortion abilities which are subject to time dilation.
+augmented spells          | Your spells gain distortion abilities which are subject to time dilation.
+hemet's blessing          | You are occasionally protected from disorientation.
+speedy manoeuvres         | You occasionally hasten your skills.
+curath's blessing         | You are invigorated by slaughter.
+survival instinct         | You regenerate vitality sporadically.
+tarmalen's blessing       | Healing spells targeting you are more effective.
+efficient skill use       | Your skills are occasionally less draining.
+thousand reflections      | Reflections of you occasionally appear to distract your enemies.
+vitality amplification    | Your vitality is occasionally amplified.
+efficient spellcasting    | Your spells are occasionally less draining.
+--------------------------------------------------------------------------------
+
+list blueprints
+Rixx-Tec blueprint of equipment frame         : You have 0
+Rixx-Tec blueprint of solid lead              : You have 0
+Rixx-Tec blueprint of metabolism              : You have 0
+Rixx-Tec blueprint of efficiency              : You have 0
+Rixx-Tec blueprint of backpack                : You have 0
+Rixx-Tec blueprint of EPIC item               : You have 0
+Rixx-Tec blueprint of satchel                 : You have 0
+Rixx-Tec blueprint of vitals                  : You have 0
+Rixx-Tec blueprint of density control         : You have 0
+Rixx-Tec blueprint of reconstruction          : You have 0
+Rixx-Tec blueprint of everlasting             : You have 0
+
+runeinfo
+ 6 x Rune to add +4 hp/sp/ep max to your Rixx-Tec gear                  reduces zinium capacity by 1
+ 6 x Rune to add +2 stat to your Rixx-Tec gear                          reduces zinium capacity by 2
+ 3 x Rune to add +2 bonus to your Rixx-Tec gear                         reduces zinium capacity by 4
+ 1 x Rixx supercharged Stellar Core Fragment                            reduces zinium capacity by 8
+10 x Rune to add +2 spell/skill to your Rixx-Tec gear                   reduces zinium capacity by 2
+ 2 x Rune to add +30 hp/sp/ep max to your Rixx-Tec gear                 reduces zinium capacity by 5
+15 x Rune to add +1 stat to your Rixx-Tec gear                          reduces zinium capacity by 1
+ 3 x Rune to add +1 bonus to your Rixx-Tec gear                         reduces zinium capacity by 2
+ 1 x Rune to add increased healing effect to your Rixx-Tec gear         reduces zinium capacity by 5
+ 6 x Rune to add resistance against mana flux to your Rixx-Tec gear     reduces zinium capacity by 1
+ 2 x Rune to add +3% spell/skill efficiency to your Rixx-Tec gear       reduces zinium capacity by 5
+ 6 x Rune to add +8 hp/sp/ep max to your Rixx-Tec gear                  reduces zinium capacity by 2
+ 7 x Rune to add +1 spell/skill to your Rixx-Tec gear                   reduces zinium capacity by 1
+ 1 x Flawed quantum Batverse-Matrix                                     reduces zinium capacity by 6
+ 1 x Rune to add spell/skill to your Rixx-Tec gear                      reduces zinium capacity by 1
+ 9 x Rune to add +1% spell/skill haste to your Rixx-Tec gear            reduces zinium capacity by 2
+ 3 x Enchant your Rixx-Tec gear to become magically heavy (True HW)     reduces zinium capacity by 0
+15 x Rune to decrease the weight of your Rixx-Tec gear by 10%           reduces zinium capacity by 0
+ 3 x Make your Rixx-Tec gear indestructible                             reduces zinium capacity by 0
+ 1 x Rune to reduce weight on any item                                  reduces zinium capacity by 0
+ 1 x Rune to permanently change damage type of any weapon               reduces zinium capacity by 0
+ 1 x Rune to replace a stat with another stat on any item               reduces zinium capacity by 0
+ 6 x Rune to add +1% exp rate to your Rixx-Tec gear                     reduces zinium capacity by 0
+ 8 x Rune to increase maximum condition of any gear                     reduces zinium capacity by 0
+ 3 x Rune to increase the capacity of your rig type Rixx-Tec gear       reduces zinium capacity by 0
+ 1 x Make any of your gear to grant additional heart beats              reduces zinium capacity by 0
+ 4 x Rune to increase zinium capacity of your Rixx-Tec gear by 1        reduces zinium capacity by 0
+ 3 x Make your Rixx-Tec gear grant additional heart beats               reduces zinium capacity by 0
+
+Index  Zinium cost & Reward                                                      Status
+------------------------------------------------------------------------------------------
+[  1]  1......You may create one Rixx-Tec gear of your choice                 (ELIGIBLE TO CREATE)
+[  2]  5......Rune to add +8 hp/sp/ep max to your Rixx-Tec gear               (ELIGIBLE)
+[  3]  10.....Rune to add +2 stat to your Rixx-Tec gear                       (silk equipment frame)
+[  4]  20.....Rune to add +2 bonus to your Rixx-Tec gear                      (ELIGIBLE)
+[  5]  25.....Rune to add +1 stat to your Rixx-Tec gear                       (silk equipment frame)
+[  6]  28.....Rune to add +4 hp/sp/ep max to your Rixx-Tec gear               (ELIGIBLE)
+[  7]  30.....Rune to add +2 spell/skill to your Rixx-Tec gear                (ELIGIBLE)
+[  8]  40.....Rune to decrease the weight of your Rixx-Tec gear by 10%        (silk equipment frame)
+[  9]  50.....Rune to add +1% exp rate to your Rixx-Tec gear                  (silk equipment frame)
+[ 10]  60.....Rune to add +1 bonus to your Rixx-Tec gear                      (silk equipment frame)
+[ 11]  75.....Rune to add +2 stat to your Rixx-Tec gear                       (silk equipment frame)
+[ 12]  90.....Rune to add +2 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 13]  125....Rune to add +1% exp rate to your Rixx-Tec gear                  (silk equipment frame)
+[ 14]  175....Rune to add +1 stat to your Rixx-Tec gear                       (silk equipment frame)
+[ 15]  190....Rune to add +1 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 16]  220....Rune to add +4 hp/sp/ep max to your Rixx-Tec gear               (INELIGIBLE)
+[ 17]  230....Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 18]  249....Rune to add +1% spell/skill haste to your Rixx-Tec gear         (INELIGIBLE)
+[ 19]  250....Rune to add +2 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 20]  300....Make your Rixx-Tec gear indestructible                          (Requires rixx-tec blueprint of everlasting)
+[ 21]  400....Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 22]  450....Rune to add +8 hp/sp/ep max to your Rixx-Tec gear               (INELIGIBLE)
+[ 23]  500....Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 24]  505....Rune to add +30 hp/sp/ep max to your Rixx-Tec gear              (Requires rixx-tec blueprint of vitals)
+[ 25]  525....Rune to add +1 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 26]  600....Rune to add +2 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 27]  750....Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 28]  755....Enchant your Rixx-Tec gear to become magically heavy (True HW)  (Requires rixx-tec blueprint of solid lead)
+[ 29]  765....Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 30]  790....Rune to add +8 hp/sp/ep max to your Rixx-Tec gear               (INELIGIBLE)
+[ 31]  800....Rune to add +2 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 32]  840....Make your Rixx-Tec gear grant additional heart beats            (Requires rixx-tec blueprint of metabolism)
+[ 33]  850....Rune to add +4 hp/sp/ep max to your Rixx-Tec gear               (INELIGIBLE)
+[ 34]  888....Rune to add +1% exp rate to your Rixx-Tec gear                  (INELIGIBLE)
+[ 35]  1000...Rune to increase the capacity of your rig type Rixx-Tec gear    (INELIGIBLE)
+[ 36]  1100...Make your Rixx-Tec gear indestructible                          (Requires rixx-tec blueprint of everlasting)
+[ 37]  1200...Rune to increase maximum condition of any gear                  (Requires rixx-tec blueprint of reconstruction)
+[ 38]  1250...Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 39]  1260...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 40]  1370...Rune to add +1 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 41]  1451...You may create one Rixx-Tec gear of your choice                 (INELIGIBLE)
+[ 42]  1500...Rune to increase zinium capacity of your Rixx-Tec gear by 1     (Requires rixx-tec blueprint of epic item)
+[ 43]  1615...Rune to add +2 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 44]  1800...Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 45]  1850...Rune to add +2 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 46]  1875...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 47]  1900...Rune to add +2 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 48]  1910...Rune to add +1% spell/skill haste to your Rixx-Tec gear         (INELIGIBLE)
+[ 49]  1930...Rune to add +8 hp/sp/ep max to your Rixx-Tec gear               (INELIGIBLE)
+[ 50]  1960...Rune to add +4 hp/sp/ep max to your Rixx-Tec gear               (INELIGIBLE)
+[ 51]  1990...Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 52]  2000...Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 53]  2010...Rune to increase the capacity of your rig type Rixx-Tec gear    (INELIGIBLE)
+[ 54]  2121...Rune to add +1% exp rate to your Rixx-Tec gear                  (INELIGIBLE)
+[ 55]  2150...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 56]  2180...Rune to add +8 hp/sp/ep max to your Rixx-Tec gear               (INELIGIBLE)
+[ 57]  2190...Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 58]  2400...Rune to add +1 bonus to your Rixx-Tec gear                      (INELIGIBLE)
+[ 59]  2425...Rune to add +1% spell/skill haste to your Rixx-Tec gear         (INELIGIBLE)
+[ 60]  2445...Rune to add +30 hp/sp/ep max to your Rixx-Tec gear              (Requires rixx-tec blueprint of vitals)
+[ 61]  2450...Rune to add +1 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 62]  2600...Rune to add +2 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 63]  2670...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 64]  2700...Rune to add +2 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 65]  2855...Enchant your Rixx-Tec gear to become magically heavy (True HW)  (Requires rixx-tec blueprint of solid lead)
+[ 66]  2890...Rune to add +4 hp/sp/ep max to your Rixx-Tec gear               (INELIGIBLE)
+[ 67]  2900...Rune to add +2 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 68]  2950...Rune to add +2 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 69]  2990...Rune to add +2 bonus to your Rixx-Tec gear                      (INELIGIBLE)
+[ 70]  2995...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 71]  3000...You may create one Rixx-Tec gear of your choice                 (INELIGIBLE)
+[ 72]  3050...Rune to increase maximum condition of any gear                  (Requires rixx-tec blueprint of reconstruction)
+[ 73]  3100...Rune to add +1% exp rate to your Rixx-Tec gear                  (INELIGIBLE)
+[ 74]  3150...Rune to add +1% spell/skill haste to your Rixx-Tec gear         (INELIGIBLE)
+[ 75]  3165...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 76]  3190...Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 77]  3200...Rune to add +8 hp/sp/ep max to your Rixx-Tec gear               (INELIGIBLE)
+[ 78]  3230...Make your Rixx-Tec gear grant additional heart beats            (Requires rixx-tec blueprint of metabolism)
+[ 79]  3290...Rune to add +1 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 80]  3295...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 81]  3300...Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 82]  3633...Make your Rixx-Tec gear indestructible                          (Requires rixx-tec blueprint of everlasting)
+[ 83]  3699...Rune to add +1% spell/skill haste to your Rixx-Tec gear         (INELIGIBLE)
+[ 84]  3700...Rune to add +2 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 85]  3725...Rune to add +3% spell/skill efficiency to your Rixx-Tec gear    (Requires rixx-tec blueprint of efficiency)
+[ 86]  3750...Rune to add +4 hp/sp/ep max to your Rixx-Tec gear               (INELIGIBLE)
+[ 87]  3770...Rune to increase maximum condition of any gear                  (Requires rixx-tec blueprint of reconstruction)
+[ 88]  3777...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 89]  3800...Rune to add +1 bonus to your Rixx-Tec gear                      (INELIGIBLE)
+[ 90]  4000...Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 91]  4600...Rune to add +2 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 92]  4620...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[ 93]  4650...Rune to add +1 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[ 94]  4800...Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 95]  5000...Enchant your Rixx-Tec gear to become magically heavy (True HW)  (Requires rixx-tec blueprint of solid lead)
+[ 96]  5055...Rune to increase the capacity of your rig type Rixx-Tec gear    (INELIGIBLE)
+[ 97]  5555...Rune to increase maximum condition of any gear                  (Requires rixx-tec blueprint of reconstruction)
+[ 98]  5600...Rune to add +1 stat to your Rixx-Tec gear                       (INELIGIBLE)
+[ 99]  5660...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[100]  5700...Rune to add +2 bonus to your Rixx-Tec gear                      (INELIGIBLE)
+[101]  6000...Rune to add +1% spell/skill haste to your Rixx-Tec gear         (INELIGIBLE)
+[102]  6500...Rune to add +1 spell/skill to your Rixx-Tec gear                (INELIGIBLE)
+[103]  7000...Rune to increase zinium capacity of your Rixx-Tec gear by 1     (INELIGIBLE)
+[104]  7050...Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[105]  8000...Rune to add +1% exp rate to your Rixx-Tec gear                  (INELIGIBLE)
+[106]  8100...Rune to reduce weight on any item                               (INELIGIBLE)
+[107]  8888...Rune to increase zinium capacity of your Rixx-Tec gear by 1     (Requires rixx-tec blueprint of epic item)
+[108]  9000...Rune to add +1% spell/skill haste to your Rixx-Tec gear         (INELIGIBLE)
+[109]  9300...Rune to add resistance against mana flux to your Rixx-Tec gear  (INELIGIBLE)
+[110]  9500...Rune to increase maximum condition of any gear                  (Requires rixx-tec blueprint of reconstruction)
+[111]  9990...Make your Rixx-Tec gear grant additional heart beats            (INELIGIBLE)
+[112]  10000..Make any of your gear to grant additional heart beats           (INELIGIBLE)
+[113]  11000..Rune to add +1% spell/skill haste to your Rixx-Tec gear         (INELIGIBLE)
+[114]  11111..Rune to decrease the weight of your Rixx-Tec gear by 10%        (Requires rixx-tec blueprint of density control)
+[115]  11555..Rune to add +1% spell/skill haste to your Rixx-Tec gear         (INELIGIBLE)
+[116]  12000..Rune to add +3% spell/skill efficiency to your Rixx-Tec gear    (Requires rixx-tec blueprint of efficiency)
+[117]  12222..Rune to add resistance against mana flux to your Rixx-Tec gear  (INELIGIBLE)
+[118]  14000..Rune to increase maximum condition of any gear                  (Requires rixx-tec blueprint of reconstruction)
+[119]  17000..Rune to add resistance against mana flux to your Rixx-Tec gear  (INELIGIBLE)
+[120]  20000..Gain 'Packrat' rank                                             (INELIGIBLE)
+[121]  24000..Rune to increase maximum condition of any gear                  (INELIGIBLE)
+[122]  25000..Flawed quantum Batverse-Matrix                                  (INELIGIBLE) (shattered)
+[123]  27000..Rune to add resistance against mana flux to your Rixx-Tec gear  (INELIGIBLE)
+[124]  30000..Gain 'Hoarder' rank                                             (INELIGIBLE)
+[125]  32000..Rune to increase maximum condition of any gear                  (INELIGIBLE)
+[126]  33333..Rune to permanently change damage type of any weapon            (INELIGIBLE)
+[127]  35000..Rune to add resistance against mana flux to your Rixx-Tec gear  (INELIGIBLE)
+[128]  38000..Rune to add spell/skill to your Rixx-Tec gear                   (INELIGIBLE)
+[129]  40000..Rune to increase zinium capacity of your Rixx-Tec gear by 1     (INELIGIBLE)
+[130]  42000..Rune to add increased healing effect to your Rixx-Tec gear      (INELIGIBLE)
+[131]  45000..Rune to add resistance against mana flux to your Rixx-Tec gear  (INELIGIBLE)
+[132]  47000..Rune to replace a stat with another stat on any item            (INELIGIBLE)
+[133]  50000..Rixx supercharged Stellar Core Fragment                         (INELIGIBLE) (shattered)

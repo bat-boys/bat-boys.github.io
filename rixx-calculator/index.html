@@ -3,17 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello BalmUI</title>
+    <title>Rixx calculator</title>
     <link rel="stylesheet" href="https://unpkg.com/balm-ui/dist/balm-ui.css" />
   </head>
   <body>
     <div id="app">
       <ui-button icon="add" @click="$alert(message)">SayHi</ui-button>
+      <ui-grid class="demo-grid">
+        <ui-grid-cell class="demo-cell"><equipment></equipment></ui-grid-cell>
+        <ui-grid-cell class="demo-cell"><equipment></equipment></ui-grid-cell>
+        <ui-grid-cell class="demo-cell">
+          <ui-card outlined class="demo-card">
+            <template v-for="(item, index) in runes" :key="`item${index}`">
+              <a v-ripple class="demo-card-article">
+                <h2 :class="[$tt('headline5'), 'demo-card-article__title']">
+                  {{ item.shortname }}
+                </h2>
+                <p class="demo-card-article__snippet">{{ item.longname }}</p>
+              </a>
+              <ui-list-divider></ui-list-divider>
+            </template>
+          </ui-card>
+        </ui-grid-cell>
+      </ui-grid>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="https://unpkg.com/balm-ui"></script>
-    <script src="https://unpkg.com/balm-ui/dist/balm-ui-plus.js"></script>
     <script>
+      const Equipment = {
+        template: `
+          <div>{{ message }}</div>
+        `,
+        setup() {
+          // Use the reusable logic in the component setup
+          const message = "Equipment";
+
+          return {
+            message,
+          };
+        },
+      };
+
       const app = Vue.createApp({
         setup() {
           var message = "Hello BalmUI";
@@ -22,10 +52,31 @@
             message,
           };
         },
+        components: {
+          Equipment,
+        },
+        data() {
+          return {
+            runes: [],
+          };
+        },
+        created() {
+          fetch("data.json")
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then((data) => (this.runes = data))
+            .catch((error) => {
+              console.error("There was a problem loading the data:", error);
+            });
+        },
       });
 
       app.use(BalmUI);
-      app.use(BalmUIPlus);
+      // app.use(BalmUIPlus);
 
       app.mount("#app");
     </script>
