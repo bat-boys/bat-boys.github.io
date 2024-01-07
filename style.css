@@ -210,6 +210,10 @@ hr {
   padding: 0.5em;
 }
 
+.pure-form-aligned .pure-control-group label {
+  width: 33.33%;
+}
+
 .empty {
   height: 5.5em;
   padding: 0.5em;
@@ -225,6 +229,10 @@ hr {
   padding-left: 0.5em;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .longname {
   font-size: 10pt;
   font-weight: 300;
@@ -232,7 +240,8 @@ hr {
 }
 
 .zincost,
-.slots {
+.slots,
+.blueprint {
   color: #817a55;
 }
 
@@ -360,10 +369,6 @@ select {
 
 input + button {
   margin-left: 0.5em;
-}
-
-.clear {
-  float: clear;
 }
 
 .white {
