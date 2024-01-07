@@ -4,36 +4,127 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rixx calculator</title>
-    <link rel="stylesheet" href="https://unpkg.com/balm-ui/dist/balm-ui.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+      integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <div id="app">
-      <ui-button icon="add" @click="$alert(message)">SayHi</ui-button>
-      <ui-grid class="demo-grid">
-        <ui-grid-cell class="demo-cell"><equipment></equipment></ui-grid-cell>
-        <ui-grid-cell class="demo-cell"><equipment></equipment></ui-grid-cell>
-        <ui-grid-cell class="demo-cell">
-          <ui-card outlined class="demo-card">
-            <template v-for="(item, index) in runes" :key="`item${index}`">
-              <a v-ripple class="demo-card-article">
-                <h2 :class="[$tt('headline5'), 'demo-card-article__title']">
-                  {{ item.shortname }}
-                </h2>
-                <p class="demo-card-article__snippet">{{ item.longname }}</p>
-              </a>
-              <ui-list-divider></ui-list-divider>
-            </template>
-          </ui-card>
-        </ui-grid-cell>
-      </ui-grid>
+    <div id="layout">
+      <div class="header">
+        <h1>Rixx calculator</h1>
+        <h2>^o^</h2>
+      </div>
+      <div id="app" class="pure-g">
+        <div class="pure-u-1-4">
+          <div class="box"><h3>Runes</h3></div>
+          <div class="rune-filter">
+            <form class="pure-form pure-form-aligned">
+              <fieldset>
+                <div class="pure-control-group">
+                  <label for="aligned-name">{{ zinabs }} zin</label>
+                  <input
+                    type="range"
+                    id="aligned-name"
+                    min="0"
+                    max="100"
+                    v-model="zinpct"
+                  />
+                </div>
+                <div class="pure-control-group">
+                  <label>equipment</label>
+                  <input
+                    type="checkbox"
+                    id="rune-filter-equipment"
+                    v-model="checked.equipment"
+                  />
+                </div>
+                <div class="pure-control-group">
+                  <label>stat</label>
+                  <input
+                    type="checkbox"
+                    id="rune-filter-stat"
+                    v-model="checked.stat"
+                  />
+                </div>
+                <div class="pure-control-group">
+                  <label>
+                    slots
+                  </label>
+                  <input
+                    type="checkbox"
+                    id="runefilter-slots-0"
+                    v-model="checked.slots0"
+                  />
+                  0
+                  <input
+                    type="checkbox"
+                    id="runefilter-slots-1"
+                    v-model="checked.slots1"
+                  />
+                  1
+                  <input
+                    type="checkbox"
+                    id="runefilter-slots-2"
+                    v-model="checked.slots2"
+                  />
+                  2
+                  <input
+                    type="checkbox"
+                    id="runefilter-slots-4"
+                    v-model="checked.slots4"
+                  />
+                  >4
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <template v-for="item in filteredRunes" :key="`item${item.index}`">
+            <div class="box rune">
+              <div class="pure-g">
+                <div class="pure-u-1-3">
+                  <div class="left">
+                    <span class="index">{{ item.index }} #&nbsp;&nbsp;</span
+                    ><br /><br />
+                    <span class="zincost">{{ item.zinium }} zin</span><br />
+                    <span class="slots">{{ item.slots }} slo</span>
+                  </div>
+                </div>
+                <div class="pure-u-2-3">
+                  <div class="right">
+                    <span class="shortname">{{ item.shortname }}</span
+                    ><br /><br />
+                    <span class="longname">{{ item.longname }}</span><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+        <div class="pure-u-1-4">
+          <div class="box"><h3>Equipment 1</h3></div>
+          <div class="box empty">
+            fds
+          </div>
+        </div>
+        <div class="pure-u-1-4">
+          <div class="box"><h3>Equipment 2</h3></div>
+        </div>
+        <div class="pure-u-1-4">
+          <div class="box"><h3>Equipment 3</h3></div>
+        </div>
+      </div>
+      <div id="app"></div>
     </div>
     <script src="https://unpkg.com/vue"></script>
-    <script src="https://unpkg.com/balm-ui"></script>
     <script>
       const Equipment = {
         template: `
-          <div>{{ message }}</div>
-        `,
+           <div>{{ message }}</div>
+         `,
         setup() {
           // Use the reusable logic in the component setup
           const message = "Equipment";
@@ -44,20 +135,27 @@
         },
       };
 
-      const app = Vue.createApp({
-        setup() {
-          var message = "Hello BalmUI";
+      const mapLogarithmic = (value, inMin, inMax, outMin, outMax) => {
+        const inRange = inMax - inMin;
+        const outRange = Math.log(outMax / outMin);
+        const scale = outRange / inRange;
 
-          return {
-            message,
-          };
-        },
-        components: {
-          Equipment,
-        },
+        return Math.exp(scale * (value - inMin)) * outMin;
+      };
+
+      const app = Vue.createApp({
         data() {
           return {
+            checked: {
+              equipment: true,
+              stat: false,
+              slots0: true,
+              slots1: true,
+              slots2: true,
+              slots4: true,
+            },
             runes: [],
+            zinpct: 44,
           };
         },
         created() {
@@ -73,10 +171,30 @@
               console.error("There was a problem loading the data:", error);
             });
         },
+        components: {
+          Equipment,
+        },
+        computed: {
+          filteredRunes() {
+            return this.runes.filter(
+              (rune) =>
+                // zin
+                rune.zinium <= this.zinabs &&
+                // type
+                ((this.checked.equipment && rune.tags.includes("equipment")) ||
+                  (this.checked.stat && rune.tags.includes("stat"))) &&
+                // slots
+                ((this.checked.slots0 && rune.slots === 0) ||
+                  (this.checked.slots1 && rune.slots === 1) ||
+                  (this.checked.slots2 && rune.slots === 2) ||
+                  (this.checked.slots4 && rune.slots >= 4))
+            );
+          },
+          zinabs() {
+            return Math.round(mapLogarithmic(this.zinpct, 0, 100, 50, 50000));
+          },
+        },
       });
-
-      app.use(BalmUI);
-      // app.use(BalmUIPlus);
 
       app.mount("#app");
     </script>

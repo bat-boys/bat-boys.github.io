@@ -1,0 +1,476 @@
+/* http://paletton.com/#uid=34I0u0k3V4WaYgf7Lb1ac80gJaQ
+19171A, hue 301, dist 30, triad, add complementary
+ */
+
+.color-primary-0-1 {
+  background: #19171a;
+  color: #4d3a56;
+} /* Main Primary color */
+.color-primary-0-2 {
+  background: #19171a;
+  color: #362d3b;
+} /* Main Primary color */
+.color-primary-1 {
+  background: #4d3a56;
+  color: #19171a;
+} /* violetti */
+.color-primary-2 {
+  background: #362d3b;
+  color: #4d3a56;
+}
+.color-primary-3 {
+  background: #261e2a;
+  color: #4d3a56;
+}
+.color-primary-4 {
+  background: #301d3a;
+  color: #4d3a56;
+}
+
+.color-secondary-1-0 {
+  background: #232520;
+  color: #6a784f;
+} /* Main Secondary color (1) */
+.color-secondary-1-1 {
+  background: #6a784f;
+  color: #232520;
+}
+.color-secondary-1-2 {
+  background: #4b523e;
+  color: #6a784f;
+}
+.color-secondary-1-3 {
+  background: #353b28;
+  color: #6a784f;
+}
+.color-secondary-1-4 {
+  background: #425026;
+  color: #6a784f;
+}
+
+.color-secondary-2-0 {
+  background: #272622;
+  color: #817a55;
+} /* Main Secondary color (2) */
+.color-secondary-2-1 {
+  background: #817a55;
+  color: #272622;
+}
+.color-secondary-2-2 {
+  background: #585443;
+  color: #817a55;
+}
+.color-secondary-2-3 {
+  background: #403c2b;
+  color: #817a55;
+}
+.color-secondary-2-4 {
+  background: #564f29;
+  color: #817a55;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100% !important;
+  font-feature-settings: "liga" 0;
+}
+
+#layout {
+  min-height: 100% !important;
+}
+
+body {
+  background: #272622;
+  color: #4d3a56;
+}
+
+body,
+html,
+button,
+input,
+select,
+textarea,
+pre,
+.pure-g [class*="pure-u"] {
+  font-family: "Fira Mono", Monaco, monospace;
+  font-size: 11pt;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+#layout {
+  position: relative;
+  margin: 0 auto;
+  margin-left: 2em;
+  margin-right: 2em;
+  background: #19171a;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 800px;
+  margin-bottom: 50px;
+  line-height: 1.6em;
+}
+
+.header {
+  margin: 0 auto 0.5em auto;
+  line-height: 1.6em;
+  color: #333;
+  text-align: center;
+  padding-top: 2.5em;
+  padding-bottom: 2em;
+  /* border-bottom: 1px solid #817A55; */
+  background: #19171a;
+}
+
+.header h1 {
+  margin: 0.2em 0;
+  font-size: 36pt;
+  font-weight: 300;
+  color: #4d3a56;
+}
+
+.header.note-header {
+  display: flex;
+  align-items: center;
+}
+
+.header.note-header h1 {
+  text-align: left;
+  margin: 11pt;
+  font-size: 24pt;
+  font-weight: 300;
+  color: #4d3a56;
+  align-items: center;
+}
+
+.header .maploc {
+  align-self: flex-end;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 18pt;
+  font-weight: 300;
+  color: #362d3b;
+  padding: 0;
+  margin-top: 1em;
+}
+
+h3, /* etusivun taggroupit */
+strong.select2-results__group /* select2-dropdownien otsikot */ {
+  text-transform: uppercase;
+  font-size: 11pt;
+  font-weight: normal;
+  margin: 0.5em 0.5em 0 0.5em;
+  color: #817a55;
+  /*
+  text-indent: -1.2em;
+  padding-left: 1.2em;
+  */
+}
+
+.content-subhead {
+  margin: 50px 0 20px 0;
+  font-weight: 300;
+  color: #888;
+}
+
+hr {
+  height: 1px;
+  background: #817a55;
+  border: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.box {
+  /* display: flex; */
+  margin: 0.5em;
+}
+
+.rune {
+  background: #232520;
+  color: #6a784f;
+  align-items: top;
+  /* height: 5.5em; */
+  padding: 0.5em;
+}
+
+.empty {
+  height: 5.5em;
+  padding: 0.5em;
+  border: 3px dashed #232520;
+}
+
+.left {
+  text-align: right;
+  padding-right: 0.5em;
+}
+
+.right {
+  padding-left: 0.5em;
+}
+
+.longname {
+  font-size: 10pt;
+  font-weight: 300;
+  color: #817a55;
+}
+
+.zincost,
+.slots {
+  color: #817a55;
+}
+
+.note-area {
+  padding: 0.5em;
+  background: #232520;
+  color: #6a784f;
+}
+
+ol {
+  counter-reset: li;
+  list-style-type: none;
+  margin-left: 0;
+  text-indent: -3em;
+  padding-left: 3em;
+}
+
+ol > li:before {
+  content: "\00A0\00A0\00A0"counter(li) " ";
+  counter-increment: li;
+}
+
+.info {
+  background: #232520;
+  color: #6a784f;
+  padding: 0.5em;
+  justify-content: space-between;
+}
+
+.info ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/*
+.info ul > li:before {
+  content: "- ";
+}
+*/
+
+li.owner:after {
+  content: " (owner)";
+}
+
+.note {
+  padding: 0.5em;
+  background: #272622;
+  color: #817a55;
+}
+
+.note pre,
+textarea {
+  font-size: 10pt;
+}
+
+.area .maploc {
+  margin: 0.5em 0 0.5em 0.5em;
+}
+
+.area .name {
+  margin: 0.5em 0.5em 0.5em 1em;
+}
+
+.info-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-menu button {
+  margin-bottom: 0.5em;
+}
+
+.info-content {
+  width: 100%;
+}
+
+.pure-button,
+a.pure-button {
+  background: #232520;
+  color: #6a784f;
+  border: 1px solid #6a784f;
+}
+
+.footer {
+  padding: 0.5em;
+}
+
+.footer .bat {
+  color: #362d3b;
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+  padding: 0.5em;
+  background: #272622;
+  color: #817a55;
+  border: 1px solid;
+  /* width: calc(100% - 1em); */
+}
+
+.selection-container {
+  width: 100%;
+}
+
+.select2-selection.select-container,
+.select-dropdown {
+  width: 100%;
+  background-color: #272622;
+  border: 1px solid;
+  width: calc(100% - 1em);
+  color: #6a784f;
+}
+
+.select2-selection.select-container .select2-selection__choice {
+  background-color: #272622;
+  color: #6a784f;
+  border: 0;
+  width: 100%;
+}
+
+.info-content .selection {
+  margin-top: 0.5em;
+}
+
+input + button {
+  margin-left: 0.5em;
+}
+
+.clear {
+  float: clear;
+}
+
+.white {
+  color: #a895b2;
+}
+
+.light_black {
+  color: #3d3542;
+}
+
+.yellow {
+  color: #564f29;
+}
+
+.light_yellow {
+  color: #817a55;
+}
+
+.green {
+  color: #425026;
+}
+
+.light_green {
+  color: #6a784f;
+}
+
+.red {
+  color: #462135;
+}
+
+.light_red {
+  color: #694558;
+}
+
+.magenta {
+  color: #3c2e43;
+}
+
+.light_magenta {
+  color: #5f446d;
+}
+
+.blue {
+  color: #372d53;
+}
+
+.light_blue {
+  color: #574d77;
+}
+
+.cyan {
+  color: #4b5575;
+}
+
+.light_cyan {
+  color: #4b5575;
+}
+
+/*
+white
+!   Mountain Peak
+?   Scenic Location
+%   Special Location
+t   Tundra
+
+light black
+#   Ruins
++   Crossing
+-   Road
+=   Bridge
+C   Player City
+c   City
+
+yellow
+,   Trail
+y   Fields
+z   Shore
+b   Beach
+d   Desert
+
+green
+.   Plains
+F   Deep Forest
+v   Valley
+f   Forest
+j   Jungle
+
+red
+@   Flowing Lava
+L   Lava Lake
+V   Volcano
+x   Badlands
+s   Swamp
+
+magenta
+H   Highlands
+^   Mountain
+h   Hills
+
+blue
+R   Deep River
+r   River
+i   Ice
+l   Lake
+~   Sea
+
+cyan
+S   Shallows
+w   Waterfall
+*/
