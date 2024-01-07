@@ -183,6 +183,10 @@ strong.select2-results__group /* select2-dropdownien otsikot */ {
   */
 }
 
+.filtercounter {
+  text-transform: none;
+}
+
 .content-subhead {
   margin: 50px 0 20px 0;
   font-weight: 300;
@@ -212,6 +216,10 @@ hr {
 
 .pure-form-aligned .pure-control-group label {
   width: 33.33%;
+}
+
+.pure-form-aligned .two-column .pure-control-group label {
+  width: 66.66%;
 }
 
 .empty {

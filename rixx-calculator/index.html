@@ -23,7 +23,12 @@
           <div class="box">
             <div class="pure-g">
               <div class="pure-u-1-2">
-                <h3>Runes</h3>
+                <h3>
+                  Runes
+                  <span class="filtercounter"
+                    >({{ filteredRunes.length }}/{{ runes.length}} shown)</span
+                  >
+                </h3>
               </div>
               <div class="pure-u-1-2 align-right">
                 <a class="pure-button" @click="showfilters = !showfilters">
@@ -36,6 +41,14 @@
             <form class="pure-form pure-form-aligned">
               <fieldset>
                 <div class="pure-control-group">
+                  <label>search</label>
+                  <input
+                    type="text"
+                    id="rune-filter-equipment"
+                    v-model="textfilter"
+                  />
+                </div>
+                <div class="pure-control-group">
                   <label for="aligned-name">{{ zinabs }} zin</label>
                   <input
                     type="range"
@@ -45,83 +58,6 @@
                     v-model="zinpct"
                   />
                 </div>
-                <div class="pure-control-group">
-                  <label></label>
-                  deselect all rune types
-                </div>
-                <div class="pure-control-group">
-                  <label>equipment</label>
-                  <input
-                    type="checkbox"
-                    id="rune-filter-equipment"
-                    v-model="checked.equipment"
-                  />
-                </div>
-                <div class="pure-control-group">
-                  <label>stat</label>
-                  <input
-                    type="checkbox"
-                    id="rune-filter-stat"
-                    v-model="checked.stat"
-                  />
-                </div>
-                <div class="pure-control-group">
-                  <label>bonus</label>
-                  <input
-                    type="checkbox"
-                    id="rune-filter-bonus"
-                    v-model="checked.bonus"
-                  />
-                </div>
-                <div class="pure-control-group">
-                  <label>hp/sp/ep max</label>
-                  <input
-                    type="checkbox"
-                    id="rune-filter-hpspepmax"
-                    v-model="checked.hpspepmax"
-                  />
-                </div>
-                <div class="pure-control-group">
-                  <label>spell/skill</label>
-                  <input
-                    type="checkbox"
-                    id="rune-filter-spellskill"
-                    v-model="checked.spellskill"
-                  />
-                </div>
-                <div class="pure-control-group">
-                  <label>weight</label>
-                  <input
-                    type="checkbox"
-                    id="rune-filter-weight"
-                    v-model="checked.weight"
-                  />
-                </div>
-                <div class="pure-control-group">
-                  <label>exp rate</label>
-                  <input
-                    type="checkbox"
-                    id="rune-filter-exprate"
-                    v-model="checked.exprate"
-                  />
-                </div>
-                <div class="pure-control-group">
-                  <label>haste</label>
-                  <input
-                    type="checkbox"
-                    id="rune-filter-haste"
-                    v-model="checked.haste"
-                  />
-                </div>
-                <div class="pure-control-group">
-                  <label>special</label>
-                  <input
-                    type="checkbox"
-                    id="rune-filter-special"
-                    v-model="checked.special"
-                  />
-                </div>
-
                 <div class="pure-control-group">
                   <label>
                     slots
@@ -150,6 +86,89 @@
                     v-model="checked.slots4"
                   />
                   >=4
+                </div>
+                <div class="box align-right">
+                  <a class="pure-button" @click="toggletypes">
+                    {{ typesselected ? "deselect" : "select" }} all types
+                  </a>
+                </div>
+                <div class="pure-g">
+                  <div class="pure-u-1-2 two-column">
+                    <div class="pure-control-group">
+                      <label>equipment</label>
+                      <input
+                        type="checkbox"
+                        id="rune-filter-equipment"
+                        v-model="checked.equipment"
+                      />
+                    </div>
+                    <div class="pure-control-group">
+                      <label>stat</label>
+                      <input
+                        type="checkbox"
+                        id="rune-filter-stat"
+                        v-model="checked.stat"
+                      />
+                    </div>
+                    <div class="pure-control-group">
+                      <label>bonus</label>
+                      <input
+                        type="checkbox"
+                        id="rune-filter-bonus"
+                        v-model="checked.bonus"
+                      />
+                    </div>
+                    <div class="pure-control-group">
+                      <label>hp/sp/ep max</label>
+                      <input
+                        type="checkbox"
+                        id="rune-filter-hpspepmax"
+                        v-model="checked.hpspepmax"
+                      />
+                    </div>
+                    <div class="pure-control-group">
+                      <label>spell/skill</label>
+                      <input
+                        type="checkbox"
+                        id="rune-filter-spellskill"
+                        v-model="checked.spellskill"
+                      />
+                    </div>
+                  </div>
+                  <div class="pure-u-1-2 two-column">
+                    <div class="pure-control-group">
+                      <label>weight</label>
+                      <input
+                        type="checkbox"
+                        id="rune-filter-weight"
+                        v-model="checked.weight"
+                      />
+                    </div>
+                    <div class="pure-control-group">
+                      <label>exp rate</label>
+                      <input
+                        type="checkbox"
+                        id="rune-filter-exprate"
+                        v-model="checked.exprate"
+                      />
+                    </div>
+                    <div class="pure-control-group">
+                      <label>haste</label>
+                      <input
+                        type="checkbox"
+                        id="rune-filter-haste"
+                        v-model="checked.haste"
+                      />
+                    </div>
+                    <div class="pure-control-group">
+                      <label>special</label>
+                      <input
+                        type="checkbox"
+                        id="rune-filter-special"
+                        v-model="checked.special"
+                      />
+                    </div>
+                  </div>
                 </div>
               </fieldset>
             </form>
@@ -244,6 +263,7 @@
             runes: [],
             zinpct: 44,
             showfilters: true,
+            textfilter: "",
           };
         },
         created() {
@@ -266,6 +286,17 @@
           filteredRunes() {
             return this.runes.filter(
               (rune) =>
+                // text
+                (rune.shortname
+                  .toLowerCase()
+                  .includes(this.textfilter.toLowerCase()) ||
+                  rune.longname
+                    .toLowerCase()
+                    .includes(this.textfilter.toLowerCase()) ||
+                  (rune.blueprint &&
+                    rune.blueprint
+                      .toLowerCase()
+                      .includes(this.textfilter.toLowerCase()))) &&
                 // zin
                 rune.zinium <= this.zinabs &&
                 // type
@@ -286,8 +317,46 @@
                   (this.checked.slots4 && rune.slots <= -4))
             );
           },
+          typesselected() {
+            return (
+              this.checked.equipment &&
+              this.checked.stat &&
+              this.checked.bonus &&
+              this.checked.hpspepmax &&
+              this.checked.spellskill &&
+              this.checked.weight &&
+              this.checked.exprate &&
+              this.checked.haste &&
+              this.checked.special
+            );
+          },
           zinabs() {
             return Math.round(mapLogarithmic(this.zinpct, 0, 100, 50, 50000));
+          },
+        },
+        methods: {
+          toggletypes(event) {
+            if (this.typesselected) {
+              this.checked.equipment = false;
+              this.checked.stat = false;
+              this.checked.bonus = false;
+              this.checked.hpspepmax = false;
+              this.checked.spellskill = false;
+              this.checked.weight = false;
+              this.checked.exprate = false;
+              this.checked.haste = false;
+              this.checked.special = false;
+            } else {
+              this.checked.equipment = true;
+              this.checked.stat = true;
+              this.checked.bonus = true;
+              this.checked.hpspepmax = true;
+              this.checked.spellskill = true;
+              this.checked.weight = true;
+              this.checked.exprate = true;
+              this.checked.haste = true;
+              this.checked.special = true;
+            }
           },
         },
       });
