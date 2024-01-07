@@ -174,32 +174,12 @@
             </form>
           </div>
           <draggable v-model="filteredRunes" group="runes">
-            <template v-for="rune in filteredRunes" :key="`item${rune.index}`">
-              <div class="box rune">
-                <div class="pure-g">
-                  <div class="pure-u-1-3">
-                    <div class="left">
-                      <span class="index">{{ rune.index }} #&nbsp;&nbsp;</span
-                      ><br /><br />
-                      <span class="zincost">{{ rune.zinium }} zin</span><br />
-                      <span class="slots">
-                        {{ rune.slots > 0 ? "+" : "" }}{{ rune.slots }} slo </span
-                      ><br />
-                      <span class="blueprint" v-if="rune.blueprint"
-                        >{{ rune.blueprint }} bp&nbsp;</span
-                      >
-                    </div>
-                  </div>
-                  <div class="pure-u-2-3">
-                    <div class="right">
-                      <span class="shortname">{{ rune.shortname }}</span
-                      ><br /><br />
-                      <span class="longname">{{ rune.longname }}</span><br />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </template>
+            <rune
+              v-for="rune in filteredRunes"
+              :key="`item${rune.index}`"
+              :rune="rune"
+            >
+            </rune>
           </draggable>
         </div>
         <div class="pure-u-1-3">
@@ -208,49 +188,68 @@
               <h3>
                 Equipment 1
                 <span class="h3-additional">
-                  ({{ eq1slots }} slots available)
+                  ({{ rixxeq1slots }} slots available)
                 </span>
               </h3>
             </div>
-            <draggable v-model="eq1" group="runes">
-              <template v-for="rune in eq1" :key="`item${rune.index}`">
-                <div class="box rune">
-                  <div class="pure-g">
-                    <div class="pure-u-1-3">
-                      <div class="left">
-                        <span class="index">{{ rune.index }} #&nbsp;&nbsp;</span
-                        ><br /><br />
-                        <span class="zincost">{{ rune.zinium }} zin</span><br />
-                        <span class="slots">
-                          {{ rune.slots > 0 ? "+" : "" }}{{ rune.slots }} slo </span
-                        ><br />
-                        <span class="blueprint" v-if="rune.blueprint"
-                          >{{ rune.blueprint }} bp&nbsp;</span
-                        >
-                      </div>
-                    </div>
-                    <div class="pure-u-2-3">
-                      <div class="right">
-                        <span class="shortname">{{ rune.shortname }}</span
-                        ><br /><br />
-                        <span class="longname">{{ rune.longname }}</span><br />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </template>
-              <div class="box empty" v-show="eq1.length === 0">
-                fds
+            <draggable v-model="rixxeq1" group="runes">
+              <rune v-for="rune in rixxeq1" :key="rune.index" :rune="rune">
+              </rune>
+              <div class="box empty" v-show="rixxeq1.length === 0">
+                Create a new equipment by dragging equipment runes here
               </div>
             </draggable>
-            <div class="box"><h3>Equipment 3</h3></div>
-            <div class="box empty">
-              fds
+          </div>
+          <div class="equipment" v-if="rixxeq2.length > 0">
+            <div class="box">
+              <h3>
+                Equipment 3
+                <span class="h3-additional">
+                  ({{ rixxeq3slots }} slots available)
+                </span>
+              </h3>
             </div>
+            <draggable v-model="rixxeq3" group="runes">
+              <rune v-for="rune in rixxeq3" :key="rune.index" :rune="rune">
+              </rune>
+              <div class="box empty" v-show="rixxeq3.length === 0">
+                Create a new equipment by dragging equipment runes here
+              </div>
+            </draggable>
           </div>
         </div>
         <div class="pure-u-1-3">
-          <div class="box"><h3>Equipment 2</h3></div>
+          <div class="equipment" v-if="rixxeq1.length > 0">
+            <div class="box">
+              <h3>
+                Equipment 2
+                <span class="h3-additional">
+                  ({{ rixxeq2slots }} slots available)
+                </span>
+              </h3>
+            </div>
+            <draggable v-model="rixxeq2" group="runes">
+              <rune v-for="rune in rixxeq2" :key="rune.index" :rune="rune">
+              </rune>
+              <div class="box empty" v-show="rixxeq2.length === 0">
+                Create a new equipment by dragging equipment runes here
+              </div>
+            </draggable>
+          </div>
+          <div class="equipment">
+            <div class="box">
+              <h3>
+                Other equipments
+              </h3>
+            </div>
+            <draggable v-model="othereq" group="runes">
+              <rune v-for="rune in othereq" :key="rune.index" :rune="rune">
+              </rune>
+              <div class="box empty" v-show="othereq.length === 0">
+                Add non-rixx equipment runes here
+              </div>
+            </draggable>
+          </div>
         </div>
       </div>
       <div id="app"></div>
@@ -269,6 +268,41 @@
 
       const sum = (arr) => arr.reduce((a, b) => a + b, 0);
       const max = (arr) => Math.max(...arr);
+
+      const Rune = {
+        props: ["rune"],
+        template: `
+        <div class="box rune">
+          <div class="pure-g">
+            <div class="pure-u-1-3">
+              <div class="left">
+                <span class="index">{{ rune.index }} #&nbsp;&nbsp;</span><br /><br />
+                <span class="zincost">{{ rune.zinium }} zin</span><br />
+                <span class="slots">
+                  {{ rune.slots > 0 ? "+" : "" }}{{ rune.slots }} slo </span><br />
+                <span class="blueprint" v-if="rune.blueprint">
+                  {{ rune.blueprint }} bp&nbsp;
+                </span>
+              </div>
+            </div>
+            <div class="pure-u-2-3">
+              <div class="right">
+                <span class="shortname">{{ rune.shortname }}</span
+                ><br /><br />
+                <span class="longname">{{ rune.longname }}</span><br />
+              </div>
+            </div>
+          </div>
+        </div>
+        `,
+      };
+
+      const Equipment = {
+        props: ["eq"],
+        template: `
+
+        `,
+      };
 
       const app = Vue.createApp({
         data() {
@@ -292,10 +326,10 @@
             zinpct: 44,
             showfilters: true,
             textfilter: "",
-            eq1: [],
-            eq2: [],
-            eq3: [],
-            eqother: [],
+            rixxeq1: [],
+            rixxeq2: [],
+            rixxeq3: [],
+            othereq: [],
           };
         },
         created() {
@@ -306,53 +340,60 @@
               }
               return response.json();
             })
-            .then((data) => (this.runes = data))
+            .then((data) => {
+              this.runes = data;
+              this.parsequeryparams();
+            })
             .catch((error) => {
               console.error("There was a problem loading the data:", error);
             });
         },
         components: {
           draggable: VueDraggablePlus.VueDraggable,
+          Rune,
         },
         computed: {
           filteredRunes() {
-            return this.runes.filter(
-              (rune) =>
-                // rune is in equipment
-                !this.eq1ids.includes(rune.index) &&
-                !this.eq2ids.includes(rune.index) &&
-                !this.eq3ids.includes(rune.index) &&
-                !this.eqotherids.includes(rune.index) &&
-                // text
-                (rune.shortname
-                  .toLowerCase()
-                  .includes(this.textfilter.toLowerCase()) ||
-                  rune.longname
+            return this.runes
+              .filter(
+                (rune) =>
+                  // rune is in equipment
+                  !this.rixxeq1ids.includes(rune.index) &&
+                  !this.rixxeq2ids.includes(rune.index) &&
+                  !this.rixxeq3ids.includes(rune.index) &&
+                  // text
+                  (rune.shortname
                     .toLowerCase()
                     .includes(this.textfilter.toLowerCase()) ||
-                  (rune.blueprint &&
-                    rune.blueprint
+                    rune.longname
                       .toLowerCase()
-                      .includes(this.textfilter.toLowerCase()))) &&
-                // zin
-                rune.zinium <= this.zinabs &&
-                // type
-                ((this.checked.equipment && rune.tags.includes("equipment")) ||
-                  (this.checked.stat && rune.tags.includes("stat")) ||
-                  (this.checked.bonus && rune.tags.includes("bonus")) ||
-                  (this.checked.hpspepmax && rune.tags.includes("hpspepmax")) ||
-                  (this.checked.spellskill &&
-                    rune.tags.includes("spellskill")) ||
-                  (this.checked.weight && rune.tags.includes("weight")) ||
-                  (this.checked.exprate && rune.tags.includes("exprate")) ||
-                  (this.checked.haste && rune.tags.includes("haste")) ||
-                  (this.checked.special && rune.tags.includes("special"))) &&
-                // slots
-                ((this.checked.slots0 && rune.slots >= 0) ||
-                  (this.checked.slots1 && rune.slots === -1) ||
-                  (this.checked.slots2 && rune.slots === -2) ||
-                  (this.checked.slots4 && rune.slots <= -4))
-            );
+                      .includes(this.textfilter.toLowerCase()) ||
+                    (rune.blueprint &&
+                      rune.blueprint
+                        .toLowerCase()
+                        .includes(this.textfilter.toLowerCase()))) &&
+                  // zin
+                  rune.zinium <= this.zinabs &&
+                  // type
+                  ((this.checked.equipment &&
+                    rune.tags.includes("equipment")) ||
+                    (this.checked.stat && rune.tags.includes("stat")) ||
+                    (this.checked.bonus && rune.tags.includes("bonus")) ||
+                    (this.checked.hpspepmax &&
+                      rune.tags.includes("hpspepmax")) ||
+                    (this.checked.spellskill &&
+                      rune.tags.includes("spellskill")) ||
+                    (this.checked.weight && rune.tags.includes("weight")) ||
+                    (this.checked.exprate && rune.tags.includes("exprate")) ||
+                    (this.checked.haste && rune.tags.includes("haste")) ||
+                    (this.checked.special && rune.tags.includes("special"))) &&
+                  // slots
+                  ((this.checked.slots0 && rune.slots >= 0) ||
+                    (this.checked.slots1 && rune.slots === -1) ||
+                    (this.checked.slots2 && rune.slots === -2) ||
+                    (this.checked.slots4 && rune.slots <= -4))
+              )
+              .sort((a, b) => a.index - b.index);
           },
           typesselected() {
             return (
@@ -370,30 +411,56 @@
           zinabs() {
             return Math.round(mapLogarithmic(this.zinpct, 0, 100, 50, 50000));
           },
-          eq1ids() {
-            return this.eq1.map((rune) => rune.index);
+          rixxeq1ids() {
+            return this.rixxeq1.map((rune) => rune.index);
           },
-          eq2ids() {
-            return this.eq2.map((rune) => rune.index);
+          rixxeq2ids() {
+            return this.rixxeq2.map((rune) => rune.index);
           },
-          eq3ids() {
-            return this.eq3.map((rune) => rune.index);
+          rixxeq3ids() {
+            return this.rixxeq3.map((rune) => rune.index);
           },
-          eqotherids() {
-            return this.eqother.map((rune) => rune.index);
+          othereqids() {
+            return this.othereq.map((rune) => rune.index);
           },
-          eq1slots() {
-            return sum(this.eq1.map((rune) => rune.slots));
+          rixxeq1slots() {
+            return sum(this.rixxeq1.map((rune) => rune.slots));
           },
-          eq2slots() {
-            return sum(this.eq2.map((rune) => rune.slots));
+          rixxeq2slots() {
+            return sum(this.rixxeq2.map((rune) => rune.slots));
           },
-          eq3slots() {
-            return sum(this.eq3.map((rune) => rune.slots));
+          rixxeq3slots() {
+            return sum(this.rixxeq3.map((rune) => rune.slots));
           },
           maxzin() {
-            const runes = this.eq1.concat(this.eq2).concat(this.eq3);
+            const runes = this.rixxeq1
+              .concat(this.rixxeq2)
+              .concat(this.rixxeq3);
             return max(runes.map((rune) => rune.zinium));
+          },
+          queryparams() {
+            const url = new URL(window.location.href);
+            if (this.rixxeq1ids.length > 0) {
+              url.searchParams.set("eq1", this.rixxeq1ids.join(","));
+            } else {
+              url.searchParams.delete("eq1");
+            }
+            if (this.rixxeq2ids.length > 0) {
+              url.searchParams.set("eq2", this.rixxeq2ids.join(","));
+            } else {
+              url.searchParams.delete("eq2");
+            }
+            if (this.rixxeq3ids.length > 0) {
+              url.searchParams.set("eq3", this.rixxeq3ids.join(","));
+            } else {
+              url.searchParams.delete("eq3");
+            }
+            if (this.othereqids.length > 0) {
+              url.searchParams.set("othereq", this.othereqids.join(","));
+            } else {
+              url.searchParams.delete("othereq");
+            }
+            return url.searchParams.toString();
           },
         },
         methods: {
@@ -419,6 +486,42 @@
               this.checked.haste = true;
               this.checked.special = true;
             }
+          },
+          parsequeryparams() {
+            const url = new URL(window.location.href);
+            const eq1 = url.searchParams.get("eq1");
+            const eq2 = url.searchParams.get("eq2");
+            const eq3 = url.searchParams.get("eq3");
+            const othereq = url.searchParams.get("othereq");
+            if (eq1) {
+              this.rixxeq1 = eq1.split(",").map((id) => {
+                return this.runes.find((rune) => rune.index === parseInt(id));
+              });
+            }
+            if (eq2) {
+              this.rixxeq2 = eq2.split(",").map((id) => {
+                return this.runes.find((rune) => rune.index === parseInt(id));
+              });
+            }
+            if (eq3) {
+              this.rixxeq3 = eq3.split(",").map((id) => {
+                return this.runes.find((rune) => rune.index === parseInt(id));
+              });
+            }
+            if (othereq) {
+              this.othereq = othereq.split(",").map((id) => {
+                return this.runes.find((rune) => rune.index === parseInt(id));
+              });
+            }
+          },
+        },
+        watch: {
+          queryparams() {
+            window.history.replaceState(
+              null,
+              null,
+              window.location.pathname + "?" + this.queryparams
+            );
           },
         },
       });

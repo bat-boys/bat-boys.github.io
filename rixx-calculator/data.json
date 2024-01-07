@@ -174,7 +174,7 @@
     "index": 20,
     "zinium": 300,
     "longname": "Make your Rixx-Tec gear indestructible",
-    "shortname": "Make your Rixx-Tec gear indestructible",
+    "shortname": "indestructible",
     "blueprint": "everlasting",
     "slots": 0,
     "tags": ["special"]
@@ -318,7 +318,7 @@
     "index": 36,
     "zinium": 1100,
     "longname": "Make your Rixx-Tec gear indestructible",
-    "shortname": "Make your Rixx-Tec gear indestructible",
+    "shortname": "indestructible",
     "blueprint": "everlasting",
     "slots": 0,
     "tags": ["special"]
@@ -365,7 +365,7 @@
     "longname": "You may create one Rixx-Tec gear of your choice",
     "shortname": "one Rixx-Tec gear",
     "blueprint": null,
-    "slots": 0,
+    "slots": 8,
     "tags": ["equipment"]
   },
   {
@@ -374,7 +374,7 @@
     "longname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
     "shortname": "increase zinium capacity",
     "blueprint": "epic item",
-    "slots": 0,
+    "slots": 1,
     "tags": ["special"]
   },
   {
@@ -635,7 +635,7 @@
     "longname": "You may create one Rixx-Tec gear of your choice",
     "shortname": "one Rixx-Tec gear",
     "blueprint": null,
-    "slots": 0,
+    "slots": 8,
     "tags": ["equipment"]
   },
   {
@@ -732,7 +732,7 @@
     "index": 82,
     "zinium": 3633,
     "longname": "Make your Rixx-Tec gear indestructible",
-    "shortname": "Make your Rixx-Tec gear indestructible",
+    "shortname": "indestructible",
     "blueprint": "everlasting",
     "slots": 0,
     "tags": ["special"]
