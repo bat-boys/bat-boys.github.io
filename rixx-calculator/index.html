@@ -13,21 +13,21 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <div id="layout">
+    <div id="app">
       <div class="header">
         <h1>Rixx calculator</h1>
-        <h2>^o^</h2>
+        <h2>{{ maxzin > 0 ? `Zinium required: ${maxzin}` : "^o^" }}</h2>
       </div>
-      <div id="app" class="pure-g">
+      <div class="pure-g">
         <div class="pure-u-1-3">
           <div class="box">
             <div class="pure-g">
               <div class="pure-u-1-2">
                 <h3>
                   Runes
-                  <span class="filtercounter"
-                    >({{ filteredRunes.length }}/{{ runes.length}} shown)</span
-                  >
+                  <span class="h3-additional">
+                    ({{ filteredRunes.length }}/{{ runes.length}} shown)
+                  </span>
                 </h3>
               </div>
               <div class="pure-u-1-2 align-right">
@@ -173,39 +173,76 @@
               </fieldset>
             </form>
           </div>
-          <template v-for="item in filteredRunes" :key="`item${item.index}`">
-            <div class="box rune">
-              <div class="pure-g">
-                <div class="pure-u-1-3">
-                  <div class="left">
-                    <span class="index">{{ item.index }} #&nbsp;&nbsp;</span
-                    ><br /><br />
-                    <span class="zincost">{{ item.zinium }} zin</span><br />
-                    <span class="slots">
-                      {{ item.slots > 0 ? "+" : "" }}{{ item.slots }} slo </span
-                    ><br />
-                    <span class="blueprint" v-if="item.blueprint"
-                      >{{ item.blueprint }} bp&nbsp;</span
-                    >
+          <draggable v-model="filteredRunes" group="runes">
+            <template v-for="rune in filteredRunes" :key="`item${rune.index}`">
+              <div class="box rune">
+                <div class="pure-g">
+                  <div class="pure-u-1-3">
+                    <div class="left">
+                      <span class="index">{{ rune.index }} #&nbsp;&nbsp;</span
+                      ><br /><br />
+                      <span class="zincost">{{ rune.zinium }} zin</span><br />
+                      <span class="slots">
+                        {{ rune.slots > 0 ? "+" : "" }}{{ rune.slots }} slo </span
+                      ><br />
+                      <span class="blueprint" v-if="rune.blueprint"
+                        >{{ rune.blueprint }} bp&nbsp;</span
+                      >
+                    </div>
                   </div>
-                </div>
-                <div class="pure-u-2-3">
-                  <div class="right">
-                    <span class="shortname">{{ item.shortname }}</span
-                    ><br /><br />
-                    <span class="longname">{{ item.longname }}</span><br />
+                  <div class="pure-u-2-3">
+                    <div class="right">
+                      <span class="shortname">{{ rune.shortname }}</span
+                      ><br /><br />
+                      <span class="longname">{{ rune.longname }}</span><br />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </template>
+            </template>
+          </draggable>
         </div>
         <div class="pure-u-1-3">
           <div class="equipment">
-            <div class="box"><h3>Equipment 1</h3></div>
-            <div class="box empty">
-              fds
+            <div class="box">
+              <h3>
+                Equipment 1
+                <span class="h3-additional">
+                  ({{ eq1slots }} slots available)
+                </span>
+              </h3>
             </div>
+            <draggable v-model="eq1" group="runes">
+              <template v-for="rune in eq1" :key="`item${rune.index}`">
+                <div class="box rune">
+                  <div class="pure-g">
+                    <div class="pure-u-1-3">
+                      <div class="left">
+                        <span class="index">{{ rune.index }} #&nbsp;&nbsp;</span
+                        ><br /><br />
+                        <span class="zincost">{{ rune.zinium }} zin</span><br />
+                        <span class="slots">
+                          {{ rune.slots > 0 ? "+" : "" }}{{ rune.slots }} slo </span
+                        ><br />
+                        <span class="blueprint" v-if="rune.blueprint"
+                          >{{ rune.blueprint }} bp&nbsp;</span
+                        >
+                      </div>
+                    </div>
+                    <div class="pure-u-2-3">
+                      <div class="right">
+                        <span class="shortname">{{ rune.shortname }}</span
+                        ><br /><br />
+                        <span class="longname">{{ rune.longname }}</span><br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+              <div class="box empty" v-show="eq1.length === 0">
+                fds
+              </div>
+            </draggable>
             <div class="box"><h3>Equipment 3</h3></div>
             <div class="box empty">
               fds
@@ -219,21 +256,9 @@
       <div id="app"></div>
     </div>
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/sortablejs@1.10.2"></script>
+    <script src="https://unpkg.com/vue-draggable-plus"></script>
     <script>
-      const Equipment = {
-        template: `
-           <div>{{ message }}</div>
-         `,
-        setup() {
-          // Use the reusable logic in the component setup
-          const message = "Equipment";
-
-          return {
-            message,
-          };
-        },
-      };
-
       const mapLogarithmic = (value, inMin, inMax, outMin, outMax) => {
         const inRange = inMax - inMin;
         const outRange = Math.log(outMax / outMin);
@@ -241,6 +266,9 @@
 
         return Math.exp(scale * (value - inMin)) * outMin;
       };
+
+      const sum = (arr) => arr.reduce((a, b) => a + b, 0);
+      const max = (arr) => Math.max(...arr);
 
       const app = Vue.createApp({
         data() {
@@ -264,6 +292,10 @@
             zinpct: 44,
             showfilters: true,
             textfilter: "",
+            eq1: [],
+            eq2: [],
+            eq3: [],
+            eqother: [],
           };
         },
         created() {
@@ -280,12 +312,17 @@
             });
         },
         components: {
-          Equipment,
+          draggable: VueDraggablePlus.VueDraggable,
         },
         computed: {
           filteredRunes() {
             return this.runes.filter(
               (rune) =>
+                // rune is in equipment
+                !this.eq1ids.includes(rune.index) &&
+                !this.eq2ids.includes(rune.index) &&
+                !this.eq3ids.includes(rune.index) &&
+                !this.eqotherids.includes(rune.index) &&
                 // text
                 (rune.shortname
                   .toLowerCase()
@@ -332,6 +369,31 @@
           },
           zinabs() {
             return Math.round(mapLogarithmic(this.zinpct, 0, 100, 50, 50000));
+          },
+          eq1ids() {
+            return this.eq1.map((rune) => rune.index);
+          },
+          eq2ids() {
+            return this.eq2.map((rune) => rune.index);
+          },
+          eq3ids() {
+            return this.eq3.map((rune) => rune.index);
+          },
+          eqotherids() {
+            return this.eqother.map((rune) => rune.index);
+          },
+          eq1slots() {
+            return sum(this.eq1.map((rune) => rune.slots));
+          },
+          eq2slots() {
+            return sum(this.eq2.map((rune) => rune.slots));
+          },
+          eq3slots() {
+            return sum(this.eq3.map((rune) => rune.slots));
+          },
+          maxzin() {
+            const runes = this.eq1.concat(this.eq2).concat(this.eq3);
+            return max(runes.map((rune) => rune.zinium));
           },
         },
         methods: {

@@ -81,7 +81,7 @@ body {
   font-feature-settings: "liga" 0;
 }
 
-#layout {
+#app {
   min-height: 100% !important;
 }
 
@@ -109,7 +109,7 @@ a:visited {
   color: inherit;
 }
 
-#layout {
+#app {
   position: relative;
   margin: 0 auto;
   margin-left: 2em;
@@ -183,7 +183,7 @@ strong.select2-results__group /* select2-dropdownien otsikot */ {
   */
 }
 
-.filtercounter {
+.h3-additional {
   text-transform: none;
 }
 
