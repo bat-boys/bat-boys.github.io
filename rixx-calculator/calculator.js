@@ -284,14 +284,15 @@ const app = Vue.createApp({
       console.log("rixxeqchanged");
     },
     rixxeqrules(runes) {
-      console.log(runes);
-      // if eq contains only one item, it must be equipment
-      if (runes.length === 1) {
-        if (!runes[0].tags.includes("equipment")) {
-          console.log("First rune must be equipment");
-          runes.pop();
-        }
+      // move equipment to the beginning
+      console.log(runes.slice());
+      const idx = runes.findIndex((rune) => rune.tags.includes("equipment"));
+      if (idx > -1) {
+        const eq = runes.splice(idx, 1);
+        runes.unshift(eq[0]);
       }
+      console.log(runes.slice());
+      // if eq contains only one item, it must be equipment
     },
   },
   watch: {

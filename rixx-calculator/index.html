@@ -194,12 +194,7 @@
                 </span>
               </h3>
             </div>
-            <draggable
-              v-model="rixxeq1"
-              group="runes"
-              draggable=".draggable"
-              @sort="rixxeqchanged"
-            >
+            <draggable v-model="rixxeq1" group="runes" draggable=".draggable">
               <rune
                 v-for="rune in rixxeq1"
                 :key="rune.index"
@@ -227,7 +222,7 @@
                 v-for="rune in rixxeq3"
                 :key="rune.index"
                 :rune="rune"
-                :equipmentdraggable="rixxeq1.length === 1"
+                :equipmentdraggable="rixxeq3.length === 1"
                 :othersdraggable="true"
               >
               </rune>
@@ -252,7 +247,7 @@
                 v-for="rune in rixxeq2"
                 :key="rune.index"
                 :rune="rune"
-                :equipmentdraggable="rixxeq1.length === 1"
+                :equipmentdraggable="rixxeq2.length === 1"
                 :othersdraggable="true"
               >
               </rune>
@@ -272,7 +267,8 @@
                 v-for="rune in othereq"
                 :key="rune.index"
                 :rune="rune"
-                :runecount="1"
+                :equipmentdraggable="true"
+                :othersdraggable="true"
               >
               </rune>
               <div class="box empty" v-show="othereq.length === 0">
