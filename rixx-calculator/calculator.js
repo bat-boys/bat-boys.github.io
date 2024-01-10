@@ -10,10 +10,16 @@ const sum = (arr) => arr.reduce((a, b) => a + b, 0);
 const max = (arr) => Math.max(...arr);
 
 const Rune = {
-  props: ["rune"],
+  props: ["rune", "equipmentdraggable", "othersdraggable"],
   computed: {
     draggable() {
-      if (this.rune.tags.includes("equipment")) return "draggable";
+      if (
+        this.rune.tags.includes("other_item") ||
+        (this.equipmentdraggable && this.rune.tags.includes("equipment")) ||
+        (this.othersdraggable && !this.rune.tags.includes("equipment"))
+      ) {
+        return "draggable";
+      }
     },
   },
   template: `

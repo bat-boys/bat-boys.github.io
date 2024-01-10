@@ -178,6 +178,8 @@
               v-for="rune in filteredRunes"
               :key="`item${rune.index}`"
               :rune="rune"
+              :equipmentdraggable="true"
+              :othersdraggable="rixxeq1.length > 0"
             >
             </rune>
           </draggable>
@@ -198,7 +200,13 @@
               draggable=".draggable"
               @sort="rixxeqchanged"
             >
-              <rune v-for="rune in rixxeq1" :key="rune.index" :rune="rune">
+              <rune
+                v-for="rune in rixxeq1"
+                :key="rune.index"
+                :rune="rune"
+                :equipmentdraggable="rixxeq1.length === 1"
+                :othersdraggable="true"
+              >
               </rune>
               <div class="box empty" v-show="rixxeq1.length === 0">
                 Create a new equipment by dragging equipment runes here
@@ -214,8 +222,14 @@
                 </span>
               </h3>
             </div>
-            <draggable v-model="rixxeq3" group="runes">
-              <rune v-for="rune in rixxeq3" :key="rune.index" :rune="rune">
+            <draggable v-model="rixxeq3" group="runes" draggable=".draggable">
+              <rune
+                v-for="rune in rixxeq3"
+                :key="rune.index"
+                :rune="rune"
+                :equipmentdraggable="rixxeq1.length === 1"
+                :othersdraggable="true"
+              >
               </rune>
               <div class="box empty" v-show="rixxeq3.length === 0">
                 Create a new equipment by dragging equipment runes here
@@ -233,8 +247,14 @@
                 </span>
               </h3>
             </div>
-            <draggable v-model="rixxeq2" group="runes">
-              <rune v-for="rune in rixxeq2" :key="rune.index" :rune="rune">
+            <draggable v-model="rixxeq2" group="runes" draggable=".draggable">
+              <rune
+                v-for="rune in rixxeq2"
+                :key="rune.index"
+                :rune="rune"
+                :equipmentdraggable="rixxeq1.length === 1"
+                :othersdraggable="true"
+              >
               </rune>
               <div class="box empty" v-show="rixxeq2.length === 0">
                 Create a new equipment by dragging equipment runes here
@@ -248,7 +268,12 @@
               </h3>
             </div>
             <draggable v-model="othereq" group="runes">
-              <rune v-for="rune in othereq" :key="rune.index" :rune="rune">
+              <rune
+                v-for="rune in othereq"
+                :key="rune.index"
+                :rune="rune"
+                :runecount="1"
+              >
               </rune>
               <div class="box empty" v-show="othereq.length === 0">
                 Add non-rixx equipment runes here
