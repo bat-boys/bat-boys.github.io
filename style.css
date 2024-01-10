@@ -253,6 +253,11 @@ hr {
   color: #817a55;
 }
 
+.draggable {
+  cursor: move;
+  /* border: 1px solid #817a55; */
+}
+
 .note-area {
   padding: 0.5em;
   background: #232520;
