@@ -9,21 +9,21 @@ const mapLogarithmic = (value, inMin, inMax, outMin, outMax) => {
 const sum = (arr) => arr.reduce((a, b) => a + b, 0);
 const max = (arr) => Math.max(...arr);
 
+const occurrences = (arr) =>
+  arr.reduce((countObj, element) => {
+    countObj[element] = (countObj[element] || 0) + 1;
+    return countObj;
+  }, {});
+
 const Rune = {
-  props: ["rune", "equipmentdraggable", "othersdraggable"],
+  props: ["rune"],
   computed: {
-    draggable() {
-      if (
-        this.rune.tags.includes("other_item") ||
-        (this.equipmentdraggable && this.rune.tags.includes("equipment")) ||
-        (this.othersdraggable && !this.rune.tags.includes("equipment"))
-      ) {
-        return "draggable";
-      }
+    isequipment() {
+      return this.rune.tags.includes("equipment");
     },
   },
   template: `
-    <div class="box rune" :class="draggable">
+    <div class="box rune draggable">
       <div class="pure-g">
         <div class="pure-u-1-3">
           <div class="left">
@@ -34,6 +34,7 @@ const Rune = {
             <span class="blueprint" v-if="rune.blueprint">
               {{ rune.blueprint }} bp&nbsp;
             </span>
+
           </div>
         </div>
         <div class="pure-u-2-3">
@@ -41,6 +42,12 @@ const Rune = {
             <span class="shortname">{{ rune.shortname }}</span
             ><br /><br />
             <span class="longname">{{ rune.longname }}</span><br />
+            <select v-if="isequipment" v-model="rune.slots">
+              <option :value="9">Non-rig</option>
+              <option :value="8">Eq frame</option>
+              <option :value="7">Backpack</option>
+              <option :value="6">Satchel</option>
+            </select>
           </div>
         </div>
       </div>
@@ -68,6 +75,7 @@ const app = Vue.createApp({
       },
       runes: [],
       zinpct: 44,
+      showinstructions: true,
       showfilters: true,
       textfilter: "",
       rixxeq1: [],
@@ -143,6 +151,12 @@ const app = Vue.createApp({
           .length > 0
       );
     },
+    rixxeq1hasequipment() {
+      return (
+        this.rixxeq1.filter((rune) => rune.tags.includes("equipment")).length >
+        0
+      );
+    },
     typesselected() {
       return (
         this.checked.equipment &&
@@ -199,9 +213,23 @@ const app = Vue.createApp({
           .length > 0
       );
     },
+    allrunes() {
+      return this.rixxeq1.concat(this.rixxeq2).concat(this.rixxeq3);
+    },
+    allblueprints() {
+      bps = this.allrunes
+        .filter((rune) => rune.blueprint)
+        .map((rune) => rune.blueprint);
+      const counts = occurrences(bps);
+      if (!counts) return "";
+      const strs = Object.keys(counts).map((bp) =>
+        counts[bp] === 1 ? bp : `${counts[bp]} x ${bp}`
+      );
+      return strs;
+    },
     maxzin() {
-      const runes = this.rixxeq1.concat(this.rixxeq2).concat(this.rixxeq3);
-      return max(runes.map((rune) => rune.zinium));
+      const m = max(this.allrunes.map((rune) => rune.zinium));
+      return m > 0 ? m : 0;
     },
     queryparams() {
       const url = new URL(window.location.href);
@@ -278,21 +306,6 @@ const app = Vue.createApp({
           return this.runes.find((rune) => rune.index === parseInt(id));
         });
       }
-    },
-    rixxeqchanged() {
-      this.rixxeqrules(this.rixxeq1);
-      console.log("rixxeqchanged");
-    },
-    rixxeqrules(runes) {
-      // move equipment to the beginning
-      console.log(runes.slice());
-      const idx = runes.findIndex((rune) => rune.tags.includes("equipment"));
-      if (idx > -1) {
-        const eq = runes.splice(idx, 1);
-        runes.unshift(eq[0]);
-      }
-      console.log(runes.slice());
-      // if eq contains only one item, it must be equipment
     },
   },
   watch: {

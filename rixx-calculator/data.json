@@ -5,7 +5,7 @@
     "longname": "You may create one Rixx-Tec gear of your choice",
     "shortname": "one Rixx-Tec gear",
     "blueprint": null,
-    "slots": 8,
+    "slots": 9,
     "tags": ["equipment"]
   },
   {
@@ -365,7 +365,7 @@
     "longname": "You may create one Rixx-Tec gear of your choice",
     "shortname": "one Rixx-Tec gear",
     "blueprint": null,
-    "slots": 8,
+    "slots": 9,
     "tags": ["equipment"]
   },
   {
@@ -635,7 +635,7 @@
     "longname": "You may create one Rixx-Tec gear of your choice",
     "shortname": "one Rixx-Tec gear",
     "blueprint": null,
-    "slots": 8,
+    "slots": 9,
     "tags": ["equipment"]
   },
   {

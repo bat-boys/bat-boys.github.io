@@ -2,9 +2,13 @@
 19171A, hue 301, dist 30, triad, add complementary
  */
 
+.warning {
+  color: #8f2a2a;
+}
+
 .color-primary-0-1 {
   background: #19171a;
-  color: #4d3a56;
+  color: #7d598f; /* #4d3a56; */
 } /* Main Primary color */
 .color-primary-0-2 {
   background: #19171a;
@@ -77,17 +81,34 @@
 html,
 body {
   height: 100%;
-  min-height: 100% !important;
+  /* min-height: 100% !important; */
   font-feature-settings: "liga" 0;
+  display: flex;
+  overflow: hidden;
 }
 
 #app {
-  min-height: 100% !important;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-  background: #272622;
-  color: #4d3a56;
+  background: #19171a;
+  color: #7d598f;
+}
+
+.columns {
+  overflow: hidden;
+}
+
+.scrollable-column {
+  height: 100%;
+  overflow: auto;
+}
+
+.equipment {
+  margin-bottom: 2em;
 }
 
 body,
@@ -105,7 +126,6 @@ pre,
 a,
 a:hover,
 a:visited {
-  text-decoration: none;
   color: inherit;
 }
 
@@ -114,7 +134,6 @@ a:visited {
   margin: 0 auto;
   margin-left: 2em;
   margin-right: 2em;
-  background: #19171a;
 }
 
 .content {
@@ -126,21 +145,14 @@ a:visited {
 }
 
 .header {
-  margin: 0 auto 0.5em auto;
   line-height: 1.6em;
-  color: #333;
   text-align: center;
-  padding-top: 2.5em;
-  padding-bottom: 2em;
-  /* border-bottom: 1px solid #817A55; */
   background: #19171a;
 }
 
 .header h1 {
-  margin: 0.2em 0;
   font-size: 36pt;
   font-weight: 300;
-  color: #4d3a56;
 }
 
 .header.note-header {
@@ -153,7 +165,6 @@ a:visited {
   margin: 11pt;
   font-size: 24pt;
   font-weight: 300;
-  color: #4d3a56;
   align-items: center;
 }
 
@@ -167,7 +178,24 @@ a:visited {
   font-weight: 300;
   color: #362d3b;
   padding: 0;
-  margin-top: 1em;
+}
+
+.header h2 + h2 {
+  margin-top: 0.5em;
+}
+
+.box p {
+  margin: 0.5em 0.5em 1em 0.5em;
+}
+
+.box ul {
+  margin: -0.5em 0.5em 1em 1.5em;
+  list-style-type: "- ";
+}
+
+.instructions {
+  font-size: 10pt;
+  line-height: 1.3em;
 }
 
 h3, /* etusivun taggroupit */
@@ -222,6 +250,10 @@ hr {
   width: 66.66%;
 }
 
+.pure-button {
+  padding: 0.25em 0.5em;
+}
+
 .empty {
   height: 5.5em;
   padding: 0.5em;
@@ -235,6 +267,10 @@ hr {
 
 .right {
   padding-left: 0.5em;
+}
+
+.right select {
+  margin-top: 1em;
 }
 
 .align-right {
@@ -348,6 +384,7 @@ a.pure-button {
 
 input:not([type="submit"]),
 textarea,
+.pure-form select,
 select {
   padding: 0.5em;
   background: #272622;
