@@ -1,3 +1,3 @@
 # bat-boys.github.io
 
-- [Rixx calculator](rixx-calculator/)
+- [Rixx-Tec gear calculator](rixx-calculator/)
