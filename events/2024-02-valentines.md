@@ -1,5 +1,11 @@
 # Valentine's day 2024 mini-event
 
+```
+command lorenchia-efiilas brief brief;13 n;tr n;tr w;tr nw;4 se;e;brief verbose;enter
+command caly-feldspar brief brief;7 e;ne;5 e;14 s;tr s;tr sw;tr nw;tr n;tr n;ne;E;NE;E;NE;E;se;E;SE;E;4 s;brief verbose;enter
+command skeep-syggax brief brief;2 n;11 w;tr w;tr s;tr s;tr s;S;SW;S;SW;W;4 s;sw;brief verbose;enter
+```
+
 ## News post
 
 ```
