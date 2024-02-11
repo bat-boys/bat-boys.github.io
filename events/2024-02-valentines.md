@@ -75,6 +75,10 @@ You have 0 total event points.
 
 ## Prizes
 
+```
+vday2024 list
+```
+
 If fifty or more players buy a fondue pot,
 the Chaos Cauldron will re-open for the rest of February.
 
