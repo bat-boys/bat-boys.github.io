@@ -88,6 +88,9 @@ vday2024 list
 If fifty or more players buy a fondue pot,
 the Chaos Cauldron will re-open for the rest of February.
 
+Prizes 7..21 (those that cost 5000 points) have str/int/wis/dex/con to slot
+
+
 ### 1. copper fondue pot set over small blue burner [1000 points]
 ```
 This polished copper nearly-spherical miniature cauldron has a dividing wall,
