@@ -847,6 +847,15 @@
   },
   {
     "index": 95,
+    "zinium": 4999,
+    "longname": "Schematics for Zinium Poop Deck",
+    "shortname": "poop deck",
+    "blueprint": null,
+    "slots": 0,
+    "tags": ["special"]
+  },
+  {
+    "index": 96,
     "zinium": 5000,
     "longname": "Enchant your Rixx-Tec gear to become magically heavy (True HW)",
     "shortname": "true hw",
@@ -855,7 +864,7 @@
     "tags": ["special"]
   },
   {
-    "index": 96,
+    "index": 97,
     "zinium": 5055,
     "longname": "Rune to increase the capacity of your rig type Rixx-Tec gear",
     "shortname": "increase rig capacity",
@@ -864,7 +873,7 @@
     "tags": ["special"]
   },
   {
-    "index": 97,
+    "index": 98,
     "zinium": 5555,
     "longname": "Rune to increase maximum condition of any gear",
     "shortname": "increase maximum condition",
@@ -873,7 +882,7 @@
     "tags": ["special", "other_item"]
   },
   {
-    "index": 98,
+    "index": 99,
     "zinium": 5600,
     "longname": "Rune to add +1 stat to your Rixx-Tec gear",
     "shortname": "+1 stat",
@@ -882,7 +891,7 @@
     "tags": ["stat"]
   },
   {
-    "index": 99,
+    "index": 100,
     "zinium": 5660,
     "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
     "shortname": "decrease weight",
@@ -891,7 +900,7 @@
     "tags": ["weight"]
   },
   {
-    "index": 100,
+    "index": 101,
     "zinium": 5700,
     "longname": "Rune to add +2 bonus to your Rixx-Tec gear",
     "shortname": "+2 bonus",
@@ -900,7 +909,7 @@
     "tags": ["bonus"]
   },
   {
-    "index": 101,
+    "index": 102,
     "zinium": 6000,
     "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
     "shortname": "+1% spell/skill haste",
@@ -909,7 +918,7 @@
     "tags": ["haste"]
   },
   {
-    "index": 102,
+    "index": 103,
     "zinium": 6500,
     "longname": "Rune to add +1 spell/skill to your Rixx-Tec gear",
     "shortname": "+1 spell/skill",
@@ -918,7 +927,7 @@
     "tags": ["spellskill"]
   },
   {
-    "index": 103,
+    "index": 104,
     "zinium": 7000,
     "longname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
     "shortname": "increase zinium capacity",
@@ -927,7 +936,7 @@
     "tags": ["special"]
   },
   {
-    "index": 104,
+    "index": 105,
     "zinium": 7050,
     "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
     "shortname": "decrease weight",
@@ -936,7 +945,7 @@
     "tags": ["weight"]
   },
   {
-    "index": 105,
+    "index": 106,
     "zinium": 8000,
     "longname": "Rune to add +1% exp rate to your Rixx-Tec gear",
     "shortname": "+1% exp rate",
@@ -945,7 +954,7 @@
     "tags": ["exprate"]
   },
   {
-    "index": 106,
+    "index": 107,
     "zinium": 8100,
     "longname": "Rune to reduce weight on any item",
     "shortname": "reduce weight",
@@ -954,7 +963,7 @@
     "tags": ["weight", "other_item"]
   },
   {
-    "index": 107,
+    "index": 108,
     "zinium": 8888,
     "longname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
     "shortname": "increase zinium capacity",
@@ -963,7 +972,7 @@
     "tags": ["special"]
   },
   {
-    "index": 108,
+    "index": 109,
     "zinium": 9000,
     "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
     "shortname": "+1% spell/skill haste",
@@ -972,7 +981,7 @@
     "tags": ["haste"]
   },
   {
-    "index": 109,
+    "index": 110,
     "zinium": 9300,
     "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
     "shortname": "resistance against mana flux",
@@ -981,7 +990,7 @@
     "tags": ["special"]
   },
   {
-    "index": 110,
+    "index": 111,
     "zinium": 9500,
     "longname": "Rune to increase maximum condition of any gear",
     "shortname": "increase maximum condition",
@@ -990,7 +999,7 @@
     "tags": ["special", "other_item"]
   },
   {
-    "index": 111,
+    "index": 112,
     "zinium": 9990,
     "longname": "Make your Rixx-Tec gear grant additional heart beats",
     "shortname": "fast metabolism",
@@ -999,7 +1008,7 @@
     "tags": ["special"]
   },
   {
-    "index": 112,
+    "index": 113,
     "zinium": 10000,
     "longname": "Make any of your gear to grant additional heart beats",
     "shortname": "fast metabolism",
@@ -1008,7 +1017,7 @@
     "tags": ["special", "other_item"]
   },
   {
-    "index": 113,
+    "index": 114,
     "zinium": 11000,
     "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
     "shortname": "+1% spell/skill haste",
@@ -1017,7 +1026,7 @@
     "tags": ["haste"]
   },
   {
-    "index": 114,
+    "index": 115,
     "zinium": 11111,
     "longname": "Rune to decrease the weight of your Rixx-Tec gear by 10%",
     "shortname": "decrease weight",
@@ -1026,7 +1035,7 @@
     "tags": ["weight"]
   },
   {
-    "index": 115,
+    "index": 116,
     "zinium": 11555,
     "longname": "Rune to add +1% spell/skill haste to your Rixx-Tec gear",
     "shortname": "+1% spell/skill haste",
@@ -1035,7 +1044,7 @@
     "tags": ["haste"]
   },
   {
-    "index": 116,
+    "index": 117,
     "zinium": 12000,
     "longname": "Rune to add +3% spell/skill efficiency to your Rixx-Tec gear",
     "shortname": "+3% spell/skill efficiency",
@@ -1044,7 +1053,7 @@
     "tags": ["special"]
   },
   {
-    "index": 117,
+    "index": 118,
     "zinium": 12222,
     "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
     "shortname": "resistance against mana flux",
@@ -1053,7 +1062,7 @@
     "tags": ["special"]
   },
   {
-    "index": 118,
+    "index": 119,
     "zinium": 14000,
     "longname": "Rune to increase maximum condition of any gear",
     "shortname": "increase maximum condition",
@@ -1062,7 +1071,7 @@
     "tags": ["special", "other_item"]
   },
   {
-    "index": 119,
+    "index": 120,
     "zinium": 17000,
     "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
     "shortname": "resistance against mana flux",
@@ -1071,7 +1080,7 @@
     "tags": ["special"]
   },
   {
-    "index": 120,
+    "index": 121,
     "zinium": 20000,
     "longname": "Gain 'Packrat' rank",
     "shortname": "Gain 'Packrat' rank",
@@ -1080,7 +1089,7 @@
     "tags": ["special"]
   },
   {
-    "index": 121,
+    "index": 122,
     "zinium": 24000,
     "longname": "Rune to increase maximum condition of any gear",
     "shortname": "increase maximum condition",
@@ -1089,7 +1098,7 @@
     "tags": ["special", "other_item"]
   },
   {
-    "index": 122,
+    "index": 123,
     "zinium": 25000,
     "longname": "Flawed quantum Batverse-Matrix",
     "shortname": "batverse-matrix",
@@ -1098,7 +1107,7 @@
     "tags": ["special"]
   },
   {
-    "index": 123,
+    "index": 124,
     "zinium": 27000,
     "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
     "shortname": "resistance against mana flux",
@@ -1107,7 +1116,7 @@
     "tags": ["special"]
   },
   {
-    "index": 124,
+    "index": 125,
     "zinium": 30000,
     "longname": "Gain 'Hoarder' rank",
     "shortname": "Gain 'Hoarder' rank",
@@ -1116,7 +1125,7 @@
     "tags": ["special"]
   },
   {
-    "index": 125,
+    "index": 126,
     "zinium": 32000,
     "longname": "Rune to increase maximum condition of any gear",
     "shortname": "increase maximum condition",
@@ -1125,7 +1134,7 @@
     "tags": ["special", "other_item"]
   },
   {
-    "index": 126,
+    "index": 127,
     "zinium": 33333,
     "longname": "Rune to permanently change damage type of any weapon",
     "shortname": "change damage type",
@@ -1134,7 +1143,7 @@
     "tags": ["special", "other_item"]
   },
   {
-    "index": 127,
+    "index": 128,
     "zinium": 35000,
     "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
     "shortname": "resistance against mana flux",
@@ -1143,7 +1152,7 @@
     "tags": ["special"]
   },
   {
-    "index": 128,
+    "index": 129,
     "zinium": 38000,
     "longname": "Rune to add spell/skill to your Rixx-Tec gear",
     "shortname": "spell/skill",
@@ -1152,7 +1161,7 @@
     "tags": ["special"]
   },
   {
-    "index": 129,
+    "index": 130,
     "zinium": 40000,
     "longname": "Rune to increase zinium capacity of your Rixx-Tec gear by 1",
     "shortname": "increase zinium capacity",
@@ -1161,7 +1170,7 @@
     "tags": ["special"]
   },
   {
-    "index": 130,
+    "index": 131,
     "zinium": 42000,
     "longname": "Rune to add increased healing effect to your Rixx-Tec gear",
     "shortname": "increased healing effect",
@@ -1170,7 +1179,7 @@
     "tags": ["special"]
   },
   {
-    "index": 131,
+    "index": 132,
     "zinium": 45000,
     "longname": "Rune to add resistance against mana flux to your Rixx-Tec gear",
     "shortname": "resistance against mana flux",
@@ -1179,7 +1188,7 @@
     "tags": ["special"]
   },
   {
-    "index": 132,
+    "index": 133,
     "zinium": 47000,
     "longname": "Rune to replace a stat with another stat on any item",
     "shortname": "replace a stat with another stat",
@@ -1188,7 +1197,7 @@
     "tags": ["special", "other_item"]
   },
   {
-    "index": 133,
+    "index": 134,
     "zinium": 50000,
     "longname": "Rixx supercharged Stellar Core Fragment",
     "shortname": "Rixx supercharged Stellar Core Fragment",
