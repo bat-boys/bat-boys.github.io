@@ -234,3 +234,32 @@ sign. That booze tests the party popper stat buffs, so give them a try. Like
 the poppers the booze is tradable but does not stack.
 
 Shinarae "pop the cork" Lluminus
+
+```
+news display updates 1568
+```
+
+Club Call Me Visible is now open. You can find it in the block north of the
+candy shop in Arelium.
+
+Bear in mind, the shop does not allow exchanges at this time. At the end of
+one year, when the prizes go single-use-only, you'll be allowed to refund eq
+for points, but those points cannot get new eq, only the other prizes (such as
+the streamer basket). It is HIGHLY advised you plan out ahead of time which
+items you want the most. Leftover points can be used to move the stats to a
+new item (letting you change slots and mats) or to replace a major stat (like
+str) with a minor one (like infravision). Those items cost 1 point each. Not
+sure what you'll get? Don't buy yet. The shop isn't going to close.
+
+Now I have also seen some of you with concerns about the event rooms' explore
+count. This is also something that will remain, but I can't add it yet, I
+didn't bring the right files with me. Short version: 5 rings at a time will be
+available each weekend, opened with the same keys, so keep that cloud file!
+The bosses will still be in there, but they won't drop points anymore, instead
+they'll have a randomized pool of weaker, standard eq, and an anti-abuse timer
+meaning once per weekend. Mostly, it's about the rooms. Anyhow, I'll get that
+up when I get back to my files, that'd be mid-July.
+
+Questions? Ask me _before_ spending points. 
+
+Shinarae "EDM" Lluminus
