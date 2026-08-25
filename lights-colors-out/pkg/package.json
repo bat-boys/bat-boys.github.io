@@ -1,0 +1,15 @@
+{
+  "name": "lights-colors-out",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "lights_colors_out_bg.wasm",
+    "lights_colors_out.js",
+    "lights_colors_out.d.ts"
+  ],
+  "main": "lights_colors_out.js",
+  "types": "lights_colors_out.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

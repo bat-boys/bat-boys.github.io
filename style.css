@@ -477,6 +477,213 @@ input + button {
   color: #4b5575;
 }
 
+/* Lights and Colors Out */
+body#lights-colors-out {
+  overflow: auto;
+}
+
+/* body.lights-colors-out { */
+/*   display: block; */
+/*   min-height: 100%; */
+/* } */
+
+#lights-colors-out main {
+  margin: 0 auto;
+  padding: 0 1.5em 2em;
+}
+
+.lights-colors-out .toolbar {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+  margin-bottom: 1.5em;
+}
+
+.lights-colors-out .controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  align-items: center;
+}
+
+.lights-colors-out button,
+.lights-colors-out select {
+  font: inherit;
+  padding: 0.25em 0.5em;
+  border: 1px solid #6a784f;
+  border-radius: 0;
+  background: #232520;
+  color: #6a784f;
+  margin-left: 0;
+}
+
+.lights-colors-out button:hover,
+.lights-colors-out select:focus,
+.lights-colors-out button:focus {
+  color: #817a55;
+  border-color: #817a55;
+}
+
+.lights-colors-out button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.lights-colors-out .start-layout {
+  display: grid;
+  grid-template-columns: minmax(25em, 1fr) minmax(25em, 1fr) minmax(25em, 1fr);
+  gap: 2em;
+  align-items: start;
+}
+
+.lights-colors-out #board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(2em, 2.5em));
+  gap: 0.35em;
+}
+
+.lights-colors-out .cell {
+  aspect-ratio: 1;
+  padding: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.lights-colors-out .cell.on,
+.lights-colors-out .picker-cell.selected {
+  background: #817a55;
+  color: #272622;
+}
+
+.lights-colors-out .cell.off,
+.lights-colors-out .picker-cell {
+  background: #272622;
+  color: #817a55;
+}
+
+.lights-colors-out textarea {
+  width: 18em;
+  box-sizing: border-box;
+  min-height: 18em;
+  padding: 0.5em;
+  background: #272622;
+  color: #817a55;
+  border: 1px solid #817a55;
+}
+
+.lights-colors-out #status {
+  flex: 1;
+  min-width: 24em;
+  margin: 0;
+  white-space: pre-wrap;
+  color: #817a55;
+}
+
+.lights-colors-out #status.solving::before {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.5em;
+  border: 2px solid #4b523e;
+  border-top-color: #817a55;
+  border-radius: 50%;
+  animation: lights-colors-out-spin 0.8s linear infinite;
+  vertical-align: -0.1em;
+}
+
+@keyframes lights-colors-out-spin {
+  to { transform: rotate(360deg); }
+}
+
+.lights-colors-out #moves {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(12em, 1fr));
+  gap: 0.75em;
+  margin: 1em 0;
+}
+
+.lights-colors-out .move-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.3em;
+  align-items: center;
+  padding: 0.7em;
+  background: #232520;
+}
+
+.lights-colors-out .move-label {
+  grid-column: 1 / -1;
+  color: #6a784f;
+}
+
+.lights-colors-out .move-cell {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.45em 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lights-colors-out .move-row > button {
+  grid-column: 1 / -1;
+}
+
+.lights-colors-out dialog {
+  margin: auto;
+  max-width: 22em;
+  background: #272622;
+  color: #817a55;
+  border: 1px solid #817a55;
+}
+
+.lights-colors-out dialog::backdrop {
+  background: #0008;
+}
+
+.lights-colors-out #picker {
+  display: grid;
+  grid-template-columns: repeat(5, 3em);
+  gap: 0.35em;
+  margin: 1em 0;
+}
+
+.start-layout section {
+  margin: 1.5em 0;
+}
+
+@media (max-width: 60em) {
+  .lights-colors-out .start-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lights-colors-out #moves {
+    grid-template-columns: repeat(3, minmax(12em, 1fr));
+  }
+}
+
+@media (max-width: 40em) {
+  .lights-colors-out main {
+    padding: 0 1em 1em;
+  }
+
+  .lights-colors-out h1 {
+    font-size: 24pt;
+  }
+
+  .lights-colors-out .toolbar {
+    flex-direction: column;
+  }
+
+  .lights-colors-out #status {
+    min-width: 0;
+  }
+
+  .lights-colors-out #moves {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*
 white
 !   Mountain Peak

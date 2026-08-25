@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en" class="lights-colors-out">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lights and Colors Out</title>
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+      integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+      crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body id="lights-colors-out">
+  <main>
+  <div class="header">
+    <h1>Lights and Colors Out</h1>
+  </div>
+
+  <div class="toolbar">
+    <div class="controls">
+      <label>Puzzle <select id="puzzle"><option value="lights">Lights Out</option><option value="colors">Colors Out</option></select></label>
+      <button id="solve">Solve</button>
+      <button id="clear">Clear</button>
+      <div id="status"></div>
+    </div>
+  </div>
+
+  <h3>Starting state</h3>
+
+  <div class="start-layout">
+    <section>
+        <div id="board" aria-label="5 by 5 starting board"></div>
+        <div class="box instructions"><label for="board">Select starting board cells</label></div>
+    </section>
+    <section>
+      <textarea id="bits" rows="13">   +---+---+---+---+---+
+ 1 | 1 | 0 | 0 | 1 | 1 |
+   +---+---+---+---+---+
+ 2 | 1 | 1 | 0 | 1 | 0 |
+   +---+---+---+---+---+
+ 3 | 0 | 1 | 0 | 1 | 0 |
+   +---+---+---+---+---+
+ 4 | 1 | 1 | 1 | 0 | 0 |
+   +---+---+---+---+---+
+ 5 | 1 | 1 | 0 | 1 | 1 |
+   +---+---+---+---+---+
+     A   B   C   D   E</textarea>
+      <div class="box instructions"><label for="bits">or paste the starting board</label></div>
+    </section>
+    <section>
+        <h3>Instructions</h3>
+        <div class="box instructions">
+            <p>
+                This is a solver for BatMUD gala quest puzzles Lights Out and Colors Out.
+            </p>
+            <p>
+                You'll have to set the starting state which can be clicked from first column
+                buttons, or copy-pasted into second column textarea.
+            </p>
+            <p>
+                Then you'll have to set all the five moves that pressing each cell will do.
+            </p>
+            <p>
+                Then click solve and hope for the best.
+            </p>
+            <p>
+                Starting state and moves are stored in URL, so you can copy the URL for
+                continuing later. Browser's back and forward work as undo and redo for
+                edits through mouse clicks (not for typing the moves via keyboard).
+            </p>
+            <p>
+                For questions, comments and bug reports, contact astrax in the game or in discord.
+            </p>
+    </div>
+    </section>
+  </div>
+
+  <h3>Move effects</h3>
+
+  <div class="box instructions">
+  <p>For each move, enter the five cells that change state.</p>
+  </div>
+  <div id="moves"></div>
+</main>
+<dialog id="move-dialog">
+  <form method="dialog">
+    <h2 id="dialog-title">Move effect</h2>
+    <p>Select exactly five cells.</p>
+    <div id="picker"></div>
+    <div class="controls"><button value="cancel">Cancel</button><button id="save-move" value="default">Save</button></div>
+  </form>
+</dialog>
+<script>
+  const board = document.querySelector("#board");
+  const bits = document.querySelector("#bits");
+  const status = document.querySelector("#status");
+  const cells = [];
+
+  function state() {
+    return cells.reduce((value, cell, index) => value | (cell.classList.contains("on") ? (1 << (24 - index)) : 0), 0) >>> 0;
+  }
+
+  function syncBits() {
+    const rows = ["   +---+---+---+---+---+"];
+    for (let row = 0; row < 5; row++) {
+      const values = cells.slice(row * 5, row * 5 + 5).map(cell => cell.classList.contains("on") ? "1" : "0");
+      rows.push(` ${row + 1} | ${values.join(" | ")} |`);
+      rows.push("   +---+---+---+---+---+");
+    }
+    rows.push("     A   B   C   D   E");
+    bits.value = rows.join("\n");
+  }
+
+  function setState(value, updateText = true) {
+    cells.forEach((cell, index) => {
+      const on = Boolean(value & (1 << (24 - index)));
+      cell.classList.toggle("on", on);
+      cell.classList.toggle("off", !on);
+      cell.textContent = on ? "1" : "0";
+    });
+    if (updateText) syncBits();
+  }
+
+  function parseBoard(text) {
+    const rowPattern = /^\s*[1-5]\s*\|\s*([01])\s*\|\s*([01])\s*\|\s*([01])\s*\|\s*([01])\s*\|\s*([01])\s*\|\s*$/gm;
+    const rows = [...text.matchAll(rowPattern)];
+    if (rows.length === 5) {
+      return rows.flatMap(row => row.slice(1, 6)).join("");
+    }
+
+    const plainBits = text.replace(/\s/g, "");
+    return /^[01]{25}$/.test(plainBits) ? plainBits : null;
+  }
+
+  const pageUrl = new URL(window.location.href);
+  const sharedPuzzle = pageUrl.searchParams.get("p");
+  const sharedStart = pageUrl.searchParams.get("s");
+
+  function decodeState(value) {
+    if (!/^[0-9a-z]+$/i.test(value)) return null;
+    const decoded = Number.parseInt(value, 36);
+    return Number.isInteger(decoded) && decoded >= 0 && decoded <= 0x1ffffff ? decoded : null;
+  }
+
+  function encodeMoves() {
+    const values = [...moveEditor.querySelectorAll(".move-row")].map(row =>
+      [...row.querySelectorAll("input")].map(input => input.value.trim().toUpperCase())
+    );
+    const encoded = values.flatMap(row => {
+      const nonEmpty = row.filter(value => value !== "");
+      if (row.length !== 5 || new Set(nonEmpty).size !== nonEmpty.length) return row.map(() => null);
+      return row.map(value => {
+        if (value === "") return "-";
+        const index = MOVE_NAMES.indexOf(value);
+        return index >= 0 ? index.toString(36) : null;
+      });
+    });
+    return encoded.length === 125 && encoded.every(value => value !== null) ? encoded.join("") : null;
+  }
+
+  function decodeMoves(value) {
+    if (!/^[0-9a-o]{125}$/i.test(value)) return null;
+    const decoded = [];
+    for (let index = 0; index < 25; index++) {
+      const row = [...value.slice(index * 5, index * 5 + 5)].map(cell =>
+        cell === "-" ? null : MOVE_NAMES[Number.parseInt(cell, 36)]
+      );
+      const nonEmpty = row.filter(cell => cell !== null);
+      if (row.some(cell => cell === undefined) || new Set(nonEmpty).size !== nonEmpty.length) return null;
+      decoded.push(row);
+    }
+    return decoded;
+  }
+
+  function updateUrl(push = false, clearMoves = false) {
+    const nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.set("p", document.querySelector("#puzzle").value);
+    nextUrl.searchParams.set("s", state().toString(36));
+    const encodedMoves = encodeMoves();
+    if (clearMoves) nextUrl.searchParams.delete("m");
+    else if (encodedMoves) nextUrl.searchParams.set("m", encodedMoves);
+    else nextUrl.searchParams.delete("m");
+    if (nextUrl.href === window.location.href) return;
+    window.history[push ? "pushState" : "replaceState"](null, "", nextUrl);
+  }
+
+  const MOVE_NAMES = Array.from({ length: 5 }, (_, row) =>
+    Array.from({ length: 5 }, (_, column) => `${String.fromCharCode(65 + column)}${row + 1}`)
+  ).flat();
+  const LIGHTS_OUT_MOVE_MASKS = [
+    0b10000_10000_00000_11000_10000,
+    0b01000_00010_01000_00010_10000,
+    0b00100_00000_00010_00100_10100,
+    0b10110_00010_00000_10000_00000,
+    0b00001_00000_10101_00000_00001,
+    0b00000_10001_01010_00001_00000,
+    0b00000_01001_00000_01000_00101,
+    0b00001_00100_10001_00010_00000,
+    0b10010_00010_00000_10000_00010,
+    0b00100_01011_00100_00000_00000,
+    0b00000_00000_10101_00001_00100,
+    0b00000_10000_01010_10000_01000,
+    0b01000_01000_00101_00000_00001,
+    0b00000_10010_10010_00100_00000,
+    0b10000_01001_10001_00000_00000,
+    0b01000_00000_00100_10110_00000,
+    0b00101_00100_00000_01000_10000,
+    0b01001_10000_00000_00101_00000,
+    0b00000_00000_00000_00110_01110,
+    0b00010_00100_00000_00011_00010,
+    0b00000_00101_01000_00000_10001,
+    0b00010_00100_00010_01000_01000,
+    0b00001_01000_01000_00000_00110,
+    0b01010_00000_00000_00001_01010,
+    0b10100_00000_00000_01000_01001,
+  ];
+  const moves = [];
+  const moveEditor = document.querySelector("#moves");
+  const moveDialog = document.querySelector("#move-dialog");
+  const picker = document.querySelector("#picker");
+  const pickerCells = [];
+  let activeMove = -1;
+  let wasmReady;
+
+  if (sharedPuzzle === "lights" || sharedPuzzle === "colors") {
+    document.querySelector("#puzzle").value = sharedPuzzle;
+  }
+
+  function loadMoveConfiguration(configuration) {
+    const rows = configuration.trim().split("\n");
+    if (rows.length !== 25) throw new Error("Invalid default move configuration");
+    moves.length = 0;
+    moveEditor.replaceChildren();
+    rows.forEach((row, index) => {
+      const values = row.split(",").map(cell => cell.trim() || null);
+      if (values.length !== 5) throw new Error(`Move ${index + 1} must contain five cells`);
+      moves.push(values);
+      const line = document.createElement("div");
+      line.className = "move-row";
+      const label = document.createElement("span");
+      label.className = "move-label";
+      label.textContent = `${MOVE_NAMES[index]}:`;
+      line.append(label);
+      values.forEach((value, valueIndex) => {
+        const input = document.createElement("input");
+        input.className = "move-cell";
+        input.maxLength = 2;
+        input.value = value ?? "";
+        input.addEventListener("input", () => {
+          input.value = input.value.toUpperCase();
+          moves[index][valueIndex] = input.value || null;
+          updateUrl();
+        });
+        input.addEventListener("change", () => updateUrl(true));
+        line.append(input);
+      });
+      const open = document.createElement("button");
+      open.type = "button";
+      open.textContent = "Open board";
+      open.addEventListener("click", () => openMovePicker(index));
+      line.append(open);
+      moveEditor.append(line);
+    });
+  }
+
+  function lightsOutMoveConfiguration() {
+    return LIGHTS_OUT_MOVE_MASKS.map(mask =>
+      MOVE_NAMES.filter((_, index) => mask & (1 << (24 - index))).join(",")
+    ).join("\n");
+  }
+
+  function moveConfiguration() {
+    const result = [];
+    for (const row of moveEditor.querySelectorAll(".move-row")) {
+      const values = [...row.querySelectorAll("input")].map(input => input.value.trim().toUpperCase());
+      if (values.length !== 5 || values.some(value => !/^[A-E][1-5]$/.test(value))) {
+        throw new Error("Every move must contain five valid cells (A1 to E5).");
+      }
+      if (new Set(values).size !== 5) throw new Error("Every move must contain five unique cells.");
+      result.push(values.join(","));
+    }
+    if (result.length !== 25) throw new Error("The move table must contain 25 moves.");
+    return result.join("\n");
+  }
+
+  function openMovePicker(index) {
+    activeMove = index;
+    const values = new Set(moves[index].filter(Boolean));
+    pickerCells.forEach(cell => cell.classList.toggle("selected", values.has(cell.dataset.name)));
+    document.querySelector("#dialog-title").textContent = `${MOVE_NAMES[index]} changes`;
+    moveDialog.showModal();
+  }
+
+  MOVE_NAMES.forEach(name => {
+    const cell = document.createElement("button");
+    cell.type = "button";
+    cell.className = "picker-cell";
+    cell.textContent = name;
+    cell.dataset.name = name;
+    cell.addEventListener("click", () => {
+      const selected = pickerCells.filter(candidate => candidate.classList.contains("selected"));
+      if (!cell.classList.contains("selected") && selected.length >= 5) return;
+      cell.classList.toggle("selected");
+    });
+    pickerCells.push(cell);
+    picker.append(cell);
+  });
+
+  document.querySelector("#save-move").addEventListener("click", event => {
+    const selected = pickerCells.filter(cell => cell.classList.contains("selected")).map(cell => cell.dataset.name);
+    if (selected.length !== 5) {
+      event.preventDefault();
+      status.textContent = "Select exactly five unique cells.";
+      return;
+    }
+    moves[activeMove] = selected;
+    const row = moveEditor.querySelectorAll(".move-row")[activeMove];
+    row.querySelectorAll("input").forEach((input, index) => { input.value = selected[index]; });
+    updateUrl(true);
+  });
+
+  async function loadWasm() {
+    wasmReady ??= import("./pkg/lights_colors_out.js").then(async module => {
+      await module.default();
+      return module;
+    });
+    return wasmReady;
+  }
+
+  async function loadDefaultMoves(url = new URL(window.location.href), canonicalize = true) {
+    try {
+      const module = await loadWasm();
+      const puzzle = document.querySelector("#puzzle").value;
+      const defaultMoves = puzzle === "lights"
+        ? lightsOutMoveConfiguration()
+        : module.default_moves_wasm(puzzle);
+      loadMoveConfiguration(defaultMoves);
+      const encodedMoves = url.searchParams.get("m");
+      if (encodedMoves) {
+        const decoded = decodeMoves(encodedMoves);
+        if (decoded) loadMoveConfiguration(decoded.map(row => row.join(",")).join("\n"));
+        else status.textContent = "Invalid move configuration in URL; using defaults.";
+      }
+      if (canonicalize) updateUrl();
+    } catch (error) {
+      status.textContent = `Move defaults unavailable: ${error}`;
+    }
+  }
+
+  document.querySelector("#puzzle").addEventListener("change", () => {
+    updateUrl(true, true);
+    loadDefaultMoves();
+  });
+  loadDefaultMoves(pageUrl);
+
+  for (let index = 0; index < 25; index++) {
+    const cell = document.createElement("button");
+    cell.className = "cell off";
+    cell.textContent = "0";
+    cell.setAttribute("aria-label", `Cell ${index + 1}`);
+    cell.addEventListener("click", () => {
+      cell.classList.toggle("on");
+      cell.classList.toggle("off");
+      cell.textContent = cell.classList.contains("on") ? "1" : "0";
+      syncBits();
+      updateUrl(true);
+    });
+    cells.push(cell);
+    board.append(cell);
+  }
+
+  const initialBits = parseBoard(bits.value);
+  const decodedStart = sharedStart ? decodeState(sharedStart) : null;
+  if (decodedStart !== null) setState(decodedStart);
+  else if (initialBits !== null) setState(parseInt(initialBits, 2), false);
+
+  bits.addEventListener("input", () => {
+    const boardBits = parseBoard(bits.value);
+    if (boardBits === null) {
+      status.textContent = "Paste five numbered board rows or exactly 25 bits.";
+      return;
+    }
+    setState(parseInt(boardBits, 2));
+    status.textContent = "Starting state loaded.";
+    updateUrl();
+  });
+
+  bits.addEventListener("change", () => updateUrl(true));
+
+  document.querySelector("#clear").addEventListener("click", () => {
+    setState(0);
+    loadMoveConfiguration(Array.from({ length: 25 }, () => ",,,,").join("\n"));
+    status.textContent = "Board cleared.";
+    updateUrl(true);
+  });
+
+  window.addEventListener("popstate", async () => {
+    const url = new URL(window.location.href);
+    const puzzle = url.searchParams.get("p");
+    document.querySelector("#puzzle").value = puzzle === "colors" ? "colors" : "lights";
+    const decodedStart = decodeState(url.searchParams.get("s") || "");
+    if (decodedStart !== null) setState(decodedStart);
+    else if (initialBits !== null) setState(parseInt(initialBits, 2));
+    await loadDefaultMoves(url, false);
+  });
+  function setBusy(busy) {
+    document.querySelectorAll("#solve, #clear, #puzzle, #board button, #moves input, #moves button").forEach(control => { control.disabled = busy; });
+    status.classList.toggle("solving", busy);
+  }
+
+  document.querySelector("#solve").addEventListener("click", async () => {
+    let configuration;
+    try {
+      configuration = moveConfiguration();
+    } catch (error) {
+      status.textContent = `Error: ${error}`;
+      return;
+    }
+    const worker = new Worker("./worker.js", { type: "module" });
+    const kind = document.querySelector("#puzzle").value;
+    setBusy(true);
+    status.textContent = "Solving...";
+    worker.onmessage = ({ data }) => {
+      if (data.type === "progress") {
+        status.textContent = `Solving... Processed: ${data.processed.toLocaleString()} Queue: ${data.queueSize.toLocaleString()}`;
+      } else if (data.type === "result") {
+        setBusy(false);
+        status.textContent = `Moves: ${data.moves}`;
+        worker.terminate();
+      } else if (data.type === "error") {
+        setBusy(false);
+        status.textContent = `Error: ${data.message}`;
+        worker.terminate();
+      }
+    };
+    worker.onerror = error => {
+      setBusy(false);
+      status.textContent = `Error: ${error.message}`;
+      worker.terminate();
+    };
+    worker.postMessage({ puzzle: kind, start: state(), configuration });
+  });
+</script>
+</body>
+</html>
