@@ -86,10 +86,12 @@
 </main>
 <dialog id="move-dialog">
   <form method="dialog">
-    <h2 id="dialog-title">Move effect</h2>
-    <p>Select exactly five cells.</p>
+      <h3 id="dialog-title">Move effect</h2>
+          <div class="instructions">
+              <p>Select exactly five cells. The pressed cell is always selected.</p>
+          </div>
     <div id="picker"></div>
-    <div class="controls"><button value="cancel">Cancel</button><button id="save-move" value="default">Save</button></div>
+    <div class="controls"><button value="cancel">Cancel</button><button id="clear-picker" type="button">Clear</button><button id="save-move" value="default">Save</button></div>
   </form>
 </dialog>
 <script>
@@ -148,9 +150,14 @@
     const values = [...moveEditor.querySelectorAll(".move-row")].map(row =>
       [...row.querySelectorAll("input")].map(input => input.value.trim().toUpperCase())
     );
-    const encoded = values.flatMap(row => {
+    const encoded = values.flatMap((row, rowIndex) => {
       const nonEmpty = row.filter(value => value !== "");
-      if (row.length !== 5 || new Set(nonEmpty).size !== nonEmpty.length) return row.map(() => null);
+      if (
+        row.length !== 5 ||
+        nonEmpty.length === 0 ||
+        !nonEmpty.includes(MOVE_NAMES[rowIndex]) ||
+        new Set(nonEmpty).size !== nonEmpty.length
+      ) return row.map(() => null);
       return row.map(value => {
         if (value === "") return "-";
         const index = MOVE_NAMES.indexOf(value);
@@ -168,7 +175,12 @@
         cell === "-" ? null : MOVE_NAMES[Number.parseInt(cell, 36)]
       );
       const nonEmpty = row.filter(cell => cell !== null);
-      if (row.some(cell => cell === undefined) || new Set(nonEmpty).size !== nonEmpty.length) return null;
+      if (
+        row.some(cell => cell === undefined) ||
+        nonEmpty.length === 0 ||
+        !nonEmpty.includes(MOVE_NAMES[index]) ||
+        new Set(nonEmpty).size !== nonEmpty.length
+      ) return null;
       decoded.push(row);
     }
     return decoded;
@@ -220,6 +232,8 @@
   const moveEditor = document.querySelector("#moves");
   const moveDialog = document.querySelector("#move-dialog");
   const picker = document.querySelector("#picker");
+  const clearPicker = document.querySelector("#clear-picker");
+  const saveMove = document.querySelector("#save-move");
   const pickerCells = [];
   let activeMove = -1;
   let wasmReady;
@@ -234,7 +248,11 @@
     moves.length = 0;
     moveEditor.replaceChildren();
     rows.forEach((row, index) => {
-      const values = row.split(",").map(cell => cell.trim() || null);
+      const parsedValues = row.split(",").map(cell => cell.trim() || null);
+      const values = parsedValues.sort((a, b) =>
+        (a === null ? MOVE_NAMES.length : MOVE_NAMES.indexOf(a)) -
+        (b === null ? MOVE_NAMES.length : MOVE_NAMES.indexOf(b))
+      );
       if (values.length !== 5) throw new Error(`Move ${index + 1} must contain five cells`);
       moves.push(values);
       const line = document.createElement("div");
@@ -248,6 +266,7 @@
         input.className = "move-cell";
         input.maxLength = 2;
         input.value = value ?? "";
+        input.readOnly = value === MOVE_NAMES[index];
         input.addEventListener("input", () => {
           input.value = input.value.toUpperCase();
           moves[index][valueIndex] = input.value || null;
@@ -273,12 +292,15 @@
 
   function moveConfiguration() {
     const result = [];
-    for (const row of moveEditor.querySelectorAll(".move-row")) {
+    for (const [index, row] of [...moveEditor.querySelectorAll(".move-row")].entries()) {
       const values = [...row.querySelectorAll("input")].map(input => input.value.trim().toUpperCase());
       if (values.length !== 5 || values.some(value => !/^[A-E][1-5]$/.test(value))) {
         throw new Error("Every move must contain five valid cells (A1 to E5).");
       }
       if (new Set(values).size !== 5) throw new Error("Every move must contain five unique cells.");
+      if (!values.includes(MOVE_NAMES[index])) {
+        throw new Error("Every move must include the cell being pressed.");
+      }
       result.push(values.join(","));
     }
     if (result.length !== 25) throw new Error("The move table must contain 25 moves.");
@@ -287,10 +309,18 @@
 
   function openMovePicker(index) {
     activeMove = index;
-    const values = new Set(moves[index].filter(Boolean));
+    const values = new Set([MOVE_NAMES[index], ...moves[index].filter(Boolean)]);
     pickerCells.forEach(cell => cell.classList.toggle("selected", values.has(cell.dataset.name)));
+    updatePickerValidity();
     document.querySelector("#dialog-title").textContent = `${MOVE_NAMES[index]} changes`;
     moveDialog.showModal();
+  }
+
+  function updatePickerValidity() {
+    const selected = pickerCells.filter(cell => cell.classList.contains("selected"));
+    const forced = pickerCells.find(cell => cell.dataset.name === MOVE_NAMES[activeMove]);
+    const isCleared = selected.length === 1 && selected[0] === forced;
+    saveMove.disabled = selected.length !== 5 && !isCleared;
   }
 
   MOVE_NAMES.forEach(name => {
@@ -300,24 +330,39 @@
     cell.textContent = name;
     cell.dataset.name = name;
     cell.addEventListener("click", () => {
+      if (name === MOVE_NAMES[activeMove]) return;
       const selected = pickerCells.filter(candidate => candidate.classList.contains("selected"));
       if (!cell.classList.contains("selected") && selected.length >= 5) return;
       cell.classList.toggle("selected");
+      updatePickerValidity();
     });
     pickerCells.push(cell);
     picker.append(cell);
   });
+  updatePickerValidity();
 
-  document.querySelector("#save-move").addEventListener("click", event => {
-    const selected = pickerCells.filter(cell => cell.classList.contains("selected")).map(cell => cell.dataset.name);
-    if (selected.length !== 5) {
+  clearPicker.addEventListener("click", () => {
+    pickerCells.forEach(cell => cell.classList.toggle("selected", cell.dataset.name === MOVE_NAMES[activeMove]));
+    updatePickerValidity();
+  });
+
+  saveMove.addEventListener("click", event => {
+    const selected = pickerCells
+      .filter(cell => cell.classList.contains("selected"))
+      .map(cell => cell.dataset.name);
+    const isCleared = selected.length === 1 && selected[0] === MOVE_NAMES[activeMove];
+    if (selected.length !== 5 && !isCleared) {
       event.preventDefault();
       status.textContent = "Select exactly five unique cells.";
       return;
     }
-    moves[activeMove] = selected;
+    const ordered = selected.sort((a, b) => MOVE_NAMES.indexOf(a) - MOVE_NAMES.indexOf(b));
+    moves[activeMove] = Array.from({ length: 5 }, (_, index) => ordered[index] ?? null);
     const row = moveEditor.querySelectorAll(".move-row")[activeMove];
-    row.querySelectorAll("input").forEach((input, index) => { input.value = selected[index]; });
+    row.querySelectorAll("input").forEach((input, index) => {
+      input.value = moves[activeMove][index] ?? "";
+      input.readOnly = moves[activeMove][index] === MOVE_NAMES[activeMove];
+    });
     updateUrl(true);
   });
 
@@ -391,7 +436,7 @@
 
   document.querySelector("#clear").addEventListener("click", () => {
     setState(0);
-    loadMoveConfiguration(Array.from({ length: 25 }, () => ",,,,").join("\n"));
+    loadMoveConfiguration(MOVE_NAMES.map(name => `${name},,,,`).join("\n"));
     status.textContent = "Board cleared.";
     updateUrl(true);
   });

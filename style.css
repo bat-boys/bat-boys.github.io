@@ -308,7 +308,6 @@ body#lights-colors-out {
 }
 
 .lights-colors-out button:disabled {
-  cursor: wait;
   opacity: 0.6;
 }
 
@@ -416,8 +415,15 @@ body#lights-colors-out {
   margin: auto;
   max-width: 22em;
   background: #272622;
-  color: #817a55;
+  color: #7d598f;
+  /* color: #817a55; */
   border: 1px solid #817a55;
+  padding: 1em;
+}
+
+.lights-colors-out dialog h3 {
+    margin: 0;
+    padding-bottom: 0.5em;
 }
 
 .lights-colors-out dialog::backdrop {
