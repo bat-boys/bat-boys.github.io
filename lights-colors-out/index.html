@@ -22,6 +22,7 @@
     <div class="controls">
       <label>Puzzle <select id="puzzle"><option value="lights">Lights Out</option><option value="colors">Colors Out</option></select></label>
       <button id="solve">Solve</button>
+      <button id="cancel" type="button" hidden>Cancel</button>
       <button id="clear">Clear</button>
       <div id="status"></div>
     </div>
@@ -77,6 +78,11 @@
     </section>
   </div>
 
+  <div id="solution-container" hidden>
+    <h3>Solution</h3>
+    <textarea id="solution" readonly wrap="off" rows="13"></textarea>
+  </div>
+
   <h3>Move effects</h3>
 
   <div class="box instructions">
@@ -97,8 +103,15 @@
 <script>
   const board = document.querySelector("#board");
   const bits = document.querySelector("#bits");
+  const solutionContainer = document.querySelector("#solution-container");
+  const solution = document.querySelector("#solution");
   const status = document.querySelector("#status");
+  const solveButton = document.querySelector("#solve");
+  const cancelButton = document.querySelector("#cancel");
   const cells = [];
+  const SOLVE_TIMEOUT_MS = 60_000;
+  let activeWorker = null;
+  let solveTimeout = null;
 
   function state() {
     return cells.reduce((value, cell, index) => value | (cell.classList.contains("on") ? (1 << (24 - index)) : 0), 0) >>> 0;
@@ -123,6 +136,49 @@
       cell.textContent = on ? "1" : "0";
     });
     if (updateText) syncBits();
+  }
+
+  function formatBoard(value, changed = 0, label = "") {
+    const lines = [label, "   +---+---+---+---+---+"];
+    for (let row = 0; row < 5; row++) {
+      const values = [];
+      for (let column = 0; column < 5; column++) {
+        const index = row * 5 + column;
+        const cell = (value & (1 << (24 - index))) ? "1" : "0";
+        values.push(changed & (1 << (24 - index)) ? `*${cell}*` : ` ${cell} `);
+      }
+      lines.push(` ${row + 1} |${values.join("|")}|`);
+      lines.push("   +---+---+---+---+---+");
+    }
+    lines.push("     A   B   C   D   E");
+    return lines;
+  }
+
+  function renderSolution(start, result) {
+    const moveNames = String(result).match(/[A-E][1-5]/g) || [];
+    const boards = [formatBoard(start, 0, "starting state")];
+    let current = start;
+    moveNames.forEach(name => {
+      const moveIndex = MOVE_NAMES.indexOf(name);
+      if (moveIndex < 0 || !moves[moveIndex]) return;
+      const effect = moves[moveIndex].filter(Boolean).reduce(
+        (mask, cell) => mask | (1 << (24 - MOVE_NAMES.indexOf(cell))),
+        0
+      );
+      current ^= effect;
+      boards.push(formatBoard(current, effect, `press ${name.toLowerCase()}`));
+    });
+
+    const width = boards[0].reduce((longest, line) => Math.max(longest, line.length), 0);
+    const lines = [];
+    for (let offset = 0; offset < boards.length; offset += 5) {
+      const group = boards.slice(offset, offset + 5);
+      for (let line = 0; line < boards[0].length; line++) {
+        lines.push(group.map(boardLines => boardLines[line].padEnd(width)).join("  ").trimEnd());
+      }
+      if (offset + 5 < boards.length) lines.push("");
+    }
+    solution.value = lines.join("\n");
   }
 
   function parseBoard(text) {
@@ -395,8 +451,7 @@
   }
 
   document.querySelector("#puzzle").addEventListener("change", () => {
-    updateUrl(true, true);
-    loadDefaultMoves();
+    updateUrl(true);
   });
   loadDefaultMoves(pageUrl);
 
@@ -437,6 +492,8 @@
   document.querySelector("#clear").addEventListener("click", () => {
     setState(0);
     loadMoveConfiguration(MOVE_NAMES.map(name => `${name},,,,`).join("\n"));
+    solutionContainer.hidden = true;
+    solution.value = "";
     status.textContent = "Board cleared.";
     updateUrl(true);
   });
@@ -452,10 +509,26 @@
   });
   function setBusy(busy) {
     document.querySelectorAll("#solve, #clear, #puzzle, #board button, #moves input, #moves button").forEach(control => { control.disabled = busy; });
+    solveButton.disabled = busy;
+    cancelButton.hidden = !busy;
+    cancelButton.disabled = !busy;
     status.classList.toggle("solving", busy);
   }
 
-  document.querySelector("#solve").addEventListener("click", async () => {
+  function stopSolving(message) {
+    if (activeWorker) {
+      activeWorker.terminate();
+      activeWorker = null;
+    }
+    clearTimeout(solveTimeout);
+    solveTimeout = null;
+    setBusy(false);
+    status.textContent = message;
+  }
+
+  cancelButton.addEventListener("click", () => stopSolving("Solving cancelled."));
+
+  solveButton.addEventListener("click", async () => {
     let configuration;
     try {
       configuration = moveConfiguration();
@@ -463,24 +536,44 @@
       status.textContent = `Error: ${error}`;
       return;
     }
+    const start = state();
     const worker = new Worker("./worker.js", { type: "module" });
+    activeWorker = worker;
     const kind = document.querySelector("#puzzle").value;
     setBusy(true);
+    solutionContainer.hidden = false;
+    solution.value = "";
     status.textContent = "Solving...";
+    solveTimeout = setTimeout(() => {
+      if (activeWorker !== worker) return;
+      stopSolving("Solving timed out after 60 seconds.");
+    }, SOLVE_TIMEOUT_MS);
     worker.onmessage = ({ data }) => {
+      if (activeWorker !== worker) return;
       if (data.type === "progress") {
         status.textContent = `Solving... Processed: ${data.processed.toLocaleString()} Queue: ${data.queueSize.toLocaleString()}`;
       } else if (data.type === "result") {
+        clearTimeout(solveTimeout);
+        solveTimeout = null;
+        activeWorker = null;
+        worker.terminate();
         setBusy(false);
         status.textContent = `Moves: ${data.moves}`;
-        worker.terminate();
+        renderSolution(start, data.moves);
       } else if (data.type === "error") {
+        clearTimeout(solveTimeout);
+        solveTimeout = null;
+        activeWorker = null;
+        worker.terminate();
         setBusy(false);
         status.textContent = `Error: ${data.message}`;
-        worker.terminate();
       }
     };
     worker.onerror = error => {
+      if (activeWorker !== worker) return;
+      activeWorker = null;
+      clearTimeout(solveTimeout);
+      solveTimeout = null;
       setBusy(false);
       status.textContent = `Error: ${error.message}`;
       worker.terminate();

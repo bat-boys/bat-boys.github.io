@@ -353,6 +353,14 @@ body#lights-colors-out {
   border: 1px solid #817a55;
 }
 
+.lights-colors-out #solution {
+  display: block;
+  width: 100%;
+  min-height: 18em;
+  white-space: pre;
+  overflow: auto;
+}
+
 .lights-colors-out #status {
   flex: 1;
   min-width: 24em;
