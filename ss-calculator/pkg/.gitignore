@@ -1,0 +1,5 @@
+# Keep wasm-pack output available to the static GitHub Pages site.
+*
+!.gitignore
+!package.json
+!ss_calculator*

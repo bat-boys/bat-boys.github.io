@@ -1,0 +1,69 @@
+Name: BatMUD's most creative group of WHINERs with HANGOVERS
+Command: kabula+
+Guild masters: Tikku and Wannabezeke
+Your level: 0
+Maximum level: 10
+
+Description:
+Hangover, Adj. Suffering from a lasting near death state. Often caused by the disagreable after effects of alcohol. Pounding headache, nausea, dizziness and more often than not days off work are not uncommon. Lack of sense of humour increases the need of total silence and ANOTHER DRINK.
+
+Abilities gained when joining:
+ Receive guild item
+
+Abilities and requirements at each level:
+ Level 1:
+  Abilities:
+   Statmax of wis +3
+   Statmax of int +3
+   Spellmax of all +1
+   Skillmax of all +1
+ Level 2:
+  Abilities:
+   Statmax of wis +4
+   Statmax of int +4
+   Spellmax of all +1
+   Skillmax of all +1
+ Level 3:
+  Abilities:
+   Statmax of wis +5
+   Statmax of int +5
+   Spellmax of all +1
+   Skillmax of all +1
+ Level 4:
+  Abilities:
+   Spellmax of all +1
+   Skillmax of all +1
+   Statmax of int +6
+   Statmax of wis +6
+ Level 5:
+  Abilities:
+   Statmax of wis +8
+   Statmax of int +8
+   Spellmax of all +1
+   Skillmax of all +1
+ Level 6:
+  Abilities:
+   Statmax of wis +4
+   Statmax of int +4
+   Spellmax of all +1
+   Skillmax of all +1
+ Level 7:
+  Abilities:
+   Spellmax of all +1
+   Statmax of int +5
+   Statmax of wis +5
+ Level 8:
+  Abilities:
+   Statmax of int +6
+   Statmax of wis +6
+ Level 9:
+  Abilities:
+   Statmax of int +8
+   Statmax of wis +8
+ Level 10:
+  Abilities:
+   Statmax of int +9
+   Statmax of wis +9
+
+Allows joining to the following guild:
+BatMUD's most creative group of WHINERs with HANGOVERS

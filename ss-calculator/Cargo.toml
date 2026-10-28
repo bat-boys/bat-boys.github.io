@@ -1,0 +1,14 @@
+[package]
+name = "ss-calculator"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+bat-ui-components = { path = "../crates/ui-components" }
+leptos = { version = "0.8", default-features = false, features = ["csr"] }
+secret-society-core = { path = "../crates/secret-society-core" }
+wasm-bindgen = "0.2"

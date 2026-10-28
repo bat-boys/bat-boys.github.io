@@ -2,6 +2,7 @@
 
 - [Rixx-Tec gear calculator](rixx-calculator/)
 - [Lights and Colors Out](lights-colors-out/)
+- [Secret society calculator](ss-calculator/)
 - Event information
   - [2022 spring - Phylactery](events/2022-04-phylactery.md)
   - [2022 halloween](events/2022-10-halloween.md)

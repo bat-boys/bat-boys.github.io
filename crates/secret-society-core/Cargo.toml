@@ -1,0 +1,9 @@
+[package]
+name = "secret-society-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "secret_society_core"
+path = "src/lib.rs"

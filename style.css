@@ -481,6 +481,243 @@ body#lights-colors-out {
   }
 }
 
+/* Secret society calculator */
+body#ss-calculator {
+  min-height: 0;
+  overflow: hidden;
+}
+
+#ss-calculator #app {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  max-width: none;
+  padding: 0 1em 1em;
+  box-sizing: border-box;
+}
+
+#ss-calculator main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+}
+
+#ss-calculator .header {
+  flex: 0 0 auto;
+}
+
+#ss-calculator .ss-layout {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 1em;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+#ss-calculator .ss-scroll-column {
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#ss-calculator .ss-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1em;
+}
+
+#ss-calculator .ss-field {
+  display: grid;
+  min-width: 0;
+  gap: 0.4em;
+  color: #817a55;
+}
+
+#ss-calculator .ss-field select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#ss-calculator .ss-panel-content > p:first-child {
+  margin-top: 0;
+}
+
+#ss-calculator .ss-description {
+  white-space: pre-line;
+}
+
+#ss-calculator .ss-joining-abilities {
+  margin: 0 0 0.75em 1.5em;
+}
+
+#ss-calculator .ss-summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 0.45em 0.6em;
+  border-bottom: 1px solid #353b28;
+}
+
+#ss-calculator .ss-summary-row:last-child {
+  border-bottom: 0;
+}
+
+#ss-calculator .ss-cap-note {
+  line-height: 1.4;
+}
+
+#ss-calculator .ss-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+#ss-calculator .ss-ability-table {
+  width: 100%;
+  min-width: max-content;
+  border-collapse: collapse;
+}
+
+#ss-calculator .ss-ability-table th,
+#ss-calculator .ss-ability-table td {
+  padding: 0.45em 0.6em;
+  border-bottom: 1px solid #353b28;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+#ss-calculator .ss-ability-table tbody tr {
+  height: 3.2em;
+}
+
+#ss-calculator .ss-ability-table thead th {
+  color: #817a55;
+  background: #19171a;
+}
+
+#ss-calculator .ss-ability-table .ss-optimize-row th,
+#ss-calculator .ss-ability-table .ss-optimize-row td {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+#ss-calculator .ss-optimize-button,
+#ss-calculator .ss-clear-all-button {
+  padding: 0.15em 0.4em;
+  font-size: 9pt;
+}
+
+#ss-calculator .ss-ability-table tbody th {
+  color: #817a55;
+  font-weight: normal;
+}
+
+#ss-calculator .ss-ability-table td.ss-selected-cell {
+  background: #4b523e;
+  color: #f2efdc;
+}
+
+#ss-calculator .ss-ability-table th:first-child,
+#ss-calculator .ss-ability-table td:first-child {
+  min-width: 3em;
+}
+
+#ss-calculator .ss-ability-table th:last-child,
+#ss-calculator .ss-ability-table td:last-child {
+  min-width: 4.5em;
+}
+
+#ss-calculator .ss-table-choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35em;
+  cursor: pointer;
+}
+
+#ss-calculator .ss-table-choice input {
+  margin: 0;
+}
+
+#ss-calculator .ss-table-choice.ss-unavailable {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+#ss-calculator .ss-empty-cell {
+  min-width: 3em;
+}
+
+#ss-calculator .ss-clear-cell {
+  text-align: center;
+}
+
+#ss-calculator .ss-empty-row {
+  display: inline-block;
+  color: #7d598f;
+}
+
+#ss-calculator .ss-clear-level {
+  padding: 0.2em 0.5em;
+}
+
+@media (max-width: 55em) {
+  body#ss-calculator {
+    display: block;
+    height: auto;
+    min-height: 100%;
+    overflow: auto;
+  }
+
+  #ss-calculator #app {
+    display: block;
+    min-height: 100%;
+    padding-bottom: 1em;
+  }
+
+  #ss-calculator main {
+    display: block;
+  }
+
+  #ss-calculator .ss-layout {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  #ss-calculator .ss-scroll-column {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 40em) {
+  #ss-calculator #app {
+    padding: 0 0.5em 1em;
+  }
+
+  #ss-calculator .ss-controls {
+    grid-template-columns: 1fr;
+  }
+
+  #ss-calculator .header h1 {
+    font-size: 24pt;
+  }
+}
+
 /*
 white
 !   Mountain Peak

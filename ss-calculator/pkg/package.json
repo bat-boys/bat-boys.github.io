@@ -1,0 +1,16 @@
+{
+  "name": "ss-calculator",
+  "type": "module",
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "ss_calculator_bg.wasm",
+    "ss_calculator.js",
+    "ss_calculator.d.ts"
+  ],
+  "main": "ss_calculator.js",
+  "types": "ss_calculator.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
