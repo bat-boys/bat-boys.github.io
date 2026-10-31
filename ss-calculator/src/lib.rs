@@ -23,7 +23,7 @@ fn App() -> impl IntoView {
     view! {
         <div id="app" class="ss-app">
             <main>
-                <PageHeader title="Secret Society Calculator" />
+                <PageHeader title="BatMUD Secret Society Calculator" />
 
                 <div class="ss-layout">
                     <div class="ss-scroll-column">
@@ -312,7 +312,7 @@ fn App() -> impl IntoView {
                                                             }.into_any()
                                                         } else if show_empty_row {
                                                             view! {
-                                                                <span class="ss-empty-row">"empty row!"</span>
+                                                                <span class="ss-empty-row">"empty!"</span>
                                                             }.into_any()
                                                         } else {
                                                             ().into_any()
