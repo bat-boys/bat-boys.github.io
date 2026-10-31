@@ -129,6 +129,139 @@ a:visited {
   color: inherit;
 }
 
+/* Markdown pages rendered by Jekyll */
+html.markdown-page,
+body.markdown-page {
+  display: block;
+  height: auto;
+  min-height: 100%;
+  overflow: auto;
+}
+
+.markdown-content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  line-height: 1.6;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  margin: 1.4em 0 0.5em;
+  color: #817a55;
+  line-height: 1.25;
+}
+
+.markdown-content h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.markdown-content h2 {
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #353b28;
+  font-size: 1.5rem;
+}
+
+.markdown-content p {
+  margin: 0 0 1em;
+}
+
+.markdown-content a,
+.markdown-content a:hover,
+.markdown-content a:visited {
+  color: #a995ba;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin: 0 0 1em 1.75em;
+}
+
+.markdown-content li {
+  margin: 0.2em 0;
+}
+
+.markdown-content table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin: 1em 0;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.markdown-content th,
+.markdown-content td {
+  padding: 0.4em 0.65em;
+  border: 1px solid #4b523e;
+  text-align: left;
+  vertical-align: top;
+}
+
+.markdown-content th {
+  color: #817a55;
+  background: #232520;
+}
+
+.markdown-content code,
+.markdown-content pre {
+  background: #232520;
+  color: #c1b5cb;
+}
+
+.markdown-content code {
+  padding: 0.1em 0.3em;
+}
+
+.markdown-content pre {
+  margin: 1em 0;
+  padding: 1em;
+  overflow-x: auto;
+  border: 1px solid #353b28;
+  white-space: pre;
+}
+
+.markdown-content pre code {
+  padding: 0;
+}
+
+.markdown-content blockquote {
+  margin: 1em 0;
+  padding: 0.1em 1em;
+  border-left: 3px solid #6a784f;
+  color: #b4aa9a;
+}
+
+.markdown-content hr {
+  margin: 1.5em 0;
+  border: 0;
+  border-top: 1px solid #353b28;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 40em) {
+  .markdown-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .markdown-content h1 {
+    font-size: 1.6rem;
+  }
+}
+
 #app {
   position: relative;
   margin: 0 auto;

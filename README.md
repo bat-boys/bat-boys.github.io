@@ -1,4 +1,4 @@
-# bat-boys.github.io
+# Laenorweb - astrax's BatMUD page
 
 - [Rixx-Tec gear calculator](rixx-calculator/)
 - [Lights and Colors Out](lights-colors-out/)
@@ -12,3 +12,4 @@
   - [2025 birthday - Coral ring](events/2025-04-birthday.md)
   - [2025 halloween - Harvest event](events/2025-11-halloween.md)
   - [2026 halloween - The Homestead event](events/2026-10-halloween.md)
+

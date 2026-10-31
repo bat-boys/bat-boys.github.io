@@ -1,0 +1,16 @@
+title: Laenorweb
+relative_links:
+  enabled: true
+  collections: false
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: "README.md"
+      type: pages
+    values:
+      permalink: /

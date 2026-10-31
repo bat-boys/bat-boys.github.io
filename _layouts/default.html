@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en" class="markdown-page">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title | default: page.name | default: site.title | remove: '.md' | escape }}</title>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}" />
+  </head>
+  <body class="markdown-page">
+    <main class="markdown-content">
+      {{ content }}
+    </main>
+  </body>
+</html>
