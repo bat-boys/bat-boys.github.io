@@ -11,6 +11,21 @@ Quickstart:
 - Then you can check `village daily` and `village weekly` for tasks.
 - On weekend boots (fri-sat-sun), you should do `village defend`.
 - On monday boot, gathered supplies are moved to stockpile.
+- Event ends on Sunday 11th of November
+
+## Table of contents
+
+1. [village daily](#village-daily)
+2. [village list / villagers](#village-list--villagers)
+3. [village comfort, village comfort details](#village-comfort-village-comfort-details)
+4. [Area quests](#area-quests)
+5. [Batrooms](#batrooms)
+6. [village defend](#village-defend)
+7. [prize list](#prize-list)
+8. [village help](#village-help)
+9. [village info](#village-info)
+10. [News posts](#news-posts)
+
 
 ## `village daily`
 
@@ -34,6 +49,7 @@ Quickstart:
 | Demon     | Land of the Overworld | A Hideous Pit Fiend                        |  75k |
 | Demon     | Plura's Castle        | Blur the extremely ugly Demon              |  20k |
 | Draconian | Snow peaked mountain  | a dragonman guardian                       | 100k |
+| Draconian | Dah'bec               | A sturdy red dragon                        | 100k |
 | Dragon    | King Eowyn's land     | A green guardian dragon glimmers magically |  50k |
 | Dragon    | Snow peaked mountain  | an icedragon called Alaxter                | 200k |
 | Drake     |                       |                                            |      |
@@ -80,42 +96,26 @@ Quickstart:
 
 ## `village comfort`, `village comfort details`
 
-| Comfort (Details)                       | Where from                          |
-|-----------------------------------------|-------------------------------------|
-| Artwork (painting, picture, tapestry)   |                                     |
-| Bedding (pillow, blanket, quilt)        |                                     |
-| China (plate, bowl, saucer)             |                                     |
-| Cooking (pot, kettle)                   |                                     |
-| Curtain                                 |                                     |
-| Door                                    |                                     |
-| Doorknob                                |                                     |
-| Floor (rug, carpet)                     |                                     |
-| Lights (lantern, lamp, candlestick)     |                                     |
-| Seating (chair, stool)                  |                                     |
-| Silverware                              |                                     |
-| Sleep (bed, cot, hammock)               |                                     |
-| Table                                   |                                     |
-| Vessels (glass, goblet, cup, bottle)    |                                     |
-| Water (barrel, cask, jug, keg, washtub) |                                     |
-|                                         |                                     |
-| Accordion                               |                                     |
-| Bagpipe                                 |                                     |
-| Bassoon                                 |                                     |
-| Bell                                    |                                     |
-| Clarinet                                |                                     |
-| Cymbal                                  |                                     |
-| Flag                                    |                                     |
-| Flute                                   |                                     |
-| Fountain                                |                                     |
-| Guitar                                  | Plura's Castle / a famous guitarist |
-| Harp                                    |                                     |
-| Oboe                                    |                                     |
-| Statue                                  |                                     |
-| Sundial                                 | Rilynt'tar, Eheckod's General shop  |
-| Tambourine                              |                                     |
-| Ukelele                                 |                                     |
-| Viola                                   |                                     |
-| Violin                                  |                                     |
+| Small items                             | Large items |
+|-----------------------------------------|-------------|
+| Artwork (painting, picture, tapestry)   | Accordion   |
+| Bedding (pillow, blanket, quilt)        | Bagpipe     |
+| China (plate, bowl, saucer)             | Bassoon     |
+| Cooking (pot, kettle)                   | Bell        |
+| Curtain                                 | Clarinet    |
+| Door                                    | Cymbal      |
+| Doorknob                                | Flag        |
+| Floor (rug, carpet)                     | Flute       |
+| Lights (lantern, lamp, candlestick)     | Fountain    |
+| Seating (chair, stool)                  | Guitar      |
+| Silverware                              | Harp        |
+| Sleep (bed, cot, hammock)               | Oboe        |
+| Table                                   | Statue      |
+| Vessels (glass, goblet, cup, bottle)    | Sundial     |
+| Water (barrel, cask, jug, keg, washtub) | Tambourine  |
+|                                         | Ukelele     |
+|                                         | Viola       |
+|                                         | Violin      |
 
 - Meadowshire and Lucentium general store sell these randomly
 - crates than can be ransacked for these items pop randomly to areas
@@ -123,98 +123,49 @@ Quickstart:
   and schematics for creating comfort items can be bought from Shinarae's daily task
   shops
 
-### Area quests
+## Area quests
 
-| Quest                         | tp | How to get |
-|-------------------------------|---:|------------|
-| Village: community service    |  4 |            |
-| Village: what you been eatin! |    |            |
-| Village: and my axe           |    |            |
-| Village: community service    |    |            |
-| Village: kegstand             |    |            |
-| Village: musical chairs       |    |            |
+| Quest                         | tp | Info                                                                                               |
+|-------------------------------|---:|----------------------------------------------------------------------------------------------------|
+| Village: and my axe           |  2 | Have an elf, a human, and a dwarf villager in your village all at the same time.                   |
+| Village: community service    |  4 | Contribute a bandit to your village.                                                               |
+| Village: kegstand             |  4 | Contribute an aluminium keg with steel pump and rubber hose to your village.                       |
+| Village: musical chairs       |  6 | Contribute to your village at least one of each musical instrument, and at least 12 seating items. |
+| Village: what you been eatin! |  8 | Contribute a pig statue from the Batrooms to your village.                                         |
 
-tp is short for training points :(
+## Batrooms
 
-### `White wooden door (closed) leads closet.`
+Closets `White wooden door (closed) leads closet.` spawn inside areas and they
+contain `storage crate with red painted stripes`. Door can be opened with lock biter.
+You can `ransack crate` for comfort items and supply bags. It's customary to bring the 
+crates back to event area so that all other players can ransack them as well.
 
-Door can be opened with lock biter and after that, `move shelf`, `step rectangle`.
-These change?
+Inside closet, `move shelf`, `step rectangle`. The area inside closets is *really* big, 
+rooms are from random locations and don't give explore. There are three levels going down:
+1. Summonable, contains crates that can be transported outside and small mobs, most
+   don't see invisible
+2. Here you can't talk with tells, channels or emotes. Bigger mobs, better crates.
+3. Can't speak either. Even bigger mobs and crates that have to be ransacked in the room.
+   The one-off mob `massive five-headed dragon stuck in a hole / Tii-A'mut` was also here.
 
-Closets spawn inside areas and they contain `storage crate with red painted stripes`.
-You can `ransack crate` for comfort items and supply bags.
-
-It's customary to bring the crates back to event area so that all other players can
-ransack them as well.
+There are really few exists down and lots of exits up, so getting out is fairly easy.
 
 ## `village defend`
 
 First, have `set 35 on`. Then `village defend` gives a location with coordinates
 where you have to go to kill bandits. There's a flag that you have to burn to start
-mob waves:
+mob waves (this for the hardest set):
 1. 2x trooper
 2. mage, archer, trooper
 3. medic, archer, sergeant, 2x trooper
 4. leader, mage, 2x trooper; might sum additional archer and medic
 
-There are different sets of bandits:
+There are different sets of bandits with different flags:
+- flag of the Brassen Bandits
+- pennant of the Sanguine Bandits
+- displayed heraldry of the Lazuli Legion
 
-```
-flag of the Brassen Bandits
 
-| 21:24   23389: human Brassen Bandit advance trooper                         |
-| 21:24   22232: human Brassen Bandit advance trooper                         |
-| 21:26   12607: drow Brassen Bandit mage                                     |
-| 21:26   16788: hobbit archer of the Brassen Bandits                         |
-| 21:27   33949: cyclops Brassen Bandit heavy trooper                         |
-| 21:28   21254: zombie Brassen Bandit infantry                               |
-| 21:28   20161: cromagnon Brassen Bandit infantry                            |
-| 21:29   37726: titan Brassen Bandit field commander                         |
-| 21:29   14348: merfolk Brassen Bandit battle medic                          |
-| 21:29   17487: kobold archer of the Brassen Bandits                         |
-| 21:32   83693: Reidan Nur, leader of the Brassen Bandits                    |
-```
-
-```
-pennant of the Sanguine Bandits
-
-| 21:50   37261: human Sanguine Bandit advance trooper                        |
-| 21:51   27059: drow Sanguine Bandit advance trooper                         |
-| 21:53   21571: human Sanguine Bandit mage                                   |
-| 21:53   27440: drow archer of the Sanguine Bandits                          |
-| 21:54   48432: giant Sanguine Bandit heavy trooper                          |
-| 21:56   41552: cromagnon Sanguine Bandit infantry                           |
-| 21:57   36801: cromagnon Sanguine Bandit infantry                           |
-| 21:58   67630: minotaur Sanguine Bandit field commander                     |
-| 21:58   24517: hobbit archer of the Sanguine Bandits                        |
-| 22:07   82716: Zhelsa, leader of the Sanguine Bandits                       |
-```
-- Zhelsa bites and grapples
-
-```
-displayed heraldry of the Lazuli Legion (glowing)
-
-| 11:15   45016: wolfman Lazuli Legion advance trooper                        |
-| 11:16   38643: orc Lazuli Legion advance trooper                            |
-
-| 11:18   25005: thrikhren Lazuli Legion mage                                 |
-| 11:19   46690: human archer of the Lazuli Legion                            |
-| 11:20   61654: centaur Lazuli Legion heavy trooper                          |
-
-| 11:25   43287: zombie Lazuli Legion infantry                                |
-| 11:30   48505: human Lazuli Legion infantry                                 |
-| 11:30   39115: kobold archer of the Lazuli Legion                           |
-| 11:31   60190: vampire Lazuli Legion field commander                        |
-| 11:31   37594: satyr Lazuli Legion battle medic                             |
-
-| 11:40   32082: zombie Lazuli Legion infantry                                |
-| 11:41   27913: cromagnon Lazuli Legion infantry                             |
-| 11:42   17202: sprite Lazuli Legion mage                                    |
-
-| 11:42   33678: kobold archer of the Lazuli Legion                           |
-| 11:47   27306: sprite Lazuli Legion battle medic                            |
-| 11:48  114094: Laplandite 'Lapis' Lazuli, leader of the Lazuli Legion       |
-```
 
 ## `prize list`
 
@@ -467,7 +418,6 @@ Instantly phaze shift with yourself as the target. Four hour cooldown.
 Blocked during Blood Bath.
 ```
 
-
 ## `village help`
 
 The main point of this event is to build, maintain, and upgrade your village. This is done
@@ -605,37 +555,7 @@ Attempt to give money to the village for daily quest 5.
 Example: contribute 2000 gold
 ```
 
-## `news display inform 1032`
-
-```
-Group: inform (#1032/1032)
-From: Shinarae (Lvl: 200 [Wizard] Age: 5y, 47d, 7h, 41min and 19s)
-Subject: Homestead Event 2026
-Date: Wed Oct 21 20:57:00 2026
-```
-
-The fall event, Homestead, is now pretty much live. Some bugs still need
-fixing, but the important elements seem to be up and running.
-
-The event's headquarters is south of Arelium, by the river southwest of the
-Farmstead. Most of the information is there, but here's the quick version:
-1. Establish your village by staffing it with captured conscripts (or, rarely,
-   willing ones)
-2. Perform their daily and weekly quests, which ask for monster kills,
-   custom-coded items, recently-made low-level eq, that sort of thing.
-3. Increase their comfort with furnishings like beds, blankets, pots, and
-   curtains.
-4. Protect them from bandits over the weekend.
-
-Start working on your village now so you can defend it - either by equipping
-your villagers with weapons and armour, or killing the bandits yourself (3-man
-party suggested). Keep me posted with bugs and use the events channel to share
-information.
-
-Shinarae "broom closet" Lluminus
-
-
-## `news display updates 1585`
+## News posts
 
 ```
 Group: updates (#1585/1585)
@@ -672,3 +592,104 @@ to be worth it.
 I'm going to keep an eye on the current status and fine-tune it for another
 few days. If everything is, or becomes, under control, I'll unveil the next
 steps.
+
+```
+Group: inform (#1032/1032)
+From: Shinarae (Lvl: 200 [Wizard] Age: 5y, 47d, 7h, 41min and 19s)
+Subject: Homestead Event 2026
+Date: Wed Oct 21 20:57:00 2026
+```
+
+The fall event, Homestead, is now pretty much live. Some bugs still need
+fixing, but the important elements seem to be up and running.
+
+The event's headquarters is south of Arelium, by the river southwest of the
+Farmstead. Most of the information is there, but here's the quick version:
+1. Establish your village by staffing it with captured conscripts (or, rarely,
+   willing ones)
+2. Perform their daily and weekly quests, which ask for monster kills,
+   custom-coded items, recently-made low-level eq, that sort of thing.
+3. Increase their comfort with furnishings like beds, blankets, pots, and
+   curtains.
+4. Protect them from bandits over the weekend.
+
+Start working on your village now so you can defend it - either by equipping
+your villagers with weapons and armour, or killing the bandits yourself (3-man
+party suggested). Keep me posted with bugs and use the events channel to share
+information.
+
+Shinarae "broom closet" Lluminus
+
+```
+Group: updates (#1586/1588)
+From: Shinarae (Lvl: 200 [Wizard] Age: 5y, 50d, 2h, 52min and 43s)
+Subject: Homestead Event of 2026
+Date: Mon Oct 26 19:01:34 2026
+Rating: 1 Votes: 1
+```
+
+Okay, looks like things are pretty much where I want them. This autumn's
+event, where you add people to your village, let them build up supplies for
+you, complete daily and weekly tasks for them, and defend them from bandit
+raids, is now up and running at full strength. Details can be found in the
+event room, south of Arelium, southwest of the Farmhouse.
+
+This Event will run for this week and two more, ending Sunday November 14.
+It's running a little longer this time because getting your village up to
+maximum takes some prep work.
+
+Prizes cost 1000 then 2000 then 3000 then 4000 stockpile, but the first prize
+is _always_ your village interface, so you can get 3 pieces of eq if you get
+to 10,000 total stockpile. If you run a maxxed-out village and do everything
+reasonable every single week, that's about 3000 stockpile each week, plus
+whatever you already have. It is not possible to get 15,000 stockpile and get
+4 eq items, so plan ahead and make sure you get your village to a higher tier
+and stay on top of quests until you know you'll hit your chosen goal.
+
+So yes, you have to get your village interface first and yes, that means
+villages are permanent - including their associated quests. Once the Event
+ends, they'll stop giving you Event points of course, but you'll be able to
+spend stockpile in other ways, such as asking your village to mine for you,
+pick plants for you, or bait a bandit raid for you in case you want the holz
+or spite marks. And you can continue to contribute comfort items or swap out
+villagers - but you will not get conscription orders nearly as often, so,
+maybe plan ahead and chest some backup villagers. Oh, also after the Event
+ends, bandit raids will no longer be automatic and your village will no longer
+be damaged. They'll become "check up on them if you feel like it" optional
+tasks.
+
+Shinarae "beach house" Lluminus
+
+```
+Group: updates (#1587/1588)
+From: Shinarae (Lvl: 200 [Wizard] Age: 5y, 52d, 1h, 57min and 20s)
+Subject: Happy Halloween!
+Date: Sat Oct 31 15:50:09 2026
+Rating: 1 Votes: 1
+```
+
+Happy Halloween everyone!
+
+This weekend, I'm putting a little extra spooky surprise in a storage closet.
+Have fun finding it, and of course, share.
+
+Shinarae "full-size bars" Lluminus
+
+```
+Group: updates (#1588/1588)
+From: Shinarae (Lvl: 200 [Wizard] Age: 5y, 52d, 9h, 57min and 44s)
+Subject: Batrooms Tiamat - one more night!
+Date: Sat Oct 31 23:54:10 2026
+Rating: 0 Votes: 2
+```
+
+Congratulations to Anks, Jure, Lolzo, Ewige, Nepnep, Gotrek, Bleezuz, Conquer
+and Galronio for finding and slaying Batrooms Tiamat!
+
+I'm going to leave her killable tomorrow with prot - the same mortals can't
+get eq from the kill if they go back, so hopefully more people give it a try.
+Worth noting, while she drops different eq from everything else in the Event,
+she has zero to do with any village-related values, so this UHB-tuned kill is
+purely optional.
+
+Shinarae Lluminus Space
