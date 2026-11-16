@@ -1,3 +1,6 @@
+Updated: 2026-11-17 17:15 EET
+{: .updated-at}
+
 # The Homestead Event of 2026
 
 Event area location `Grassy Fields [368,539] in southern Laenor`
@@ -11,22 +14,1923 @@ Quickstart:
 - Then you can check `village daily` and `village weekly` for tasks.
 - On weekend boots (fri-sat-sun), you should do `village defend`.
 - On monday boot, gathered supplies are moved to stockpile.
-- Event ends on Sunday 14th of November
+- Event ends on Sunday 15th of November
 
 ## Table of contents
 
-1. [village daily](#village-daily)
-2. [village list / villagers](#village-list--villagers)
-3. [village comfort, village comfort details](#village-comfort-village-comfort-details)
-4. [Area quests](#area-quests)
-5. [Batrooms](#batrooms)
-6. [village defend](#village-defend)
-7. [prize list](#prize-list)
+1. [prize list](#prize-list)
+2. [village daily](#village-daily)
+3. [village list / villagers](#village-list--villagers)
+4. [village comfort, village comfort details](#village-comfort-village-comfort-details)
+5. [Area quests](#area-quests)
+6. [Batrooms](#batrooms)
+7. [village defend](#village-defend)
 8. [village skill](#village-skills)
 8. [village help](#village-help)
 9. [village info](#village-info)
 10. [News posts](#news-posts)
 
+## `prize list`
+
+| slots   | Brute (str)                                                                                                    | Raider (dex)                                                                                                     | Infan&#8203;try (con)                                                                                                | Hedge Mage (int)                                                                                                         | Battle Medic (wis)                                                                                                           | special                                                                                                                                                                              |
+|---------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| arms    | [110](#prize-110-homestead-bracers-of-the-brute), [111](#prize-111-homestead-sleeves-of-the-brute)             | [140](#prize-140-homestead-bracers-of-the-raider), [141](#prize-141-homestead-sleeves-of-the-raider)             | [150](#prize-150-homestead-bracers-of-the-infantry), [151](#prize-151-homestead-sleeves-of-the-infantry)             | [120](#prize-120-homestead-bracers-of-the-hedge-mage), [121](#prize-121-homestead-sleeves-of-the-hedge-mage)             | [130](#prize-130-homestead-bracers-of-the-battle-medic), [131](#prize-131-homestead-sleeves-of-the-battle-medic)             | Increases maximum carrying capacity by 15kg (halved after one year).                                                                                                                 |
+| belt    | [210](#prize-210-homestead-great-belt-of-the-brute), [211](#prize-211-homestead-sash-of-the-brute)             | [240](#prize-240-homestead-great-belt-of-the-raider), [241](#prize-241-homestead-sash-of-the-raider)             | [250](#prize-250-homestead-great-belt-of-the-infantry), [251](#prize-251-homestead-sash-of-the-infantry)             | [220](#prize-220-homestead-great-belt-of-the-hedge-mage), [221](#prize-221-homestead-sash-of-the-hedge-mage)             | [230](#prize-230-homestead-great-belt-of-the-battle-medic), [231](#prize-231-homestead-sash-of-the-battle-medic)             | The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.                                                                                 |
+| cloak   | [310](#prize-310-homestead-great-cloak-of-the-brute), [311](#prize-311-homestead-cape-of-the-brute)            | [340](#prize-340-homestead-great-cloak-of-the-raider), [341](#prize-341-homestead-cape-of-the-raider)            | [350](#prize-350-homestead-great-cloak-of-the-infantry), [351](#prize-351-homestead-cape-of-the-infantry)            | [320](#prize-320-homestead-great-cloak-of-the-hedge-mage), [321](#prize-321-homestead-cape-of-the-hedge-mage)            | [330](#prize-330-homestead-great-cloak-of-the-battle-medic), [331](#prize-331-homestead-cape-of-the-battle-medic)            | The wearer can use teleport spells. (see the whole description from the item)                                                                                                        |
+| feet    | [410](#prize-410-homestead-great-boots-of-the-infantry), [411](#prize-411-homestead-sandals-of-the-brute)      | [440](#prize-440-homestead-great-boots-of-the-raider), [441](#prize-441-homestead-sandals-of-the-raider)         | [450](#prize-450-homestead-great-boots-of-the-infantry), [451](#prize-451-homestead-sandals-of-the-infantry)         | [420](#prize-420-homestead-great-boots-of-the-hedge-mage), [421](#prize-421-homestead-sandals-of-the-hedge-mage)         | [430](#prize-430-homestead-great-boots-of-the-battle-medic), [431](#prize-431-homestead-sandals-of-the-battle-medic)         | While worn, once per hour, you can dramatically reduce your currently cast spell or used skill remaining timer.                                                                      |
+| finger  | [510](#prize-510-homestead-ring-of-the-brute)                                                                  | [540](#prize-540-homestead-ring-of-the-raider)                                                                   | [550](#prize-550-homestead-ring-of-the-infantry)                                                                     | [520](#prize-520-homestead-ring-of-the-hedge-mage)                                                                       | [530](#prize-530-homestead-ring-of-the-battle-medic)                                                                         | This is an invoke item. (see the whole description from the item)                                                                                                                    |
+| hands   | [610](#prize-610-homestead-gauntlets-of-the-brute), [611](#prize-611-homestead-gloves-of-the-brute)            | [640](#prize-640-homestead-gauntlets-of-the-raider), [641](#prize-641-homestead-gloves-of-the-raider)            | [650](#prize-650-homestead-gauntlets-of-the-infantry), [651](#prize-651-homestead-gloves-of-the-infantry)            | [620](#prize-620-homestead-gauntlets-of-the-hedge-mage), [621](#prize-621-homestead-gloves-of-the-hedge-mage)            | [630](#prize-630-homestead-gauntlets-of-the-battle-medic), [631](#prize-631-homestead-gloves-of-the-battle-medic)            | While worn, once per hour, you can dramatically increase your currently cast spell or used skill success chance.                                                                     |
+| head    | [710](#prize-710-homestead-great-helm-of-the-brute), [711](#prize-711-homestead-trilby-of-the-brute)           | [740](#prize-740-homestead-great-helm-of-the-raider), [741](#prize-741-homestead-trilby-of-the-raider)           | [750](#prize-750-homestead-great-helm-of-the-infantry), [751](#prize-751-homestead-trilby-of-the-infantry)           | [720](#prize-720-homestead-great-helm-of-the-hedge-mage), [721](#prize-721-homestead-trilby-of-the-hedge-mage)           | [730](#prize-730-homestead-great-helm-of-the-battle-medic), [731](#prize-731-homestead-trilby-of-the-battle-medic)           | You can put gems in the sockets to add tiny customizable stats.                                                                                                                      |
+| neck    | [810](#prize-810-homestead-plated-collar-of-the-brute), [811](#prize-811-homestead-necklace-of-the-brute)      | [840](#prize-840-homestead-plated-collar-of-the-raider), [841](#prize-841-homestead-necklace-of-the-raider)      | [850](#prize-850-homestead-plated-collar-of-the-infantry), [851](#prize-851-homestead-necklace-of-the-infantry)      | [820](#prize-820-homestead-plated-collar-of-the-hedge-mage), [821](#prize-821-homestead-necklace-of-the-hedge-mage)      | [830](#prize-830-homestead-plated-collar-of-the-battle-medic), [831](#prize-831-homestead-necklace-of-the-battle-medic)      | +hpr, +spr, +epr. The regen bonuses are not halved when a year passes.                                                                                                               |
+| rig     | [910](#prize-910-homestead-reinforced-backpack-of-the-brute), [911](#prize-911-homestead-satchel-of-the-brute) | [940](#prize-940-homestead-reinforced-backpack-of-the-raider), [941](#prize-941-homestead-satchel-of-the-raider) | [950](#prize-950-homestead-reinforced-backpack-of-the-infantry), [951](#prize-951-homestead-satchel-of-the-infantry) | [920](#prize-920-homestead-reinforced-backpack-of-the-hedge-mage), [921](#prize-921-homestead-satchel-of-the-hedge-mage) | [930](#prize-930-homestead-reinforced-backpack-of-the-battle-medic), [931](#prize-931-homestead-satchel-of-the-battle-medic) | While worn, the rig will sometimes look inside for a [stat] food. If it finds one, it will consume it to give you a [stat] boost and heal you.                                       |
+| legs    | [1010](#prize-1010-homestead-cuisses-of-the-brute), [1011](#prize-1011-homestead-cargo-shorts-of-the-brute)    | [1040](#prize-1040-homestead-cuisses-of-the-raider), [1041](#prize-1041-homestead-cargo-shorts-of-the-raider)    | [1050](#prize-1050-homestead-cuisses-of-the-infantry), [1051](#prize-1051-homestead-cargo-shorts-of-the-infantry)    | [1020](#prize-1020-homestead-cuisses-of-the-hedge-mage), [1021](#prize-1021-homestead-cargo-shorts-of-the-hedge-mage)    | [1030](#prize-1030-homestead-cuisses-of-the-battle-medic), [1031](#prize-1031-homestead-cargo-shorts-of-the-battle-medic)    | It is a six-slot herb jar, a six-slot mineral box, and a small toolkit. Herb, mineral and tool storage lasts past a year and does not contribute weight.                             |
+| torso   | [1110](#prize-1110-homestead-plackart-of-the-brute), [1111](#prize-1111-homestead-t-shirt-of-the-brute)        | [1140](#prize-1140-homestead-plackart-of-the-raider), [1141](#prize-1141-homestead-t-shirt-of-the-raider)        | [1150](#prize-1150-homestead-plackart-of-the-infantry), [1151](#prize-1151-homestead-t-shirt-of-the-infantry)        | [1120](#prize-1120-homestead-plackart-of-the-hedge-mage), [1121](#prize-1121-homestead-t-shirt-of-the-hedge-mage)        | [1130](#prize-1130-homestead-plackart-of-the-battle-medic), [1131](#prize-1131-homestead-t-shirt-of-the-battle-medic)        | While worn at under 25% max hp, chance for the armour to look through your inventory for a [stat] food. If it finds one, it will consume it to give you a [stat] boost and heal you. |
+
+| slots   | str/dex/con                                                              | str/con/wis                                                               | int/wis/con                                                                | special                       |
+|---------|--------------------------------------------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------|-------------------------------|
+| o-yoroi | [2002](#prize-2002-homestead-o-yoroi-of-the-lazuli-leader-no-skillspell) | [2003](#prize-2003-homestead-o-yoroi-of-the-brassen-leader-no-skillspell) | [2001](#prize-2001-homestead-o-yoroi-of-the-sanquine-leader-no-skillspell) | +12 each stat, no skill/spell |
+
+Numbers in stat columns are prize ids. Prize [9999](#prize-9999-safecracker-kit-in-a-leather-case-statless) is unlisted above.
+
+Random research notes
+- Rig
+  - stat bonus is +8 and lasts for 15 minutes (doesn't seem to random), tested with int waffles
+  - cooldown is maybe 1 hour
+  - procs maybe 15 minutes after wear
+- Head
+  - +1 stat per gem, gem quality doesn't seem to matter (perfect gems don't give more)
+  - opal: int, sapphire: con, ruby: genprot, aquamarine: asphyx res, diamond: phys res
+  - stats seem to be same as in _Glittery crystal breastplate_ (aka gemplate), except for ruby?
+  - gems are destroyed when sockets are emptied
+
+---
+
+```
+la testbot
+
+A large steel box with a vertical glass lid firmly secured in place, this
+vending machine dispenses Homestead Event prizes for testing. One per customer
+per day, but they do not require any Event points.
+Syntax: prize list
+        prize id <number> [shows item's identify info]
+        prize redeem <number> skill:<skill name>
+        prize redeem <number> spell:<spell name>
+        prize redeem <number> [for statless items]
+You can only redeem skills and spells you have spent experience on.
+It is labeled as 'testbot'.
+This item is in good condition.
+It looks EXTREMELY heavy.
+```
+
+### Prize 110: Homestead Bracers of the Brute
+
+```
+A pair of durable-looking arm protectors, these bracers are sleeves of black
+chaos drake leather with curved, smooth adamantium plates mounted on the backs
+of the forearms, like a pair of miniature shields. Etched around the border of
+both plates is a flowering vine decoration.
+80% adamantium bracers, 3014g
+It takes the following slots: arm and arm.
+It will divinely improve your strength.
+It will slightly improve your ability at the spell of your choice.
+Increases maximum carrying capacity by 15kg (halved after one year).
+```
+
+### Prize 111: Homestead Sleeves of the Brute
+
+```
+A pair of simple bright blue silk sleeves with off-white fur shoulders. Each
+cuff has a bone button.
+90% silk sleeves, 85g
+It takes the following slots: arm and arm.
+It will moderately improve your strength.
+It will slightly improve your ability at the spell of your choice.
+Increases maximum carrying capacity by 15kg (halved after one year).
+```
+
+### Prize 120: Homestead Bracers of the Hedge Mage
+
+```
+A pair of durable-looking arm protectors, these bracers are sleeves of black
+chaos drake leather with curved, smooth adamantium plates mounted on the backs
+of the forearms, like a pair of miniature shields. Etched around the border of
+both plates is a flowering vine decoration.
+80% adamantium bracers, 3014g
+It takes the following slots: arm and arm.
+It will moderately improve your intelligence.
+It will moderately improve your ability at the spell of your choice.
+Increases maximum carrying capacity by 15kg (halved after one year).
+```
+
+### Prize 121: Homestead Sleeves of the Hedge Mage
+
+```
+A pair of simple bright blue silk sleeves with off-white fur shoulders. Each
+cuff has a bone button.
+90% silk sleeves, 85g
+It takes the following slots: arm and arm.
+It will moderately improve your intelligence.
+It will slightly improve your ability at the spell of your choice.
+Increases maximum carrying capacity by 15kg (halved after one year).
+```
+
+### Prize 130: Homestead Bracers of the Battle Medic
+
+```
+A pair of durable-looking arm protectors, these bracers are sleeves of black
+chaos drake leather with curved, smooth adamantium plates mounted on the backs
+of the forearms, like a pair of miniature shields. Etched around the border of
+both plates is a flowering vine decoration.
+80% adamantium bracers, 3014g
+It takes the following slots: arm and arm.
+It will divinely improve your wisdom.
+It will moderately improve your ability at the spell of your choice.
+Increases maximum carrying capacity by 15kg (halved after one year).
+```
+
+### Prize 131: Homestead Sleeves of the Battle Medic
+
+```
+A pair of simple bright blue silk sleeves with off-white fur shoulders. Each
+cuff has a bone button.
+90% silk sleeves, 85g
+It takes the following slots: arm and arm.
+It will divinely improve your wisdom.
+It will slightly improve your ability at the spell of your choice.
+Increases maximum carrying capacity by 15kg (halved after one year).
+```
+
+### Prize 140: Homestead Bracers of the Raider
+
+```
+A pair of durable-looking arm protectors, these bracers are sleeves of black
+chaos drake leather with curved, smooth adamantium plates mounted on the backs
+of the forearms, like a pair of miniature shields. Etched around the border of
+both plates is a flowering vine decoration.
+80% adamantium bracers, 3014g
+It takes the following slots: arm and arm.
+It will moderately improve your dexterity.
+It will insignificantly improve your ability at the spell of your choice.
+Increases maximum carrying capacity by 15kg (halved after one year).
+```
+
+### Prize 141: Homestead Sleeves of the Raider
+
+```
+A pair of simple bright blue silk sleeves with off-white fur shoulders. Each
+cuff has a bone button.
+90% silk sleeves, 85g
+It takes the following slots: arm and arm.
+It will greatly improve your dexterity.
+It will slightly improve your ability at the spell of your choice.
+Increases maximum carrying capacity by 15kg (halved after one year).
+```
+
+### Prize 150: Homestead Bracers of the Infantry
+
+```
+A pair of durable-looking arm protectors, these bracers are sleeves of black
+chaos drake leather with curved, smooth adamantium plates mounted on the backs
+of the forearms, like a pair of miniature shields. Etched around the border of
+both plates is a flowering vine decoration.
+80% adamantium bracers, 3014g
+It takes the following slots: arm and arm.
+It will divinely improve your constitution.
+It will moderately improve your ability at the spell of your choice.
+Increases maximum carrying capacity by 15kg (halved after one year).
+```
+
+### Prize 151: Homestead Sleeves of the Infantry
+
+```
+A pair of simple bright blue silk sleeves with off-white fur shoulders. Each
+cuff has a bone button.
+90% silk sleeves, 85g
+It takes the following slots: arm and arm.
+It will moderately improve your constitution.
+It will insignificantly improve your ability at the spell of your choice.
+Increases maximum carrying capacity by 15kg (halved after one year).
+```
+
+### Prize 210: Homestead Great Belt of the Brute
+
+```
+This wide black leather belt has a darksteel buckle with two prongs, pairs of
+punch holes also lined in darksteel, and three loops, the first of which is a
+darksteel rectangle.
+70% leather great belt, 2425g
+It takes the following slots: belt.
+It will slightly improve your ability at the skill of your choice.
+It will vastly improve your strength.
+The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.
+You must still have the skill/spell trained/studied.
+A few skills are also prohibited.
+Syntax: homestead modify skill bonus to <skill name>
+        homestead modify spell bonus to <spell name>
+This will remove all previous skill/spell bonuses.
+```
+
+### Prize 211: Homestead Sash of the Brute
+
+```
+This band of mustard-yellow silk ties loosely around the waist. A single
+simple circle of vibrant blue heat-treated titanium forms a buckle-like clasp
+for cinching for a better fit.
+90% silk sash, 130g
+It takes the following slots: belt.
+It will slightly improve your ability at the skill of your choice.
+It will vastly improve your strength.
+The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.
+You must still have the skill/spell trained/studied.
+A few skills are also prohibited.
+Syntax: homestead modify skill bonus to <skill name>
+        homestead modify spell bonus to <spell name>
+This will remove all previous skill/spell bonuses.
+```
+
+### Prize 220: Homestead Great Belt of the Hedge Mage
+
+```
+This wide black leather belt has a darksteel buckle with two prongs, pairs of
+punch holes also lined in darksteel, and three loops, the first of which is a
+darksteel rectangle.
+70% leather great belt, 2425g
+It takes the following slots: belt.
+It will moderately improve your ability at the skill of your choice.
+It will divinely improve your intelligence.
+The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.
+You must still have the skill/spell trained/studied.
+A few skills are also prohibited.
+Syntax: homestead modify skill bonus to <skill name>
+        homestead modify spell bonus to <spell name>
+This will remove all previous skill/spell bonuses.
+```
+
+### Prize 221: Homestead Sash of the Hedge Mage
+
+```
+This band of mustard-yellow silk ties loosely around the waist. A single
+simple circle of vibrant blue heat-treated titanium forms a buckle-like clasp
+for cinching for a better fit.
+90% silk sash, 130g
+It takes the following slots: belt.
+It will slightly improve your ability at the skill of your choice.
+It will moderately improve your intelligence.
+The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.
+You must still have the skill/spell trained/studied.
+A few skills are also prohibited.
+Syntax: homestead modify skill bonus to <skill name>
+        homestead modify spell bonus to <spell name>
+This will remove all previous skill/spell bonuses.
+```
+
+### Prize 230: Homestead Great Belt of the Battle Medic
+
+```
+This wide black leather belt has a darksteel buckle with two prongs, pairs of
+punch holes also lined in darksteel, and three loops, the first of which is a
+darksteel rectangle.
+70% leather great belt, 2425g
+It takes the following slots: belt.
+It will moderately improve your ability at the skill of your choice.
+It will moderately improve your wisdom.
+The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.
+You must still have the skill/spell trained/studied.
+A few skills are also prohibited.
+Syntax: homestead modify skill bonus to <skill name>
+        homestead modify spell bonus to <spell name>
+This will remove all previous skill/spell bonuses.
+```
+
+### Prize 231: Homestead Sash of the Battle Medic
+
+```
+This band of mustard-yellow silk ties loosely around the waist. A single
+simple circle of vibrant blue heat-treated titanium forms a buckle-like clasp
+for cinching for a better fit.
+90% silk sash, 130g
+It takes the following slots: belt.
+It will slightly improve your ability at the skill of your choice.
+It will moderately improve your wisdom.
+The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.
+You must still have the skill/spell trained/studied.
+A few skills are also prohibited.
+Syntax: homestead modify skill bonus to <skill name>
+        homestead modify spell bonus to <spell name>
+This will remove all previous skill/spell bonuses.
+```
+
+### Prize 240: Homestead Great Belt of the Raider
+
+```
+This wide black leather belt has a darksteel buckle with two prongs, pairs of
+punch holes also lined in darksteel, and three loops, the first of which is a
+darksteel rectangle.
+70% leather great belt, 2425g
+It takes the following slots: belt.
+It will moderately improve your ability at the skill of your choice.
+It will greatly improve your dexterity.
+The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.
+You must still have the skill/spell trained/studied.
+A few skills are also prohibited.
+Syntax: homestead modify skill bonus to <skill name>
+        homestead modify spell bonus to <spell name>
+This will remove all previous skill/spell bonuses.
+```
+
+### Prize 241: Homestead Sash of the Raider
+
+```
+This band of mustard-yellow silk ties loosely around the waist. A single
+simple circle of vibrant blue heat-treated titanium forms a buckle-like clasp
+for cinching for a better fit.
+90% silk sash, 130g
+It takes the following slots: belt.
+It will slightly improve your ability at the skill of your choice.
+It will moderately improve your dexterity.
+The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.
+You must still have the skill/spell trained/studied.
+A few skills are also prohibited.
+Syntax: homestead modify skill bonus to <skill name>
+        homestead modify spell bonus to <spell name>
+This will remove all previous skill/spell bonuses.
+```
+
+### Prize 250: Homestead Great Belt of the Infantry
+
+```
+This wide black leather belt has a darksteel buckle with two prongs, pairs of
+punch holes also lined in darksteel, and three loops, the first of which is a
+darksteel rectangle.
+70% leather great belt, 2425g
+It takes the following slots: belt.
+It will slightly improve your ability at the skill of your choice.
+It will moderately improve your constitution.
+The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.
+You must still have the skill/spell trained/studied.
+A few skills are also prohibited.
+Syntax: homestead modify skill bonus to <skill name>
+        homestead modify spell bonus to <spell name>
+This will remove all previous skill/spell bonuses.
+```
+
+### Prize 251: Homestead Sash of the Infantry
+
+```
+This band of mustard-yellow silk ties loosely around the waist. A single
+simple circle of vibrant blue heat-treated titanium forms a buckle-like clasp
+for cinching for a better fit.
+90% silk sash, 130g
+It takes the following slots: belt.
+It will slightly improve your ability at the skill of your choice.
+It will moderately improve your constitution.
+The skill/spell bonus can be reset at any time in any any city room, and is not halved after a year.
+You must still have the skill/spell trained/studied.
+A few skills are also prohibited.
+Syntax: homestead modify skill bonus to <skill name>
+        homestead modify spell bonus to <spell name>
+This will remove all previous skill/spell bonuses.
+```
+
+### Prize 310: Homestead Great Cloak of the Brute
+
+```
+A heavy garment, substantial protection against wind, rain, and blades. The
+exterior of this cloak is treated black chaos drake leather, and the interior
+is dark brown bear fur. It ties around the neck with a sturdy darksteel chain.
+80% leather great cloak, 3408g
+It takes the following slots: cloak.
+It will greatly improve your strength.
+It will insignificantly improve your ability at the skill of your choice.
+The wearer can use teleport spells.
+Syntax: homestead teleport
+Instantly teleport without error. One hour cooldown. Blocked during Blood Bath.
+        homestead mind store
+Instantly mind store. Ten minute cooldown.
+        homestead phaze shift
+Instantly phaze shift with yourself as the target. Four hour cooldown.
+Phaze shift/mind store blocked during Blood Bath and after one year.
+```
+
+### Prize 311: Homestead Cape of the Brute
+
+```
+A fashion statement more than a covering or protective garment, this cape is
+gold-dyed cotton with a cobalt-blue silk lining on the inside. A pair of
+cobalt-blue silk ribbons tie around the neck, and it has a small collar as
+well.
+70% cotton cape, 2384g
+It takes the following slots: cloak.
+It will greatly improve your strength.
+It will slightly improve your ability at the skill of your choice.
+The wearer can use teleport spells.
+Syntax: homestead teleport
+Instantly teleport without error. One hour cooldown. Blocked during Blood Bath.
+        homestead mind store
+Instantly mind store. Ten minute cooldown.
+        homestead phaze shift
+Instantly phaze shift with yourself as the target. Four hour cooldown.
+Phaze shift/mind store blocked during Blood Bath and after one year.
+```
+
+### Prize 320: Homestead Great Cloak of the Hedge Mage
+
+```
+A heavy garment, substantial protection against wind, rain, and blades. The
+exterior of this cloak is treated black chaos drake leather, and the interior
+is dark brown bear fur. It ties around the neck with a sturdy darksteel chain.
+80% leather great cloak, 3408g
+It takes the following slots: cloak.
+It will greatly improve your intelligence.
+It will insignificantly improve your ability at the skill of your choice.
+The wearer can use teleport spells.
+Syntax: homestead teleport
+Instantly teleport without error. One hour cooldown. Blocked during Blood Bath.
+        homestead mind store
+Instantly mind store. Ten minute cooldown.
+        homestead phaze shift
+Instantly phaze shift with yourself as the target. Four hour cooldown.
+Phaze shift/mind store blocked during Blood Bath and after one year.
+```
+
+### Prize 321: Homestead Cape of the Hedge Mage
+
+```
+A fashion statement more than a covering or protective garment, this cape is
+gold-dyed cotton with a cobalt-blue silk lining on the inside. A pair of
+cobalt-blue silk ribbons tie around the neck, and it has a small collar as
+well.
+70% cotton cape, 2384g
+It takes the following slots: cloak.
+It will greatly improve your intelligence.
+It will moderately improve your ability at the skill of your choice.
+The wearer can use teleport spells.
+Syntax: homestead teleport
+Instantly teleport without error. One hour cooldown. Blocked during Blood Bath.
+        homestead mind store
+Instantly mind store. Ten minute cooldown.
+        homestead phaze shift
+Instantly phaze shift with yourself as the target. Four hour cooldown.
+Phaze shift/mind store blocked during Blood Bath and after one year.
+```
+
+### Prize 330: Homestead Great Cloak of the Battle Medic
+
+```
+A heavy garment, substantial protection against wind, rain, and blades. The
+exterior of this cloak is treated black chaos drake leather, and the interior
+is dark brown bear fur. It ties around the neck with a sturdy darksteel chain.
+80% leather great cloak, 3408g
+It takes the following slots: cloak.
+It will divinely improve your wisdom.
+It will insignificantly improve your ability at the skill of your choice.
+The wearer can use teleport spells.
+Syntax: homestead teleport
+Instantly teleport without error. One hour cooldown. Blocked during Blood Bath.
+        homestead mind store
+Instantly mind store. Ten minute cooldown.
+        homestead phaze shift
+Instantly phaze shift with yourself as the target. Four hour cooldown.
+Phaze shift/mind store blocked during Blood Bath and after one year.
+```
+
+### Prize 331: Homestead Cape of the Battle Medic
+
+```
+A fashion statement more than a covering or protective garment, this cape is
+gold-dyed cotton with a cobalt-blue silk lining on the inside. A pair of
+cobalt-blue silk ribbons tie around the neck, and it has a small collar as
+well.
+70% cotton cape, 2384g
+It takes the following slots: cloak.
+It will vastly improve your wisdom.
+It will moderately improve your ability at the skill of your choice.
+The wearer can use teleport spells.
+Syntax: homestead teleport
+Instantly teleport without error. One hour cooldown. Blocked during Blood Bath.
+        homestead mind store
+Instantly mind store. Ten minute cooldown.
+        homestead phaze shift
+Instantly phaze shift with yourself as the target. Four hour cooldown.
+Phaze shift/mind store blocked during Blood Bath and after one year.
+```
+
+### Prize 340: Homestead Great Cloak of the Raider
+
+```
+A heavy garment, substantial protection against wind, rain, and blades. The
+exterior of this cloak is treated black chaos drake leather, and the interior
+is dark brown bear fur. It ties around the neck with a sturdy darksteel chain.
+80% leather great cloak, 3408g
+It takes the following slots: cloak.
+It will moderately improve your ability at the skill of your choice.
+It will divinely improve your dexterity.
+The wearer can use teleport spells.
+Syntax: homestead teleport
+Instantly teleport without error. One hour cooldown. Blocked during Blood Bath.
+        homestead mind store
+Instantly mind store. Ten minute cooldown.
+        homestead phaze shift
+Instantly phaze shift with yourself as the target. Four hour cooldown.
+Phaze shift/mind store blocked during Blood Bath and after one year.
+```
+
+### Prize 341: Homestead Cape of the Raider
+
+```
+A fashion statement more than a covering or protective garment, this cape is
+gold-dyed cotton with a cobalt-blue silk lining on the inside. A pair of
+cobalt-blue silk ribbons tie around the neck, and it has a small collar as
+well.
+70% cotton cape, 2384g
+It takes the following slots: cloak.
+It will moderately improve your ability at the skill of your choice.
+It will greatly improve your dexterity.
+The wearer can use teleport spells.
+Syntax: homestead teleport
+Instantly teleport without error. One hour cooldown. Blocked during Blood Bath.
+        homestead mind store
+Instantly mind store. Ten minute cooldown.
+        homestead phaze shift
+Instantly phaze shift with yourself as the target. Four hour cooldown.
+Phaze shift/mind store blocked during Blood Bath and after one year.
+```
+
+### Prize 350: Homestead Great Cloak of the Infantry
+
+```
+A heavy garment, substantial protection against wind, rain, and blades. The
+exterior of this cloak is treated black chaos drake leather, and the interior
+is dark brown bear fur. It ties around the neck with a sturdy darksteel chain.
+80% leather great cloak, 3408g
+It takes the following slots: cloak.
+It will slightly improve your ability at the skill of your choice.
+It will greatly improve your constitution.
+The wearer can use teleport spells.
+Syntax: homestead teleport
+Instantly teleport without error. One hour cooldown. Blocked during Blood Bath.
+        homestead mind store
+Instantly mind store. Ten minute cooldown.
+        homestead phaze shift
+Instantly phaze shift with yourself as the target. Four hour cooldown.
+Phaze shift/mind store blocked during Blood Bath and after one year.
+```
+
+### Prize 351: Homestead Cape of the Infantry
+
+```
+A fashion statement more than a covering or protective garment, this cape is
+gold-dyed cotton with a cobalt-blue silk lining on the inside. A pair of
+cobalt-blue silk ribbons tie around the neck, and it has a small collar as
+well.
+70% cotton cape, 2384g
+It takes the following slots: cloak.
+It will slightly improve your ability at the skill of your choice.
+It will greatly improve your constitution.
+The wearer can use teleport spells.
+Syntax: homestead teleport
+Instantly teleport without error. One hour cooldown. Blocked during Blood Bath.
+        homestead mind store
+Instantly mind store. Ten minute cooldown.
+        homestead phaze shift
+Instantly phaze shift with yourself as the target. Four hour cooldown.
+Phaze shift/mind store blocked during Blood Bath and after one year.
+```
+
+### Prize 410: Homestead Great Boots of the Infantry
+
+```
+These glossy black boots appear to be made from the leather of a chaos drake.
+The soles are hardened leather with ridged rubber treads, and a strap with a
+darksteel buckle around the ankle tightens for extra fit.
+90% leather great boots, 3273g
+It takes the following slots: foot and foot.
+It will greatly improve your strength.
+It will moderately improve your ability at the skill of your choice.
+While worn, once per hour, you can dramatically reduce your currently cast spell
+or used skill remaining timer.
+Syntax: homestead hasten
+```
+
+### Prize 411: Homestead Sandals of the Brute
+
+```
+Lightweight, comfortable, breathable footwear for traveling, these sandals
+have several soft leather straps attached to cork soles. A buckle of
+heat-treated golden titanium holds the main strap around the ankle.
+60% cork sandals, 155g
+It takes the following slots: foot and foot.
+It will greatly improve your strength.
+It will moderately improve your ability at the skill of your choice.
+While worn, once per hour, you can dramatically reduce your currently cast spell
+or used skill remaining timer.
+Syntax: homestead hasten
+```
+
+### Prize 420: Homestead Great Boots of the Hedge Mage
+
+```
+These glossy black boots appear to be made from the leather of a chaos drake.
+The soles are hardened leather with ridged rubber treads, and a strap with a
+darksteel buckle around the ankle tightens for extra fit.
+90% leather great boots, 3273g
+It takes the following slots: foot and foot.
+It will greatly improve your intelligence.
+It will moderately improve your ability at the skill of your choice.
+While worn, once per hour, you can dramatically reduce your currently cast spell
+or used skill remaining timer.
+Syntax: homestead hasten
+```
+
+### Prize 421: Homestead Sandals of the Hedge Mage
+
+```
+Lightweight, comfortable, breathable footwear for traveling, these sandals
+have several soft leather straps attached to cork soles. A buckle of
+heat-treated golden titanium holds the main strap around the ankle.
+60% cork sandals, 155g
+It takes the following slots: foot and foot.
+It will greatly improve your intelligence.
+It will slightly improve your ability at the skill of your choice.
+While worn, once per hour, you can dramatically reduce your currently cast spell
+or used skill remaining timer.
+Syntax: homestead hasten
+```
+
+### Prize 430: Homestead Great Boots of the Battle Medic
+
+```
+These glossy black boots appear to be made from the leather of a chaos drake.
+The soles are hardened leather with ridged rubber treads, and a strap with a
+darksteel buckle around the ankle tightens for extra fit.
+90% leather great boots, 3273g
+It takes the following slots: foot and foot.
+It will moderately improve your wisdom.
+It will slightly improve your ability at the skill of your choice.
+While worn, once per hour, you can dramatically reduce your currently cast spell
+or used skill remaining timer.
+Syntax: homestead hasten
+```
+
+### Prize 431: Homestead Sandals of the Battle Medic
+
+```
+Lightweight, comfortable, breathable footwear for traveling, these sandals
+have several soft leather straps attached to cork soles. A buckle of
+heat-treated golden titanium holds the main strap around the ankle.
+60% cork sandals, 155g
+It takes the following slots: foot and foot.
+It will greatly improve your wisdom.
+It will slightly improve your ability at the skill of your choice.
+While worn, once per hour, you can dramatically reduce your currently cast spell
+or used skill remaining timer.
+Syntax: homestead hasten
+```
+
+### Prize 440: Homestead Great Boots of the Raider
+
+```
+These glossy black boots appear to be made from the leather of a chaos drake.
+The soles are hardened leather with ridged rubber treads, and a strap with a
+darksteel buckle around the ankle tightens for extra fit.
+90% leather great boots, 3273g
+It takes the following slots: foot and foot.
+It will moderately improve your ability at the skill of your choice.
+It will greatly improve your dexterity.
+While worn, once per hour, you can dramatically reduce your currently cast spell
+or used skill remaining timer.
+Syntax: homestead hasten
+```
+
+### Prize 441: Homestead Sandals of the Raider
+
+```
+Lightweight, comfortable, breathable footwear for traveling, these sandals
+have several soft leather straps attached to cork soles. A buckle of
+heat-treated golden titanium holds the main strap around the ankle.
+60% cork sandals, 155g
+It takes the following slots: foot and foot.
+It will slightly improve your ability at the skill of your choice.
+It will moderately improve your dexterity.
+While worn, once per hour, you can dramatically reduce your currently cast spell
+or used skill remaining timer.
+Syntax: homestead hasten
+```
+
+### Prize 450: Homestead Great Boots of the Infantry
+
+```
+These glossy black boots appear to be made from the leather of a chaos drake.
+The soles are hardened leather with ridged rubber treads, and a strap with a
+darksteel buckle around the ankle tightens for extra fit.
+90% leather great boots, 3273g
+It takes the following slots: foot and foot.
+It will slightly improve your ability at the skill of your choice.
+It will greatly improve your constitution.
+While worn, once per hour, you can dramatically reduce your currently cast spell
+or used skill remaining timer.
+Syntax: homestead hasten
+```
+
+### Prize 451: Homestead Sandals of the Infantry
+
+```
+Lightweight, comfortable, breathable footwear for traveling, these sandals
+have several soft leather straps attached to cork soles. A buckle of
+heat-treated golden titanium holds the main strap around the ankle.
+60% cork sandals, 155g
+It takes the following slots: foot and foot.
+It will insignificantly improve your ability at the skill of your choice.
+It will vastly improve your constitution.
+While worn, once per hour, you can dramatically reduce your currently cast spell
+or used skill remaining timer.
+Syntax: homestead hasten
+```
+
+### Prize 510: Homestead Ring of the Brute
+
+```
+A gleaming silver ring, set with a large rose-pink pearl. There is an
+engraving around the setting resembling flowering vines.
+70% silver ring, 20g
+It takes the following slots: finger.
+It will greatly improve your strength.
+It will insignificantly improve your ability at the spell of your choice.
+This is an invoke item. You can store a spell in it, if that spell
+is medium XP cost to study or lower, and you studied it 50% or higher.
+You can always store 'minor heal' whether you know it or not.
+Syntax: store <spell> in <this> [replaces existing spell]
+        invoke <spell>
+        invoke <spell> at <target>
+Ring must be worn to store or invoke a spell.
+The ring's single charge recovers after 24 hours after use.
+The current stored spell is 'minor heal'.
+```
+
+### Prize 520: Homestead Ring of the Hedge Mage
+
+```
+A gleaming silver ring, set with a large rose-pink pearl. There is an
+engraving around the setting resembling flowering vines.
+70% silver ring, 20g
+It takes the following slots: finger.
+It will vastly improve your intelligence.
+It will slightly improve your ability at the spell of your choice.
+This is an invoke item. You can store a spell in it, if that spell
+is medium XP cost to study or lower, and you studied it 50% or higher.
+You can always store 'minor heal' whether you know it or not.
+Syntax: store <spell> in <this> [replaces existing spell]
+        invoke <spell>
+        invoke <spell> at <target>
+Ring must be worn to store or invoke a spell.
+The ring's single charge recovers after 24 hours after use.
+The current stored spell is 'minor heal'.
+```
+
+### Prize 530: Homestead Ring of the Battle Medic
+
+```
+A gleaming silver ring, set with a large rose-pink pearl. There is an
+engraving around the setting resembling flowering vines.
+70% silver ring, 20g
+It takes the following slots: finger.
+It will greatly improve your wisdom.
+It will slightly improve your ability at the spell of your choice.
+This is an invoke item. You can store a spell in it, if that spell
+is medium XP cost to study or lower, and you studied it 50% or higher.
+You can always store 'minor heal' whether you know it or not.
+Syntax: store <spell> in <this> [replaces existing spell]
+        invoke <spell>
+        invoke <spell> at <target>
+Ring must be worn to store or invoke a spell.
+The ring's single charge recovers after 24 hours after use.
+The current stored spell is 'minor heal'.
+```
+
+### Prize 540: Homestead Ring of the Raider
+
+```
+A gleaming silver ring, set with a large rose-pink pearl. There is an
+engraving around the setting resembling flowering vines.
+70% silver ring, 20g
+It takes the following slots: finger.
+It will vastly improve your dexterity.
+It will slightly improve your ability at the spell of your choice.
+This is an invoke item. You can store a spell in it, if that spell
+is medium XP cost to study or lower, and you studied it 50% or higher.
+You can always store 'minor heal' whether you know it or not.
+Syntax: store <spell> in <this> [replaces existing spell]
+        invoke <spell>
+        invoke <spell> at <target>
+Ring must be worn to store or invoke a spell.
+The ring's single charge recovers after 24 hours after use.
+The current stored spell is 'minor heal'.
+```
+
+### Prize 550: Homestead Ring of the Infantry
+
+```
+A gleaming silver ring, set with a large rose-pink pearl. There is an
+engraving around the setting resembling flowering vines.
+70% silver ring, 20g
+It takes the following slots: finger.
+It will vastly improve your constitution.
+It will moderately improve your ability at the spell of your choice.
+This is an invoke item. You can store a spell in it, if that spell
+is medium XP cost to study or lower, and you studied it 50% or higher.
+You can always store 'minor heal' whether you know it or not.
+Syntax: store <spell> in <this> [replaces existing spell]
+        invoke <spell>
+        invoke <spell> at <target>
+Ring must be worn to store or invoke a spell.
+The ring's single charge recovers after 24 hours after use.
+The current stored spell is 'minor heal'.
+```
+
+### Prize 610: Homestead Gauntlets of the Brute
+
+```
+A pair of armoured gloves, these hand protection pieces have a base of
+powder-blue fine 'knit' mithril and silk weave gloves, Attached to the back of
+the hand, and segments along the back of each finger, are curved plates of
+mithril. The edge of the largest plate has a border engraving of a flowering
+vine.
+70% mithril gauntlets, 1575g
+It takes the following slots: hand and hand.
+It will vastly improve your strength.
+It will slightly improve your ability at the spell of your choice.
+While worn, once per hour, you can dramatically increase your currently cast spell
+or used skill success chance.
+Syntax: homestead fortify
+```
+
+### Prize 611: Homestead Gloves of the Brute
+
+```
+A pair of thin, fingerless gloves, with pads of black suede on the back of the
+hands, and smooth yellow silk everywhere else. They seem to be designed around
+unrestricted hand movement while also giving some comfort and protection from
+handling tools.
+90% silk gloves, 20g
+It takes the following slots: hand and hand.
+It will greatly improve your strength.
+It will slightly improve your ability at the spell of your choice.
+While worn, once per hour, you can dramatically increase your currently cast spell
+or used skill success chance.
+Syntax: homestead fortify
+```
+
+### Prize 620: Homestead Gauntlets of the Hedge Mage
+
+```
+A pair of armoured gloves, these hand protection pieces have a base of
+powder-blue fine 'knit' mithril and silk weave gloves, Attached to the back of
+the hand, and segments along the back of each finger, are curved plates of
+mithril. The edge of the largest plate has a border engraving of a flowering
+vine.
+70% mithril gauntlets, 1575g
+It takes the following slots: hand and hand.
+It will moderately improve your intelligence.
+It will slightly improve your ability at the spell of your choice.
+While worn, once per hour, you can dramatically increase your currently cast spell
+or used skill success chance.
+Syntax: homestead fortify
+```
+
+### Prize 621: Homestead Gloves of the Hedge Mage
+
+```
+A pair of thin, fingerless gloves, with pads of black suede on the back of the
+hands, and smooth yellow silk everywhere else. They seem to be designed around
+unrestricted hand movement while also giving some comfort and protection from
+handling tools.
+90% silk gloves, 20g
+It takes the following slots: hand and hand.
+It will vastly improve your intelligence.
+It will moderately improve your ability at the spell of your choice.
+While worn, once per hour, you can dramatically increase your currently cast spell
+or used skill success chance.
+Syntax: homestead fortify
+```
+
+### Prize 630: Homestead Gauntlets of the Battle Medic
+
+```
+A pair of armoured gloves, these hand protection pieces have a base of
+powder-blue fine 'knit' mithril and silk weave gloves, Attached to the back of
+the hand, and segments along the back of each finger, are curved plates of
+mithril. The edge of the largest plate has a border engraving of a flowering
+vine.
+70% mithril gauntlets, 1575g
+It takes the following slots: hand and hand.
+It will vastly improve your wisdom.
+It will moderately improve your ability at the spell of your choice.
+While worn, once per hour, you can dramatically increase your currently cast spell
+or used skill success chance.
+Syntax: homestead fortify
+```
+
+### Prize 631: Homestead Gloves of the Battle Medic
+
+```
+A pair of thin, fingerless gloves, with pads of black suede on the back of the
+hands, and smooth yellow silk everywhere else. They seem to be designed around
+unrestricted hand movement while also giving some comfort and protection from
+handling tools.
+90% silk gloves, 20g
+It takes the following slots: hand and hand.
+It will greatly improve your wisdom.
+It will moderately improve your ability at the spell of your choice.
+While worn, once per hour, you can dramatically increase your currently cast spell
+or used skill success chance.
+Syntax: homestead fortify
+```
+
+### Prize 640: Homestead Gauntlets of the Raider
+
+```
+A pair of armoured gloves, these hand protection pieces have a base of
+powder-blue fine 'knit' mithril and silk weave gloves, Attached to the back of
+the hand, and segments along the back of each finger, are curved plates of
+mithril. The edge of the largest plate has a border engraving of a flowering
+vine.
+70% mithril gauntlets, 1575g
+It takes the following slots: hand and hand.
+It will divinely improve your dexterity.
+It will slightly improve your ability at the spell of your choice.
+While worn, once per hour, you can dramatically increase your currently cast spell
+or used skill success chance.
+Syntax: homestead fortify
+```
+
+### Prize 641: Homestead Gloves of the Raider
+
+```
+A pair of thin, fingerless gloves, with pads of black suede on the back of the
+hands, and smooth yellow silk everywhere else. They seem to be designed around
+unrestricted hand movement while also giving some comfort and protection from
+handling tools.
+90% silk gloves, 20g
+It takes the following slots: hand and hand.
+It will greatly improve your dexterity.
+It will slightly improve your ability at the spell of your choice.
+While worn, once per hour, you can dramatically increase your currently cast spell
+or used skill success chance.
+Syntax: homestead fortify
+```
+
+### Prize 650: Homestead Gauntlets of the Infantry
+
+```
+A pair of armoured gloves, these hand protection pieces have a base of
+powder-blue fine 'knit' mithril and silk weave gloves, Attached to the back of
+the hand, and segments along the back of each finger, are curved plates of
+mithril. The edge of the largest plate has a border engraving of a flowering
+vine.
+70% mithril gauntlets, 1575g
+It takes the following slots: hand and hand.
+It will divinely improve your constitution.
+It will slightly improve your ability at the spell of your choice.
+While worn, once per hour, you can dramatically increase your currently cast spell
+or used skill success chance.
+Syntax: homestead fortify
+```
+
+### Prize 651: Homestead Gloves of the Infantry
+
+```
+A pair of thin, fingerless gloves, with pads of black suede on the back of the
+hands, and smooth yellow silk everywhere else. They seem to be designed around
+unrestricted hand movement while also giving some comfort and protection from
+handling tools.
+90% silk gloves, 20g
+It takes the following slots: hand and hand.
+It will greatly improve your constitution.
+It will moderately improve your ability at the spell of your choice.
+While worn, once per hour, you can dramatically increase your currently cast spell
+or used skill success chance.
+Syntax: homestead fortify
+```
+
+### Prize 710: Homestead Great Helm of the Brute
+
+```
+This large helmet is has the top, sides, and back made from a thick sheet of
+adamantium, extending to a nose guard and jaw protection. It has a thin rim of
+golden metal around all of its edges, a plume of what seems to be pure white
+unicorn tail, and a gem socket over each eyebrow.
+90% adamantium great helm, 1870g
+It takes the following slots: head.
+It will vastly improve your strength.
+It will moderately improve your ability at the skill of your choice.
+You can put gems in the sockets to add tiny customizable stats.
+These bonuses are _not_ halved after a year passes.
+Syntax: insert <gem> into <left/right> socket
+        empty <left/right> socket
+```
+
+### Prize 711: Homestead Trilby of the Brute
+
+```
+This fashionable black felt hat has a moderate brim all around the outside, a
+low and concave crown, and a band of crimson silk. The lining inside the hat
+is matching crimson silk. A small gold ornament with two gem sockets and a
+raven feather are set over the wearer's left ear.
+60% cloth fedora, 425g
+It takes the following slots: head.
+It will moderately improve your strength.
+It will moderately improve your ability at the skill of your choice.
+You can put gems in the sockets to add tiny customizable stats.
+These bonuses are _not_ halved after a year passes.
+Syntax: insert <gem> into <left/right> socket
+        empty <left/right> socket
+```
+
+### Prize 720: Homestead Great Helm of the Hedge Mage
+
+```
+This large helmet is has the top, sides, and back made from a thick sheet of
+adamantium, extending to a nose guard and jaw protection. It has a thin rim of
+golden metal around all of its edges, a plume of what seems to be pure white
+unicorn tail, and a gem socket over each eyebrow.
+90% adamantium great helm, 1870g
+It takes the following slots: head.
+It will moderately improve your intelligence.
+It will insignificantly improve your ability at the skill of your choice.
+You can put gems in the sockets to add tiny customizable stats.
+These bonuses are _not_ halved after a year passes.
+Syntax: insert <gem> into <left/right> socket
+        empty <left/right> socket
+```
+
+### Prize 721: Homestead Trilby of the Hedge Mage
+
+```
+This fashionable black felt hat has a moderate brim all around the outside, a
+low and concave crown, and a band of crimson silk. The lining inside the hat
+is matching crimson silk. A small gold ornament with two gem sockets and a
+raven feather are set over the wearer's left ear.
+60% cloth fedora, 425g
+It takes the following slots: head.
+It will greatly improve your intelligence.
+It will slightly improve your ability at the skill of your choice.
+You can put gems in the sockets to add tiny customizable stats.
+These bonuses are _not_ halved after a year passes.
+Syntax: insert <gem> into <left/right> socket
+        empty <left/right> socket
+```
+
+### Prize 730: Homestead Great Helm of the Battle Medic
+
+```
+This large helmet is has the top, sides, and back made from a thick sheet of
+adamantium, extending to a nose guard and jaw protection. It has a thin rim of
+golden metal around all of its edges, a plume of what seems to be pure white
+unicorn tail, and a gem socket over each eyebrow.
+90% adamantium great helm, 1870g
+It takes the following slots: head.
+It will greatly improve your wisdom.
+It will slightly improve your ability at the skill of your choice.
+You can put gems in the sockets to add tiny customizable stats.
+These bonuses are _not_ halved after a year passes.
+Syntax: insert <gem> into <left/right> socket
+        empty <left/right> socket
+```
+
+### Prize 731: Homestead Trilby of the Battle Medic
+
+```
+This fashionable black felt hat has a moderate brim all around the outside, a
+low and concave crown, and a band of crimson silk. The lining inside the hat
+is matching crimson silk. A small gold ornament with two gem sockets and a
+raven feather are set over the wearer's left ear.
+60% cloth fedora, 425g
+It takes the following slots: head.
+It will vastly improve your wisdom.
+It will slightly improve your ability at the skill of your choice.
+You can put gems in the sockets to add tiny customizable stats.
+These bonuses are _not_ halved after a year passes.
+Syntax: insert <gem> into <left/right> socket
+        empty <left/right> socket
+```
+
+### Prize 740: Homestead Great Helm of the Raider
+
+```
+This large helmet is has the top, sides, and back made from a thick sheet of
+adamantium, extending to a nose guard and jaw protection. It has a thin rim of
+golden metal around all of its edges, a plume of what seems to be pure white
+unicorn tail, and a gem socket over each eyebrow.
+90% adamantium great helm, 1870g
+It takes the following slots: head.
+It will moderately improve your ability at the skill of your choice.
+It will vastly improve your dexterity.
+You can put gems in the sockets to add tiny customizable stats.
+These bonuses are _not_ halved after a year passes.
+Syntax: insert <gem> into <left/right> socket
+        empty <left/right> socket
+```
+
+### Prize 741: Homestead Trilby of the Raider
+
+```
+This fashionable black felt hat has a moderate brim all around the outside, a
+low and concave crown, and a band of crimson silk. The lining inside the hat
+is matching crimson silk. A small gold ornament with two gem sockets and a
+raven feather are set over the wearer's left ear.
+60% cloth fedora, 425g
+It takes the following slots: head.
+It will moderately improve your ability at the skill of your choice.
+It will greatly improve your dexterity.
+You can put gems in the sockets to add tiny customizable stats.
+These bonuses are _not_ halved after a year passes.
+Syntax: insert <gem> into <left/right> socket
+        empty <left/right> socket
+```
+
+### Prize 750: Homestead Great Helm of the Infantry
+
+```
+This large helmet is has the top, sides, and back made from a thick sheet of
+adamantium, extending to a nose guard and jaw protection. It has a thin rim of
+golden metal around all of its edges, a plume of what seems to be pure white
+unicorn tail, and a gem socket over each eyebrow.
+90% adamantium great helm, 1870g
+It takes the following slots: head.
+It will slightly improve your ability at the skill of your choice.
+It will moderately improve your constitution.
+You can put gems in the sockets to add tiny customizable stats.
+These bonuses are _not_ halved after a year passes.
+Syntax: insert <gem> into <left/right> socket
+        empty <left/right> socket
+```
+
+### Prize 751: Homestead Trilby of the Infantry
+
+```
+This fashionable black felt hat has a moderate brim all around the outside, a
+low and concave crown, and a band of crimson silk. The lining inside the hat
+is matching crimson silk. A small gold ornament with two gem sockets and a
+raven feather are set over the wearer's left ear.
+60% cloth fedora, 425g
+It takes the following slots: head.
+It will slightly improve your ability at the skill of your choice.
+It will greatly improve your constitution.
+You can put gems in the sockets to add tiny customizable stats.
+These bonuses are _not_ halved after a year passes.
+Syntax: insert <gem> into <left/right> socket
+        empty <left/right> socket
+```
+
+### Prize 810: Homestead Plated Collar of the Brute
+
+```
+A piece of armour designed to cover the gap between the helmet and the
+breastplate, this horn-like curved adamantium metal plate fastens at the back
+with a pair of leather straps and adamantium buckles. The image of a flowering
+vine runs along the rim at the top of the neck.
+90% adamantium gorget, 3524g
+It takes the following slots: neck.
+It will insignificantly improve your mental regeneration.
+It will insignificantly improve your physical regeneration.
+It will slightly improve your ability at the skill of your choice.
+It will not improve your endurance regeneration.
+It will moderately improve your strength.
+The regen bonuses are not halved when a year passes.
+```
+
+### Prize 811: Homestead Necklace of the Brute
+
+```
+This necklace consists mostly of a fine chain of intricate silver links.
+Hanging in the front is a silver relief figure of a six-pointed flower, with
+three ivy-like leaves on each side.
+100% silver necklace, 520g
+It takes the following slots: neck.
+It will not improve your mental regeneration.
+It will not improve your physical regeneration.
+It will insignificantly improve your ability at the skill of your choice.
+It will insignificantly improve your endurance regeneration.
+It will greatly improve your strength.
+The regen bonuses are not halved when a year passes.
+```
+
+### Prize 820: Homestead Plated Collar of the Hedge Mage
+
+```
+A piece of armour designed to cover the gap between the helmet and the
+breastplate, this horn-like curved adamantium metal plate fastens at the back
+with a pair of leather straps and adamantium buckles. The image of a flowering
+vine runs along the rim at the top of the neck.
+90% adamantium gorget, 3524g
+It takes the following slots: neck.
+It will moderately improve your intelligence.
+It will insignificantly improve your mental regeneration.
+It will insignificantly improve your physical regeneration.
+It will moderately improve your ability at the skill of your choice.
+It will insignificantly improve your endurance regeneration.
+The regen bonuses are not halved when a year passes.
+```
+
+### Prize 821: Homestead Necklace of the Hedge Mage
+
+```
+This necklace consists mostly of a fine chain of intricate silver links.
+Hanging in the front is a silver relief figure of a six-pointed flower, with
+three ivy-like leaves on each side.
+100% silver necklace, 520g
+It takes the following slots: neck.
+It will vastly improve your intelligence.
+It will insignificantly improve your mental regeneration.
+It will insignificantly improve your physical regeneration.
+It will slightly improve your ability at the skill of your choice.
+It will not improve your endurance regeneration.
+The regen bonuses are not halved when a year passes.
+```
+
+### Prize 830: Homestead Plated Collar of the Battle Medic
+
+```
+A piece of armour designed to cover the gap between the helmet and the
+breastplate, this horn-like curved adamantium metal plate fastens at the back
+with a pair of leather straps and adamantium buckles. The image of a flowering
+vine runs along the rim at the top of the neck.
+90% adamantium gorget, 3524g
+It takes the following slots: neck.
+It will vastly improve your wisdom.
+It will insignificantly improve your mental regeneration.
+It will insignificantly improve your physical regeneration.
+It will insignificantly improve your ability at the skill of your choice.
+It will not improve your endurance regeneration.
+The regen bonuses are not halved when a year passes.
+```
+
+### Prize 831: Homestead Necklace of the Battle Medic
+
+```
+This necklace consists mostly of a fine chain of intricate silver links.
+Hanging in the front is a silver relief figure of a six-pointed flower, with
+three ivy-like leaves on each side.
+100% silver necklace, 520g
+It takes the following slots: neck.
+It will moderately improve your wisdom.
+It will insignificantly improve your mental regeneration.
+It will insignificantly improve your physical regeneration.
+It will slightly improve your ability at the skill of your choice.
+It will insignificantly improve your endurance regeneration.
+The regen bonuses are not halved when a year passes.
+```
+
+### Prize 840: Homestead Plated Collar of the Raider
+
+```
+A piece of armour designed to cover the gap between the helmet and the
+breastplate, this horn-like curved adamantium metal plate fastens at the back
+with a pair of leather straps and adamantium buckles. The image of a flowering
+vine runs along the rim at the top of the neck.
+90% adamantium gorget, 3524g
+It takes the following slots: neck.
+It will insignificantly improve your mental regeneration.
+It will insignificantly improve your physical regeneration.
+It will moderately improve your ability at the skill of your choice.
+It will vastly improve your dexterity.
+It will insignificantly improve your endurance regeneration.
+The regen bonuses are not halved when a year passes.
+```
+
+### Prize 841: Homestead Necklace of the Raider
+
+```
+This necklace consists mostly of a fine chain of intricate silver links.
+Hanging in the front is a silver relief figure of a six-pointed flower, with
+three ivy-like leaves on each side.
+100% silver necklace, 520g
+It takes the following slots: neck.
+It will insignificantly improve your mental regeneration.
+It will insignificantly improve your physical regeneration.
+It will slightly improve your ability at the skill of your choice.
+It will greatly improve your dexterity.
+It will insignificantly improve your endurance regeneration.
+The regen bonuses are not halved when a year passes.
+```
+
+### Prize 850: Homestead Plated Collar of the Infantry
+
+```
+A piece of armour designed to cover the gap between the helmet and the
+breastplate, this horn-like curved adamantium metal plate fastens at the back
+with a pair of leather straps and adamantium buckles. The image of a flowering
+vine runs along the rim at the top of the neck.
+90% adamantium gorget, 3524g
+It takes the following slots: neck.
+It will vastly improve your constitution.
+It will not improve your mental regeneration.
+It will not improve your physical regeneration.
+It will slightly improve your ability at the skill of your choice.
+It will insignificantly improve your endurance regeneration.
+The regen bonuses are not halved when a year passes.
+```
+
+### Prize 851: Homestead Necklace of the Infantry
+
+```
+This necklace consists mostly of a fine chain of intricate silver links.
+Hanging in the front is a silver relief figure of a six-pointed flower, with
+three ivy-like leaves on each side.
+100% silver necklace, 520g
+It takes the following slots: neck.
+It will vastly improve your constitution.
+It will insignificantly improve your mental regeneration.
+It will insignificantly improve your physical regeneration.
+It will slightly improve your ability at the skill of your choice.
+It will insignificantly improve your endurance regeneration.
+The regen bonuses are not halved when a year passes.
+```
+
+### Prize 910: Homestead Reinforced Backpack of the Brute
+
+```
+This dark brown hemp backpack is extra large, with its main section already
+being dufflebag-sized even before taking into account two large side pockets,
+each capable of holding a large canteen or jug. A scaffolding-like set of
+hollow highsteel bars form a rectangle at the bottom with wires to add extra
+strength to its base support, and stick up a bit over the top of the backpack
+with extra hooks to hang additional items.
+70% hemp equipment frame, 5004g
+It takes the following slots: rig.
+It will moderately improve your strength.
+It will slightly improve your ability at the skill of your choice.
+While worn, the rig will sometimes look inside for a str food. If it finds one, it
+will consume it to give you a str boost and heal you.
+```
+
+### Prize 911: Homestead Satchel of the Brute
+
+```
+A travel bag that hangs over the shoulder on a strap, this satchel is made
+from beaten and scratched, but durable, chaos drake leather. Each of the two
+large outside pockets are covered with a large black chaos drake scale,
+curving them to hold items like bottles. The flap is held in place by
+darksteel latches, and the strap connects to the satchel with a pair of
+darksteel linked rings.
+80% leather satchel, 3072g
+It takes the following slots: rig.
+It will divinely improve your strength.
+It will slightly improve your ability at the skill of your choice.
+While worn, the rig will sometimes look inside for a str food. If it finds one, it
+will consume it to give you a str boost and heal you.
+```
+
+### Prize 920: Homestead Reinforced Backpack of the Hedge Mage
+
+```
+This dark brown hemp backpack is extra large, with its main section already
+being dufflebag-sized even before taking into account two large side pockets,
+each capable of holding a large canteen or jug. A scaffolding-like set of
+hollow highsteel bars form a rectangle at the bottom with wires to add extra
+strength to its base support, and stick up a bit over the top of the backpack
+with extra hooks to hang additional items.
+70% hemp equipment frame, 5004g
+It takes the following slots: rig.
+It will divinely improve your intelligence.
+It will slightly improve your ability at the skill of your choice.
+While worn, the rig will sometimes look inside for a int food. If it finds one, it
+will consume it to give you a int boost and heal you.
+```
+
+### Prize 921: Homestead Satchel of the Hedge Mage
+
+```
+A travel bag that hangs over the shoulder on a strap, this satchel is made
+from beaten and scratched, but durable, chaos drake leather. Each of the two
+large outside pockets are covered with a large black chaos drake scale,
+curving them to hold items like bottles. The flap is held in place by
+darksteel latches, and the strap connects to the satchel with a pair of
+darksteel linked rings.
+80% leather satchel, 3072g
+It takes the following slots: rig.
+It will vastly improve your intelligence.
+It will moderately improve your ability at the skill of your choice.
+While worn, the rig will sometimes look inside for a int food. If it finds one, it
+will consume it to give you a int boost and heal you.
+```
+
+### Prize 930: Homestead Reinforced Backpack of the Battle Medic
+
+```
+This dark brown hemp backpack is extra large, with its main section already
+being dufflebag-sized even before taking into account two large side pockets,
+each capable of holding a large canteen or jug. A scaffolding-like set of
+hollow highsteel bars form a rectangle at the bottom with wires to add extra
+strength to its base support, and stick up a bit over the top of the backpack
+with extra hooks to hang additional items.
+70% hemp equipment frame, 5004g
+It takes the following slots: rig.
+It will greatly improve your wisdom.
+It will moderately improve your ability at the skill of your choice.
+While worn, the rig will sometimes look inside for a wis food. If it finds one, it
+will consume it to give you a wis boost and heal you.
+```
+
+### Prize 931: Homestead Satchel of the Battle Medic
+
+```
+A travel bag that hangs over the shoulder on a strap, this satchel is made
+from beaten and scratched, but durable, chaos drake leather. Each of the two
+large outside pockets are covered with a large black chaos drake scale,
+curving them to hold items like bottles. The flap is held in place by
+darksteel latches, and the strap connects to the satchel with a pair of
+darksteel linked rings.
+80% leather satchel, 3072g
+It takes the following slots: rig.
+It will vastly improve your wisdom.
+It will slightly improve your ability at the skill of your choice.
+While worn, the rig will sometimes look inside for a wis food. If it finds one, it
+will consume it to give you a wis boost and heal you.
+```
+
+### Prize 940: Homestead Reinforced Backpack of the Raider
+
+```
+This dark brown hemp backpack is extra large, with its main section already
+being dufflebag-sized even before taking into account two large side pockets,
+each capable of holding a large canteen or jug. A scaffolding-like set of
+hollow highsteel bars form a rectangle at the bottom with wires to add extra
+strength to its base support, and stick up a bit over the top of the backpack
+with extra hooks to hang additional items.
+70% hemp equipment frame, 5004g
+It takes the following slots: rig.
+It will slightly improve your ability at the skill of your choice.
+It will vastly improve your dexterity.
+While worn, the rig will sometimes look inside for a dex food. If it finds one, it
+will consume it to give you a dex boost and heal you.
+```
+
+### Prize 941: Homestead Satchel of the Raider
+
+```
+A travel bag that hangs over the shoulder on a strap, this satchel is made
+from well-treated soft leather with brass snaps, buckles, and latches. A pair
+of smaller side pockets seem intended for quick-access items like keys, while
+the flap-covered main section can hold items up to a dozen items the size of a
+large tome.
+90% leather satchel, 3285g
+It takes the following slots: rig.
+It will moderately improve your ability at the skill of your choice.
+It will divinely improve your dexterity.
+While worn, the rig will sometimes look inside for a dex food. If it finds one, it
+will consume it to give you a dex boost and heal you.
+```
+
+### Prize 950: Homestead Reinforced Backpack of the Infantry
+
+```
+This dark brown hemp backpack is extra large, with its main section already
+being dufflebag-sized even before taking into account two large side pockets,
+each capable of holding a large canteen or jug. A scaffolding-like set of
+hollow highsteel bars form a rectangle at the bottom with wires to add extra
+strength to its base support, and stick up a bit over the top of the backpack
+with extra hooks to hang additional items.
+70% hemp equipment frame, 5004g
+It takes the following slots: rig.
+It will slightly improve your ability at the skill of your choice.
+It will vastly improve your constitution.
+While worn, the rig will sometimes look inside for a con food. If it finds one, it
+will consume it to give you a con boost and heal you.
+```
+
+### Prize 951: Homestead Satchel of the Infantry
+
+```
+A travel bag that hangs over the shoulder on a strap, this satchel is made
+from beaten and scratched, but durable, chaos drake leather. Each of the two
+large outside pockets are covered with a large black chaos drake scale,
+curving them to hold items like bottles. The flap is held in place by
+darksteel latches, and the strap connects to the satchel with a pair of
+darksteel linked rings.
+80% leather satchel, 3072g
+It takes the following slots: rig.
+It will slightly improve your ability at the skill of your choice.
+It will vastly improve your constitution.
+While worn, the rig will sometimes look inside for a con food. If it finds one, it
+will consume it to give you a con boost and heal you.
+```
+
+### Prize 1010: Homestead Cuisses of the Brute
+
+```
+A pair of armoured leg coverings, these armour pieces have thick curved plates
+of mithril over the thighs mounted on heat-treated golden titanium chain mail
+extending from the hips to the shins. The chain mail itself is backed with a
+smooth blue silk lining. Each knee is protected by a thick hinge-like poleyn,
+also made of mithril. Etched around those circular 'knee caps' is the symbol
+of a flowering vine. Pockets are sewn into the silk, and some armoured
+sections are mounted on the mithril thigh plates.
+60% mithril leggings, 4419g
+It takes the following slots: leg and leg.
+It will moderately improve your strength.
+It will moderately improve your ability at the spell of your choice.
+It is a six-slot herb jar, a six-slot mineral box, and a small toolkit.
+Herb, mineral and tool storage lasts past a year and does not contribute weight.
+```
+
+### Prize 1011: Homestead Cargo Shorts of the Brute
+
+```
+These durable short tan leg garments are made from canvas-like fabric and
+extend just below the knee. Each leg has four pockets, large ones capable of
+holding a large item. It cinches through eight belt loops.
+100% cloth shorts, 275g
+It takes the following slots: leg and leg.
+It will vastly improve your strength.
+It will moderately improve your ability at the spell of your choice.
+It is a six-slot herb jar, a six-slot mineral box, and a small toolkit.
+Herb, mineral and tool storage lasts past a year and does not contribute weight.
+```
+
+### Prize 1020: Homestead Cuisses of the Hedge Mage
+
+```
+A pair of armoured leg coverings, these armour pieces have thick curved plates
+of mithril over the thighs mounted on heat-treated golden titanium chain mail
+extending from the hips to the shins. The chain mail itself is backed with a
+smooth blue silk lining. Each knee is protected by a thick hinge-like poleyn,
+also made of mithril. Etched around those circular 'knee caps' is the symbol
+of a flowering vine. Pockets are sewn into the silk, and some armoured
+sections are mounted on the mithril thigh plates.
+60% mithril leggings, 4419g
+It takes the following slots: leg and leg.
+It will greatly improve your intelligence.
+It will moderately improve your ability at the spell of your choice.
+It is a six-slot herb jar, a six-slot mineral box, and a small toolkit.
+Herb, mineral and tool storage lasts past a year and does not contribute weight.
+```
+
+### Prize 1021: Homestead Cargo Shorts of the Hedge Mage
+
+```
+These durable short tan leg garments are made from canvas-like fabric and
+extend just below the knee. Each leg has four pockets, large ones capable of
+holding a large item. It cinches through eight belt loops.
+100% cloth shorts, 275g
+It takes the following slots: leg and leg.
+It will moderately improve your intelligence.
+It will moderately improve your ability at the spell of your choice.
+It is a six-slot herb jar, a six-slot mineral box, and a small toolkit.
+Herb, mineral and tool storage lasts past a year and does not contribute weight.
+```
+
+### Prize 1030: Homestead Cuisses of the Battle Medic
+
+```
+A pair of armoured leg coverings, these armour pieces have thick curved plates
+of mithril over the thighs mounted on heat-treated golden titanium chain mail
+extending from the hips to the shins. The chain mail itself is backed with a
+smooth blue silk lining. Each knee is protected by a thick hinge-like poleyn,
+also made of mithril. Etched around those circular 'knee caps' is the symbol
+of a flowering vine. Pockets are sewn into the silk, and some armoured
+sections are mounted on the mithril thigh plates.
+60% mithril leggings, 4419g
+It takes the following slots: leg and leg.
+It will vastly improve your wisdom.
+It will moderately improve your ability at the spell of your choice.
+It is a six-slot herb jar, a six-slot mineral box, and a small toolkit.
+Herb, mineral and tool storage lasts past a year and does not contribute weight.
+```
+
+### Prize 1031: Homestead Cargo Shorts of the Battle Medic
+
+```
+These durable short tan leg garments are made from canvas-like fabric and
+extend just below the knee. Each leg has four pockets, large ones capable of
+holding a large item. It cinches through eight belt loops.
+100% cloth shorts, 275g
+It takes the following slots: leg and leg.
+It will moderately improve your wisdom.
+It will insignificantly improve your ability at the spell of your choice.
+It is a six-slot herb jar, a six-slot mineral box, and a small toolkit.
+Herb, mineral and tool storage lasts past a year and does not contribute weight.
+```
+
+### Prize 1040: Homestead Cuisses of the Raider
+
+```
+A pair of armoured leg coverings, these armour pieces have thick curved plates
+of mithril over the thighs mounted on heat-treated golden titanium chain mail
+extending from the hips to the shins. The chain mail itself is backed with a
+smooth blue silk lining. Each knee is protected by a thick hinge-like poleyn,
+also made of mithril. Etched around those circular 'knee caps' is the symbol
+of a flowering vine. Pockets are sewn into the silk, and some armoured
+sections are mounted on the mithril thigh plates.
+60% mithril leggings, 4419g
+It takes the following slots: leg and leg.
+It will vastly improve your dexterity.
+It will slightly improve your ability at the spell of your choice.
+It is a six-slot herb jar, a six-slot mineral box, and a small toolkit.
+Herb, mineral and tool storage lasts past a year and does not contribute weight.
+```
+
+### Prize 1041: Homestead Cargo Shorts of the Raider
+
+```
+These durable short tan leg garments are made from canvas-like fabric and
+extend just below the knee. Each leg has four pockets, large ones capable of
+holding a large item. It cinches through eight belt loops.
+100% cloth shorts, 275g
+It takes the following slots: leg and leg.
+It will vastly improve your dexterity.
+It will moderately improve your ability at the spell of your choice.
+It is a six-slot herb jar, a six-slot mineral box, and a small toolkit.
+Herb, mineral and tool storage lasts past a year and does not contribute weight.
+```
+
+### Prize 1050: Homestead Cuisses of the Infantry
+
+```
+A pair of armoured leg coverings, these armour pieces have thick curved plates
+of mithril over the thighs mounted on heat-treated golden titanium chain mail
+extending from the hips to the shins. The chain mail itself is backed with a
+smooth blue silk lining. Each knee is protected by a thick hinge-like poleyn,
+also made of mithril. Etched around those circular 'knee caps' is the symbol
+of a flowering vine. Pockets are sewn into the silk, and some armoured
+sections are mounted on the mithril thigh plates.
+60% mithril leggings, 4419g
+It takes the following slots: leg and leg.
+It will moderately improve your intelligence.
+It will slightly improve your ability at the spell of your choice.
+It is a six-slot herb jar, a six-slot mineral box, and a small toolkit.
+Herb, mineral and tool storage lasts past a year and does not contribute weight.
+```
+
+### Prize 1051: Homestead Cargo Shorts of the Infantry
+
+```
+These durable short tan leg garments are made from canvas-like fabric and
+extend just below the knee. Each leg has four pockets, large ones capable of
+holding a large item. It cinches through eight belt loops.
+100% cloth shorts, 275g
+It takes the following slots: leg and leg.
+It will vastly improve your constitution.
+It will moderately improve your ability at the spell of your choice.
+It is a six-slot herb jar, a six-slot mineral box, and a small toolkit.
+Herb, mineral and tool storage lasts past a year and does not contribute weight.
+```
+
+### Prize 1110: Homestead Plackart of the Brute
+
+```
+A narrow and form-fitting protector for the ribcage and abdomen, this
+breastplate is made from heat-treated titanium to give it a golden colour. The
+edges are reinforced with an extra rim of mithril for a little bit more joint
+coverage, but mostly for flair.
+90% titanium breastplate, 4882g
+It takes the following slots: torso.
+It will vastly improve your strength.
+It will slightly improve your ability at the skill of your choice.
+While worn at under 25% max hp, chance for the armour to look through your inventory
+for a str food. If it finds one, it will consume it to give you a str boost and heal you.
+Chance drops after one year.
+```
+
+### Prize 1111: Homestead T-shirt of the Brute
+
+```
+A simple cotton T-shirt, although a very well-made one, with nearly seamless
+stitching and very comfortable fabric. The shirt is cobalt blue in hue and has
+'Homestead 2026' on the front in large white script.
+100% cotton muscle shirt, 850g
+It takes the following slots: torso.
+It will vastly improve your strength.
+It will insignificantly improve your ability at the skill of your choice.
+While worn at under 25% max hp, chance for the armour to look through your inventory
+for a str food. If it finds one, it will consume it to give you a str boost and heal you.
+Chance drops after one year.
+```
+
+### Prize 1120: Homestead Plackart of the Hedge Mage
+
+```
+A narrow and form-fitting protector for the ribcage and abdomen, this
+breastplate is made from heat-treated titanium to give it a golden colour. The
+edges are reinforced with an extra rim of mithril for a little bit more joint
+coverage, but mostly for flair.
+90% titanium breastplate, 4882g
+It takes the following slots: torso.
+It will greatly improve your intelligence.
+It will slightly improve your ability at the skill of your choice.
+While worn at under 25% max hp, chance for the armour to look through your inventory
+for a int food. If it finds one, it will consume it to give you a int boost and heal you.
+Chance drops after one year.
+```
+
+### Prize 1121: Homestead T-shirt of the Hedge Mage
+
+```
+A simple cotton T-shirt, although a very well-made one, with nearly seamless
+stitching and very comfortable fabric. The shirt is cobalt blue in hue and has
+'Homestead 2026' on the front in large white script.
+100% cotton muscle shirt, 850g
+It takes the following slots: torso.
+It will greatly improve your intelligence.
+It will slightly improve your ability at the skill of your choice.
+While worn at under 25% max hp, chance for the armour to look through your inventory
+for a int food. If it finds one, it will consume it to give you a int boost and heal you.
+Chance drops after one year.
+```
+
+### Prize 1130: Homestead Plackart of the Battle Medic
+
+```
+A narrow and form-fitting protector for the ribcage and abdomen, this
+breastplate is made from heat-treated titanium to give it a golden colour. The
+edges are reinforced with an extra rim of mithril for a little bit more joint
+coverage, but mostly for flair.
+90% titanium breastplate, 4882g
+It takes the following slots: torso.
+It will greatly improve your wisdom.
+It will insignificantly improve your ability at the skill of your choice.
+While worn at under 25% max hp, chance for the armour to look through your inventory
+for a wis food. If it finds one, it will consume it to give you a wis boost and heal you.
+Chance drops after one year.
+```
+
+### Prize 1131: Homestead T-shirt of the Battle Medic
+
+```
+A simple cotton T-shirt, although a very well-made one, with nearly seamless
+stitching and very comfortable fabric. The shirt is cobalt blue in hue and has
+'Homestead 2026' on the front in large white script.
+100% cotton muscle shirt, 850g
+It takes the following slots: torso.
+It will moderately improve your wisdom.
+It will slightly improve your ability at the skill of your choice.
+While worn at under 25% max hp, chance for the armour to look through your inventory
+for a wis food. If it finds one, it will consume it to give you a wis boost and heal you.
+Chance drops after one year.
+Large eagle shouts 'Let's do that again sometime, Pere!'
+```
+
+### Prize 1140: Homestead Plackart of the Raider
+
+```
+A narrow and form-fitting protector for the ribcage and abdomen, this
+breastplate is made from heat-treated titanium to give it a golden colour. The
+edges are reinforced with an extra rim of mithril for a little bit more joint
+coverage, but mostly for flair.
+90% titanium breastplate, 4882g
+It takes the following slots: torso.
+It will slightly improve your ability at the skill of your choice.
+It will vastly improve your dexterity.
+While worn at under 25% max hp, chance for the armour to look through your inventory
+for a dex food. If it finds one, it will consume it to give you a dex boost and heal you.
+Chance drops after one year.
+```
+
+### Prize 1141: Homestead T-shirt of the Raider
+
+```
+A simple cotton T-shirt, although a very well-made one, with nearly seamless
+stitching and very comfortable fabric. The shirt is cobalt blue in hue and has
+'Homestead 2026' on the front in large white script.
+100% cotton muscle shirt, 850g
+It takes the following slots: torso.
+It will moderately improve your ability at the skill of your choice.
+It will greatly improve your dexterity.
+While worn at under 25% max hp, chance for the armour to look through your inventory
+for a dex food. If it finds one, it will consume it to give you a dex boost and heal you.
+Chance drops after one year.
+```
+
+### Prize 1150: Homestead Plackart of the Infantry
+
+```
+A narrow and form-fitting protector for the ribcage and abdomen, this
+breastplate is made from heat-treated titanium to give it a golden colour. The
+edges are reinforced with an extra rim of mithril for a little bit more joint
+coverage, but mostly for flair.
+90% titanium breastplate, 4882g
+It takes the following slots: torso.
+It will insignificantly improve your ability at the skill of your choice.
+It will vastly improve your constitution.
+While worn at under 25% max hp, chance for the armour to look through your inventory
+for a con food. If it finds one, it will consume it to give you a con boost and heal you.
+Chance drops after one year.
+```
+
+### Prize 1151: Homestead T-shirt of the Infantry
+
+```
+A simple cotton T-shirt, although a very well-made one, with nearly seamless
+stitching and very comfortable fabric. The shirt is cobalt blue in hue and has
+'Homestead 2026' on the front in large white script.
+100% cotton muscle shirt, 850g
+It takes the following slots: torso.
+It will slightly improve your ability at the skill of your choice.
+It will vastly improve your constitution.
+While worn at under 25% max hp, chance for the armour to look through your inventory
+for a con food. If it finds one, it will consume it to give you a con boost and heal you.
+Chance drops after one year.
+```
+
+### Prize 2001: Homestead O-yoroi of the Sanquine Leader (no skill/spell)
+
+```
+A variant of the traditional armour, it covers the chest, abdomen, shoulders,
+upper arms, and upper legs. Formed with a backing of fine titanium mail mesh,
+curved plates are attached to the front, back, and limbs. Each plate is a
+framework of bamboo, holding thin black-enameled plates of mithril to create
+solid coverage while retaining some flexibility and being easy to repair.
+40% bamboo o-yoroi, 7937g
+It takes the following slots: torso, leg, leg, arm and arm.
+It will exaltedly improve your constitution.
+It will exaltedly improve your intelligence.
+It will ultimately improve your wisdom.
+```
+
+### Prize 2002: Homestead O-yoroi of the Lazuli Leader (no skill/spell)
+
+```
+A variant of the traditional armour, it covers the chest, abdomen, shoulders,
+upper arms, and upper legs. Formed with a backing of fine titanium mail mesh,
+curved plates are attached to the front, back, and limbs. Each plate is a
+framework of bamboo, holding thin black-enameled plates of mithril to create
+solid coverage while retaining some flexibility and being easy to repair.
+40% bamboo o-yoroi, 7937g
+It takes the following slots: torso, leg, leg, arm and arm.
+It will exaltedly improve your constitution.
+It will ultimately improve your dexterity.
+It will transcendently improve your strength.
+```
+
+### Prize 2003: Homestead O-yoroi of the Brassen Leader (no skill/spell)
+
+```
+A variant of the traditional armour, it covers the chest, abdomen, shoulders,
+upper arms, and upper legs. Formed with a backing of fine titanium mail mesh,
+curved plates are attached to the front, back, and limbs. Each plate is a
+framework of bamboo, holding thin black-enameled plates of mithril to create
+solid coverage while retaining some flexibility and being easy to repair.
+40% bamboo o-yoroi, 7937g
+It takes the following slots: torso, leg, leg, arm and arm.
+It will exaltedly improve your constitution.
+It will supremely improve your strength.
+It will exaltedly improve your wisdom.
+```
+
+### Prize 9999: safecracker kit in a leather case (statless)
+
+```
+This case for holding tools is rigid, glossy black leather, some kind of
+durable reptile hide, about the size of a breadbox.
+Inside are:
+ -- ten lockpicks of various sizes and angles
+ -- a stethoscope
+ -- a magnifying glass
+ -- a drill and four adamantium bits of various sizes
+ -- six small bottles of oils and acids
+Syntax: safecracker help
+30% steel slotless item, 3156g
+It takes the following slots: held.
+How to use the safecracker kit:
+The kit works as a lockpick, a magnifying glass, and a stethoscope.
+Syntax: apply <this> to <what>
+        unapply stethoscope
+You may also work on most locked containers that are in the same room as you.
+Syntax: safecracker peek <container> [Cost: 10 charges]
+Glance inside the container at its inventory.
+        safecracker detrap <container> [Cost: 10 charges]
+Attempt to detect and remove most common box traps. Chance is based on
+'detect trap' or 'chest trap creation' skills plus a 25% bonus.
+        safecracker dials <container> [Cost: 20 charges]
+Attempt to find the combination on a dial-based lock. Chance is based on
+'pick locks' or 'chest lock creation' skills plus a 25% bonus.
+        safecracker unlock <container> [Cost: 25 charges]
+Attempt to unlock the container without setting any traps off.
+
+Charges naturally return 1 per 5 minutes for one year, after which
+its remaining charges can still be used but will not recover.
+If the container is a no-get item, all costs multiplied by four.
+Generally speaking, items immune to the 'pick locks' skill are immune to this.
+Has no effet on player-owned chests. EVER.
+```
+
+Previous prize list description:
+
+An announcement of upcoming Event prizes stands at the site of the future
+shop.
+
+Prizes cost 1,000 for the first, then 2,000 then 3,000 then 4,000 stockpile.
+However, the first prize MUST ALWAYS be the village sign. To get the maximum
+amount of eq, three items, you need 10,000 stockpile. It is mathematically
+impossible to get 15,000 for a fourth eq prize.
+
+Some example prizes are listed. Most eq prizes will come in two sizes, small
+and lightweight vs. large and covering. Prizes will scale with their owner's
+current level, maxxing out at +greatly to one stat [str/int/wis/dex/con],
++slightly to one skill or spell from your train/study lists [chosen at time of
+purchase, some few exceptions] and a minor tertiary effect [varies by prize
+slot]. Stat and spell/skill bonuses will be halved after one year, but the
+items will remain indestructible forever.
 
 ## `village daily`
 
@@ -167,257 +2071,6 @@ There are different sets of bandits with different flags:
 - flag of the Brassen Bandits
 - pennant of the Sanguine Bandits
 - displayed heraldry of the Lazuli Legion
-
-## `prize list`
-
-An announcement of upcoming Event prizes stands at the site of the future
-shop.
-
-Prizes cost 1,000 for the first, then 2,000 then 3,000 then 4,000 stockpile.
-However, the first prize MUST ALWAYS be the village sign. To get the maximum
-amount of eq, three items, you need 10,000 stockpile. It is mathematically
-impossible to get 15,000 for a fourth eq prize.
-
-Some example prizes are listed. Most eq prizes will come in two sizes, small
-and lightweight vs. large and covering. Prizes will scale with their owner's
-current level, maxxing out at +greatly to one stat [str/int/wis/dex/con],
-+slightly to one skill or spell from your train/study lists [chosen at time of
-purchase, some few exceptions] and a minor tertiary effect [varies by prize
-slot]. Stat and spell/skill bonuses will be halved after one year, but the
-items will remain indestructible forever.
-
-Prize 1: message board mounted on thick posts
-
-```
-This board is where the local villagers post requests for help, be it
-supplies, animals, materials or combat. A set of crates sit next to the sign
-for drop-offs, and a map pinned to the board shows some locations.
-Syntax: village info
-This item is in great condition.
-
-Weight: 8.4kg
-Connect to your village directly from your pcity room.
-
-Once the event ends, your village remains, and continues to gather supplies.
-You will also be able to do daily and weekly quests for more supplies (but no
-more small box rewards). Raids will stop happening every week, so there is no
-longer a distinction between 'supplies' and 'stockpile'. Instead, you will be
-able to spend supplies (prices vary, but in the thousands) to request from a
-list of options.
-1) a specific item, such as crops, leather, food, or ore.
-The list of items you can ask for is based on the village's total skill
-in that category (such as Farming or Mining). Higher total skill means
-you can ask for better items.
-2) another owned conscription orders.
-Once the event ends, this will be the only way to get more villagers,
-or to swap out any you already have.
-3) a bandit raid
-Bait out bandits to kill for XP, holz marks, low-level eq, etc.
-Bandits will no longer damage your village no matter what.
-4) open a storage closet in your village.
-```
-
-Prize 2: Homestead Gauntlets of the Hedge Mage
-
-```
-A pair of armoured gloves, these hand protection pieces have a base of
-powder-blue fine 'knit' mithril and silk weave gloves, Attached to the back of
-the hand, and segments along the back of each finger, are curved plates of
-mithril. The edge of the largest plate has a border engraving of a flowering
-vine.
-It is surrounded by a red glow.
-These gauntlets are in AWESOME condition.
-
-Weight: 0.24kg
-It takes the following slots: hand and hand.
-It will greatly improve your intelligence.
-It will slightly improve your ability at the spell of your choice.
-While worn, once per hour, you can dramatically increase your currently cast spell or
-used skill success chance.
-Syntax: homestead fortify
-```
-
-Prize 3: Homestead Gloves of the Hedge Mage
-
-```
-A pair of thin, fingerless gloves, with pads of black suede on the back of the
-hands, and smooth yellow silk everywhere else. They seem to be designed around
-unrestricted hand movement while also giving some comfort and protection from
-handling tools.
-It is surrounded by a red glow.
-These gloves are in AWESOME condition.
-
-Weight: 0.02kg
-It takes the following slots: hand and hand.
-It will vastly improve your intelligence.
-It will slightly improve your ability at the spell of your choice.
-While worn, once per hour, you can dramatically increase your currently cast spell or 
-used skill success chance.
-Syntax: homestead fortify
-```
-
-Prize 4: Homestead Great Helm of the Brute
-
-```
-This large helmet is has the top, sides, and back made from a thick sheet of
-adamantium, extending to a nose guard and jaw protection. It has a thin rim of
-golden metal around all of its edges, a plume of what seems to be pure white
-unicorn tail, and a gem socket over each eyebrow.
-It is surrounded by a red glow.
-This great helm is in AWESOME condition.
-Left socket:  empty
-Right socket: empty
-
-Weight: 1.87kg
-It takes the following slots: head.
-It will moderately improve your strength.
-It will slightly improve your ability at the skill of your choice.
-You can put gems in the sockets to add tiny customizable stats.
-These bonuses are _not_ halved after a year passes.
-Syntax: insert <gem> into <left/right> socket
-        empty <left/right> socket
-```
-
-Prize 5: Homestead Necklace of the Battle Medic
-
-```
-This necklace consists mostly of a fine chain of intricate silver links.
-Hanging in the front is a silver relief figure of a six-pointed flower, with
-three ivy-like leaves on each side.
-It is surrounded by a red glow.
-This necklace is in AWESOME condition.
-
-Weight: 0.52kg
-It takes the following slots: neck.
-It will moderately improve your wisdom.
-It will insignificantly improve your mental regeneration.
-It will not improve your physical regeneration.
-It will slightly improve your ability at the skill of your choice.
-It will not improve your endurance regeneration.
-The regen bonuses are not halved when a year passes.
-```
-
-Prize 6: Homestead Satchel of the Infantry
-
-```
-A travel bag that hangs over the shoulder on a strap, this satchel is made
-from beaten and scratched, but durable, chaos drake leather. Each of the two
-large outside pockets are covered with a large black chaos drake scale,
-curving them to hold items like bottles. The flap is held in place by
-darksteel latches, and the strap connects to the satchel with a pair of
-darksteel linked rings.
-It is surrounded by a red glow.
-This satchel is in AWESOME condition.
-
-Weight: 3.072kg
-It takes the following slots: rig.
-It will insignificantly improve your ability at the skill of your choice.
-It will vastly improve your constitution.
-While worn, the rig will sometimes look inside for a con food. If it finds one, it will
-consume it to give you a con boost and heal you.
-```
-
-Prize 7: Homestead Satchel of the Raider
-
-```
-A travel bag that hangs over the shoulder on a strap, this satchel is made
-from well-treated soft leather with brass snaps, buckles, and latches. A pair
-of smaller side pockets seem intended for quick-access items like keys, while
-the flap-covered main section can hold items up to a dozen items the size of a
-large tome.
-It is surrounded by a red glow.
-This satchel is in AWESOME condition.
-
-Weight: 3.285kg
-It takes the following slots: rig.
-It will moderately improve your ability at the skill of your choice.
-It will greatly improve your dexterity.
-While worn, the rig will sometimes look inside for a dex food. If it finds one, it will
-consume it to give you a dex boost and heal you.
-```
-
-Prize 8: Homestead Ring of the Battle Medic
-
-```
-A gleaming silver ring, set with a large rose-pink pearl. There is an
-engraving around the setting resembling flowering vines.
-It is surrounded by a red glow.
-This ring is in AWESOME condition.
-
-Weight: 0.02kg
-It takes the following slots: finger.
-It will divinely improve your wisdom.
-It will insignificantly improve your ability at the spell of your choice.
-This is an invoke item. You can store a spell in it, if that spell
-is medium XP cost to study or lower, and you studied it 50% or higher.
-You can always store 'minor heal' whether you know it or not.
-Syntax: store <spell> in <this> [replaces existing spell]
-        invoke <spell>
-        invoke <spell> at <target>
-Ring must be worn to store or invoke a spell.
-The ring's single charge recovers after 24 hours after use.
-The current stored spell is 'minor heal'.
-```
-
-Prize 9: Homestead Great Belt of the Brute
-
-```
-This wide black leather belt has a darksteel buckle with two prongs, pairs of
-punch holes also lined in darksteel, and three loops, the first of which is a
-darksteel rectangle.
-It is surrounded by a red glow.
-This great belt is in AWESOME condition.
-
-Weight: 2.425kg
-It takes the following slots: belt.
-It will moderately improve your ability at the skill of your choice.
-It will vastly improve your strength.
-The skill/spell bonus can be reset at any time in any any city room, and is not halved
-after a year.
-You must still have the skill/spell trained/studied.
-A few skills are also prohibited.
-Syntax: homestead modify skill bonus to <skill name>
-        homestead modify spell bonus to <spell name>
-This will remove all previous skill/spell bonuses.
-```
-
-Prize 10: Homestead Sleeves of the Hedge Mage
-
-```
-A pair of simple bright blue silk sleeves with off-white fur shoulders. Each
-cuff has a bone button.
-It is surrounded by a red glow.
-These sleeves are in AWESOME condition.
-
-Weight: 0.085kg
-It takes the following slots: arm and arm.
-It will divinely improve your intelligence.
-It will slightly improve your ability at the spell of your choice.
-Increases maximum carrying capacity by 15kg (halved after one year).
-```
-
-Prize 11: Homestead Great Cloak of the Infantry
-
-```
-A heavy garment, substantial protection against wind, rain, and blades. The
-exterior of this cloak is treated black chaos drake leather, and the interior
-is dark brown bear fur. It ties around the neck with a sturdy darksteel chain.
-It is surrounded by a red glow.
-This great cloak is in AWESOME condition.
-
-Weight: 3.408kg
-It takes the following slots: cloak.
-It will slightly improve your ability at the skill of your choice.
-It will greatly improve your constitution.
-The wearer can use teleport spells.
-Syntax: homestead teleport
-Instantly teleport without error. One hour cooldown.
-        homestead mind store
-Instantly mind store. Ten minute cooldown.
-        homestead phaze shift
-Instantly phaze shift with yourself as the target. Four hour cooldown.
-Blocked during Blood Bath.
-```
 
 ## `village skills`
 
